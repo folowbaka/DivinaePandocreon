@@ -1,5 +1,5 @@
 package carte.abstractcarte;
 
-public abstract class DeusEx {
+public abstract class DeusEx extends Carte{
 
 }

@@ -1,5 +1,5 @@
 package carte.abstractcarte;
 
-public abstract class Croyant {
+public abstract class Croyant extends CarteDogme{
 
 }

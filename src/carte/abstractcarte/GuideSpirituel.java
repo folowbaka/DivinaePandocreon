@@ -1,5 +1,5 @@
 package carte.abstractcarte;
 
-public abstract class GuideSpirituel {
+public abstract class GuideSpirituel extends CarteDogme {
 
 }
