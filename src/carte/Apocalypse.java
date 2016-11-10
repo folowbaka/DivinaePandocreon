@@ -1,5 +1,5 @@
 package carte;
 
-public class Apocalypse {
+public  abstract class Apocalypse {
 
 }
