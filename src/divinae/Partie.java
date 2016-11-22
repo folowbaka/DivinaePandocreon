@@ -1,5 +1,6 @@
 package divinae;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -19,16 +20,24 @@ public class Partie {
     }
     public void choisirJoueur() {
         Scanner choixUtilisateur = new Scanner(System.in);
-        int nbJoueur;
+        int nbJoueur=-1;
         do {
             System.out.println("Veuillez choisir le nombre de joueur");
-            nbJoueur = choixUtilisateur.nextInt();
-        } while (nbJoueur > 2 && nbJoueur < 7);
+            try {
+                nbJoueur = choixUtilisateur.nextInt();
+            }
+            catch(InputMismatchException e)
+            {
+                System.out.println("Erreur de saisie");
+                choixUtilisateur.next();
+            }
+        } while (nbJoueur<2 || nbJoueur > 6);
         this.joueur=new Joueur[nbJoueur];
     }
     private Partie()
     {
         System.out.println("Partie créée");
+        choisirJoueur();
     }
 
 }

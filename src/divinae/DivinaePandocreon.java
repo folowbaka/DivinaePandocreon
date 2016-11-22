@@ -1,5 +1,6 @@
 package divinae;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -10,10 +11,18 @@ public class DivinaePandocreon {
     public static void main(String[] args) {
         boolean creerpartie = false;
         Scanner choixUtilisateur = new Scanner(System.in);
-        int choix;
+        int choix=-1;
         do {
             System.out.println("----------DIVINAE PANDOCREON----------\n----------1-Créer Partie\n----------0-Exit");
-            choix = choixUtilisateur.nextInt();
+            try
+            {
+                choix = choixUtilisateur.nextInt();
+            }catch(InputMismatchException e)
+            {
+                System.out.println("Erreur de saisie,Veuillez réessayer");
+                choixUtilisateur.next();
+
+            }
         } while (choix > 1 || choix < 0);
 
         switch(choix)
