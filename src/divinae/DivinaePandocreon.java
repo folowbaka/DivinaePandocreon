@@ -28,7 +28,9 @@ public class DivinaePandocreon {
         switch(choix)
         {
             case 1:
-                Partie partie = Partie.getInstance();
+
+                Partie partie = Partie.getInstance(Partie.choisirJoueur());
+                System.out.println(partie);
                 break;
             default:
                 System.out.println("A la prochaine");
