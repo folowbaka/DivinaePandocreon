@@ -7,13 +7,13 @@ import divinae.enumeration.Origine;
 
 public class Moine extends Croyant {
     public Moine(Origine origine, String description, String nom, Dogme dogme) {
-        super(origine, description, nom, dogme);
+        super(origine, nom, dogme);
+        this.setDescription("Sacrifice :\nDonne un point d'Action d'Origine Jour");
     }
 
-    @java.lang.Override
-    public void sacrifice(Joueur joueur) {
-        if (joueur.peutSacrifier){
+    public void capacite() {
+        /*if (joueur.peutSacrifier){
             joueur.pointJour++;
-        }
+        }*/
     }
 }

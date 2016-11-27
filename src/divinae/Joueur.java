@@ -1,21 +1,21 @@
 package divinae;
 
+import java.util.HashMap;
+
 public class Joueur {
 
     private String nom;
-    protected Double pointJour;
-    protected Double pointNuit;
-    protected Double pointNeant;
-    protected Boolean peutSacrifier;
+    private HashMap<String,Integer>pointsAction;
+    private Boolean peutSacrifier;
 
 
     public Joueur(String nom)
     {
         this.nom=nom;
-        this.pointJour=0;
-        this.pointNeant=0;
-        this.pointNuit=0;
         this.peutSacrifier=true;
+        this.pointsAction.put("JOUR",0);
+        this.pointsAction.put("NUIT",0);
+        this.pointsAction.put("NEANT",0);
     }
 
     @Override

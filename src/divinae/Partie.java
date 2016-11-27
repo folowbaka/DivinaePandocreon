@@ -1,5 +1,7 @@
 package divinae;
 
+import divinae.carte.abstractcarte.Carte;
+
 import java.util.*;
 
 /**
@@ -60,7 +62,7 @@ public class Partie {
             this.joueur[i]=new Joueur(nomJoueur[i]);
         }
         this.pioche=new ArrayList<Carte>();
-        Collection.shuffle(this.pioche);
+        //Collection.shuffle(this.pioche);
     }
     public void remplirPioche()
     {
