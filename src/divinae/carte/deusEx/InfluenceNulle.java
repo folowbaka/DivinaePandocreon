@@ -5,7 +5,15 @@ import divinae.enumeration.Origine;
 
 public class InfluenceNulle extends DeusEx {
 
-    public InfluenceNulle(Origine origine, String description, String nom) {
-        super(origine, description, nom);
+    public InfluenceNulle(Origine origine, String nom)
+    {
+        super(origine, nom);
+        this.setDescription("Annule la capacité spéciale\n" +
+                "d'une autre carte d'Action.\n");
+    }
+
+    @Override
+    public void capacite() {
+
     }
 }

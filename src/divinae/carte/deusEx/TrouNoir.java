@@ -5,7 +5,15 @@ import divinae.enumeration.Origine;
 
 public class TrouNoir extends DeusEx {
 
-    public TrouNoir(Origine origine, String description, String nom) {
-        super(origine, description, nom);
+    public TrouNoir(Origine origine, String nom) {
+        super(origine, nom);
+        this.setDescription("Aucun autre joueur ne gagne\n" +
+                "de points d'Action durant ce\n" +
+                "tour.");
+    }
+
+    @Override
+    public void capacite() {
+
     }
 }

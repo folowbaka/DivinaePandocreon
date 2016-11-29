@@ -5,7 +5,19 @@ import divinae.enumeration.Origine;
 
 public class Transe extends DeusEx {
 
-    public Transe(Origine origine, String description, String nom) {
-        super(origine, description, nom);
+    public Transe(Origine origine, String nom) {
+        super(origine, nom);
+        this.setDescription("Permet de récupérer les effets\n" +
+                "bénéfiques d'une carte\n" +
+                "d'Action posée par une autre\n" +
+                "Divinité. S'il s'agit d'une carte\n" +
+                "Croyants ou Guide Spirituel,\n" +
+                "vous posez la carte devant\n" +
+                "vous.");
+    }
+
+    @Override
+    public void capacite() {
+
     }
 }
