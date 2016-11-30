@@ -6,7 +6,14 @@ import divinae.enumeration.Origine;
 
 public class Romtec extends Divinite {
 
-    public Romtec(Origine origine, String description, String nom, Dogme dogme) {
-        super(origine, description, nom, dogme);
+    public Romtec(Origine origine, String nom, Dogme dogme) {
+        super(origine, nom, dogme);
+        this.setDescriptionDivinite("Romtec est une Divinité individualiste, pour qui chaque être vivant doit garder son libre arbitre.\n");
+        this.setDescription("Peut empêcher un jour de créer un Guide Spirituel. La carte est défaussée.");
+    }
+
+    @Override
+    public void capacite() {
+
     }
 }

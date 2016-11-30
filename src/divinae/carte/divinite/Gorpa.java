@@ -5,7 +5,14 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 public class Gorpa extends Divinite {
-    public Gorpa(Origine origine, String description, String nom, Dogme dogme) {
-        super(origine, description, nom, dogme);
+    public Gorpa(Origine origine, String nom, Dogme dogme) {
+        super(origine, nom, dogme);
+        this.setDescriptionDivinite("Divinité joueuse et espiègle, Gorpa aime gêner ses consœurs dans leur recherche de puissance.");
+        this.setDescription("Peut récupérer les points d'Action d'une autre Divinité en plus des siens. L'autre Divinité ne reçoit aucun point d'Action ce tour-ci.");
+    }
+
+    @Override
+    public void capacite() {
+
     }
 }
