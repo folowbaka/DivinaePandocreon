@@ -18,7 +18,7 @@ public class Travailleur extends Croyant {
         this.setNbCroyant(2);
     }
     public void capacite(Joueur j) {
-        if (j.divinite.getDogme()=="Nature" || j.divinite.getDogme()=="Mystique"){
+        if (j.divinite.getDogme()=="NATURE" || j.divinite.getDogme()=="MYSTIQUE"){
             j.peutSacrifier=false;
         }
         else {
