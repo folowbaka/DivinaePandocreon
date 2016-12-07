@@ -39,4 +39,13 @@ public abstract class Carte {
     public void setNom(String nom) {
         this.nom = nom;
     }
+
+    @Override
+    public String toString() {
+        return "Carte{" +
+                "origine=" + origine +
+                ", description='" + description + '\'' +
+                ", nom='" + nom + '\'' +
+                '}';
+    }
 }

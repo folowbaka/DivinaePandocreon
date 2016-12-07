@@ -7,7 +7,7 @@ public enum Dogme {
     NATURE("NATURE"),
     HUMAIN("HUMAIN"),
     SYMBOLE("SYMBOLE"),
-    MYSTIQUE("Mystique"),
+    MYSTIQUE("MYSTIQUE"),
     CHAOS("CHAOS");
 
     private String dogme="";

@@ -13,4 +13,10 @@ public abstract class Divinite extends CarteDogme {
     public void setDescriptionDivinite(String descriptionDivinite) {
         this.descriptionDivinite = descriptionDivinite;
     }
+
+    public String toString() {
+        return "Divinite{" +
+                "descriptionDivinite='" + descriptionDivinite + '\'' +
+                '}';
+    }
 }

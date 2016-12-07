@@ -2,6 +2,7 @@ package divinae;
 
 import divinae.carte.Apocalypse;
 import divinae.carte.abstractcarte.Carte;
+import divinae.carte.abstractcarte.Divinite;
 import divinae.carte.croyant.*;
 import divinae.carte.deusEx.*;
 import divinae.carte.divinite.*;
@@ -11,11 +12,13 @@ import divinae.enumeration.Origine;
 
 import java.util.*;
 
+import static java.util.Collections.shuffle;
+
 /*
  * Created by david on 21/11/2016.
  */
 public class Partie {
-    private Joueur[] joueur;
+    private ArrayList<Joueur> joueur;
     private ArrayList<Carte> pioche;
     private static Partie ourInstance = null;
 
@@ -30,14 +33,58 @@ public class Partie {
     private Partie(String[] nomJoueur)
     {
         System.out.println("Partie créée");
-        this.joueur=new Joueur[nomJoueur.length];
+        this.joueur=new ArrayList<Joueur>();
         for(int i=0;i<nomJoueur.length;i++)
         {
-            this.joueur[i]=new Joueur(nomJoueur[i]);
+            this.joueur.add(new Joueur(nomJoueur[i]));
         }
-        this.pioche=new ArrayList<Carte>();
+        this.pioche= new ArrayList<Carte>();
         remplirPioche();
-        //Collection.shuffle(this.pioche);
+        this.distribDivinite();
+        this.commencerPartie();
+    }
+    public void commencerPartie()
+    {
+
+        int j=0;
+        Origine origineTour=this.lancerDes();
+        System.out.println(origineTour);
+        while(j<this.joueur.size())
+        {
+            this.joueur.get(j).ajoutPoints(origineTour);
+            System.out.println(this.joueur.get(j));
+            j++;
+        }
+
+    }
+    public Origine lancerDes()
+    {
+        Random rd=new Random();
+        int des=rd.nextInt(3);
+        System.out.println(des);
+        switch(des)
+        {
+            case 0:
+                return Origine.JOUR;
+            case 1:
+                return Origine.NUIT;
+            case 2:
+                return Origine.NEANT;
+            default:
+                return null;
+        }
+    }
+
+    public void distribDivinite()
+    {
+        ArrayList<Divinite> divin=new ArrayList<Divinite>();
+        Collections.addAll(divin,new Brewalen(),new Drinded(),new Gorpa(),new Gwenghelen(),new Killinstred(),new Llewella(),new PuiTara(),new Romtec(),new Shingva(),new Yarstur());
+        Random rd=new Random();
+        for(int i=0;i<this.joueur.size();i++)
+        {
+
+            this.joueur.get(i).setDivinite(divin.remove(rd.nextInt(divin.size())));
+        }
     }
     public void remplirPioche()
     {
@@ -126,15 +173,13 @@ public class Partie {
         this.pioche.add(new Apocalypse(Origine.NEANT));
         this.pioche.add(new Apocalypse(null));
         this.pioche.add(new Apocalypse(null));
-        /*
-        this.pioche.add(new Brewalen(new Dogme[]{Dogme.NATURE,Dogme.HUMAIN,Dogme.MYSTIQUE}));
-        this.pioche.add(new Drinded(new Dogme[]{Dogme.NATURE,Dogme.HUMAIN,Dogme.SYMBOLE}));
-        this.pioche.add(new Yarstur(new Dogme[]{Dogme.CHAOS,Dogme.SYMBOLE,Dogme.MYSTIQUE}));
-        this.pioche.add(new Killinstred(new Dogme[]{Dogme.NATURE,Dogme.MYSTIQUE,Dogme.CHAOS}));
-        this.pioche.add(new Llewella(new Dogme[]{Dogme.NATURE,Dogme.MYSTIQUE,Dogme.CHAOS}));
-        this.pioche.add(new PuiTara(new Dogme[]{Dogme.NATURE,Dogme.MYSTIQUE,Dogme.SYMBOLE}));
-        */
+        shuffle(this.pioche);
 
     }
 
+    @Override
+    public String toString() {
+        return "Partie{" +
+                "joueur=" + joueur;
+    }
 }
