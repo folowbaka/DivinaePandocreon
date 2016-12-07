@@ -14,6 +14,8 @@ public class Clerc extends GuideSpirituel {
                 "rattachées. L'Origine des\n" +
                 "points d'Action est au choix\n" +
                 "du joueur.\n");
+        this.setNom("Clerc");
+        this.setNbMaxCroyant(2);
     }
     public void capacite() {
 

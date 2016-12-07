@@ -13,6 +13,8 @@ public class Paladin extends GuideSpirituel{
                 "sur la table sont défaussés.\n" +
                 "Les capacités spéciales ne sont\n" +
                 "pas jouées.");
+        this.setNom("Paladin");
+        this.setNbMaxCroyant(3);
     }
 
     @Override

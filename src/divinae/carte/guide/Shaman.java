@@ -13,6 +13,8 @@ public class Shaman extends GuideSpirituel {
                 "Humain. Les capacités\n" +
                 "spécials sont jouées\n" +
                 "normalement.\n");
+        this.setNom("Shaman");
+        this.setNbMaxCroyant(3);
     }
 
     public void capacite() {

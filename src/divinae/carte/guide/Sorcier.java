@@ -14,6 +14,8 @@ public class Sorcier extends GuideSpirituel{
                 "question. Les Croyants\n" +
                 "restent attachés aux mêmes\n" +
                 "cartes.\n");
+        this.setNom("Sorcier");
+        this.setNbMaxCroyant(3);
     }
 
     @Override

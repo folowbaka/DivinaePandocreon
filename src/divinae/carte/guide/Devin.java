@@ -12,6 +12,8 @@ public class Devin extends GuideSpirituel{
                 "Dogme Nature ou Mystique\n" +
                 "à sacrifier l'un de ses Guides\n" +
                 "Spirituels.\n");
+        this.setNom("Devin");
+        this.setNbMaxCroyant(1);
     }
 
     @Override

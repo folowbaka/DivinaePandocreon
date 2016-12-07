@@ -11,6 +11,8 @@ public class Messie  extends GuideSpirituel{
                 "Cosmogonie sur la face qu'il\n" +
                 "désire et commence un\n" +
                 "nouveau tour de jeu.\n");
+        this.setNom("Messie");
+        this.setNbMaxCroyant(3);
     }
 
     @Override

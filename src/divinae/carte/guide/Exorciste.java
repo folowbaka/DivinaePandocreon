@@ -14,6 +14,8 @@ public class Exorciste extends GuideSpirituel{
                 "Guides Spirituels. Les\n" +
                 "Croyants qui y étaient\n" +
                 "attachés sont défaussés.");
+        this.setNom("Exorciste");
+        this.setNbMaxCroyant(1);
     }
 
     @Override

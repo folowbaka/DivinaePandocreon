@@ -12,6 +12,8 @@ public class Anarchiste extends GuideSpirituel {
                 "au Dogme Chaos. Les\n" +
                 "capacités spéciales sont jouées\n" +
                 "normalement.\n");
+        this.setNom("Anarchiste");
+        this.setNbMaxCroyant(3);
     }
 
     @Override

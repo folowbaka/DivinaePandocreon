@@ -11,6 +11,8 @@ public class Tyran extends GuideSpirituel {
                 "ayant le Dogme Mystique\n" +
                 "actuellement au centre de la\n" +
                 "table.\n");
+        this.setNom("Tyran");
+        this.setNbMaxCroyant(3);
     }
 
     @Override

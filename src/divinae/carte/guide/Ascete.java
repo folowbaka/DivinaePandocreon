@@ -12,6 +12,8 @@ public class Ascete extends GuideSpirituel{
                 "Dogme Humain ou Symboles.\n" +
                 "Les capacités spéciales sont\n" +
                 "jouées normalement.\n");
+        this.setNom("Ascete");
+        this.setNbMaxCroyant(1);
     }
 
     @Override

@@ -9,6 +9,8 @@ public class Martyr extends GuideSpirituel {
         super(origine, dogme);
         this.setDescription("Sacrifice :\nEquivalent à la pose d'une\n" +
                 "carte Apocalypse.\n");
+        this.setNom("Martyr");
+        this.setNbMaxCroyant(2);
     }
     public void capacite() {
 
