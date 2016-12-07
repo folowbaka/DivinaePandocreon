@@ -1,8 +1,10 @@
 package divinae;
 
+import divinae.carte.Apocalypse;
 import divinae.carte.abstractcarte.Carte;
 import divinae.carte.croyant.*;
 import divinae.carte.deusEx.*;
+import divinae.carte.divinite.*;
 import divinae.carte.guide.*;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
@@ -118,13 +120,21 @@ public class Partie {
         this.pioche.add(new Miroir(null));
         this.pioche.add(new Bouleversement(null));
         this.pioche.add(new Inquisition(null));
-
+        //Ajout Apocalypse
+        this.pioche.add(new Apocalypse(Origine.JOUR));
+        this.pioche.add(new Apocalypse(Origine.NUIT));
+        this.pioche.add(new Apocalypse(Origine.NEANT));
+        this.pioche.add(new Apocalypse(null));
+        this.pioche.add(new Apocalypse(null));
+        /*
+        this.pioche.add(new Brewalen(new Dogme[]{Dogme.NATURE,Dogme.HUMAIN,Dogme.MYSTIQUE}));
+        this.pioche.add(new Drinded(new Dogme[]{Dogme.NATURE,Dogme.HUMAIN,Dogme.SYMBOLE}));
+        this.pioche.add(new Yarstur(new Dogme[]{Dogme.CHAOS,Dogme.SYMBOLE,Dogme.MYSTIQUE}));
+        this.pioche.add(new Killinstred(new Dogme[]{Dogme.NATURE,Dogme.MYSTIQUE,Dogme.CHAOS}));
+        this.pioche.add(new Llewella(new Dogme[]{Dogme.NATURE,Dogme.MYSTIQUE,Dogme.CHAOS}));
+        this.pioche.add(new PuiTara(new Dogme[]{Dogme.NATURE,Dogme.MYSTIQUE,Dogme.SYMBOLE}));
+        */
 
     }
-    @Override
-    public String toString() {
-        return "Partie{" +
-                "joueur=" + Arrays.toString(joueur) +
-                '}';
-    }
+
 }
