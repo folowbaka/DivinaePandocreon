@@ -6,10 +6,11 @@ import divinae.enumeration.Origine;
 
 public class Shingva extends Divinite {
 
-    public Shingva(Origine origine, Dogme[] dogme) {
-        super(origine,dogme);
+    public Shingva() {
+        super(Origine.AUBE,new Dogme[]{Dogme.HUMAIN,Dogme.MYSTIQUE,Dogme.CHAOS});
         this.setDescriptionDivinite("Perverse et retorse, Shingva est une Divinité que toutes les autres détestent.\n");
         this.setDescription("Peut imposer le sacrifice d'un Guide Spirituel ayant le Dogme Symboles ou Nature.");
+        this.setNom("Shingva");
     }
 
     @Override
