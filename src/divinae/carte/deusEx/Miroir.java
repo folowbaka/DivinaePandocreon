@@ -11,6 +11,7 @@ public class Miroir extends DeusEx {
         this.setDescription("Retourne les effets d'une carte\n" +
                 "d'Action sur la Divinité qui\n" +
                 "l'a posée");
+        this.setNom("Miroir");
     }
 
     @Override

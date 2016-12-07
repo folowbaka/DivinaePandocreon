@@ -12,6 +12,7 @@ public class Phoenix extends DeusEx {
                 "vos Croyants ou Guides\n" +
                 "Spirituels sans sacrifier la\n" +
                 "carte.\n");
+        this.setNom("Phoenix");
     }
 
     @Override

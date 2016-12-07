@@ -14,6 +14,7 @@ public class ColereDivine extends DeusEx {
                 "spéciale n'a pas effet. Les\n" +
                 "Croyants attachés reviennent\n" +
                 "au centre de la table.");
+        this.setNom("Colère Divine");
     }
 
     @Override

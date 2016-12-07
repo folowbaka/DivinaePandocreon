@@ -11,6 +11,7 @@ public class InfluenceJour extends DeusEx {
         this.setDescription("Annule la capacité spéciale\n" +
                 "d'une carte d'Action d'Origine\n" +
                 "Nuit ou Néant.\n");
+        this.setNom("Influence Jour");
     }
 
     @Override

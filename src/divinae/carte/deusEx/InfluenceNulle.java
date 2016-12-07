@@ -10,6 +10,7 @@ public class InfluenceNulle extends DeusEx {
         super(origine);
         this.setDescription("Annule la capacité spéciale\n" +
                 "d'une autre carte d'Action.\n");
+        this.setNom("Influence Nulle");
     }
 
     @Override

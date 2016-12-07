@@ -13,6 +13,7 @@ public class Stase extends DeusEx {
                 "cette carte soit annulée ou\n" +
                 "jusqu'à la prochaine tentative\n" +
                 "d'Apocalypse.\n");
+        this.setNom("Stase");
     }
 
     @Override

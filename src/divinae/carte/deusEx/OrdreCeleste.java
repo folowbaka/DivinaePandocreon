@@ -14,6 +14,7 @@ public class OrdreCeleste extends DeusEx {
                 "le placez devant vous avec\n" +
                 "les Croyants qui y sont\n" +
                 "attachés.\n");
+        this.setNom("Ordre Céleste");
     }
 
     @Override

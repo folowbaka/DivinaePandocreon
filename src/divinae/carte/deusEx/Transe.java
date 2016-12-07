@@ -14,6 +14,7 @@ public class Transe extends DeusEx {
                 "Croyants ou Guide Spirituel,\n" +
                 "vous posez la carte devant\n" +
                 "vous.");
+        this.setNom("Transe");
     }
 
     @Override

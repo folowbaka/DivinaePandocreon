@@ -11,6 +11,7 @@ public class Diversion extends DeusEx {
         this.setDescription("Prenez 3 cartes dans la main\n" +
                 "d'un autre joueur et\n" +
                 "incluez-les à votre main.");
+        this.setNom("Diversion");
     }
 
     @Override

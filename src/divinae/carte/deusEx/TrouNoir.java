@@ -10,6 +10,7 @@ public class TrouNoir extends DeusEx {
         this.setDescription("Aucun autre joueur ne gagne\n" +
                 "de points d'Action durant ce\n" +
                 "tour.");
+        this.setNom("Trou Noir");
     }
 
     @Override

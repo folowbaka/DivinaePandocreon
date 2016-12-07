@@ -16,6 +16,7 @@ public class Inquisition extends DeusEx {
                 "Nuit le votre est sacrifié, sur\n" +
                 "Néant rien ne se passe. Les capacités spéciales sont jouées." +
                 " La partie continue avec la nouvelle Cosmogonie");
+        this.setNom("Inquisition");
     }
 
     @Override

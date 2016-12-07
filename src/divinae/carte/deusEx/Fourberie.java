@@ -13,6 +13,7 @@ public class Fourberie extends DeusEx {
                 "d'une autre Divinité. Les\n" +
                 "capacités spéciales ne sont pas\n" +
                 "jouées.\n");
+        this.setNom("Fourberie");
     }
 
     @Override

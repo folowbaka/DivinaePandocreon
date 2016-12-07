@@ -2,6 +2,7 @@ package divinae;
 
 import divinae.carte.abstractcarte.Carte;
 import divinae.carte.croyant.*;
+import divinae.carte.deusEx.*;
 import divinae.carte.guide.*;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
@@ -98,7 +99,25 @@ public class Partie {
         this.pioche.add(new Sorcier(Origine.NUIT,new Dogme[]{Dogme.MYSTIQUE,Dogme.SYMBOLE}));
         this.pioche.add(new Tyran(Origine.NEANT,new Dogme[]{Dogme.SYMBOLE,Dogme.CHAOS}));
         this.pioche.add(new Messie(Origine.JOUR,new Dogme[]{Dogme.HUMAIN,Dogme.MYSTIQUE}));
-
+        //AJOUT Deus Ex
+        this.pioche.add(new ColereDivine(Origine.JOUR));
+        this.pioche.add(new ColereDivine(Origine.NUIT));
+        this.pioche.add(new Stase(Origine.JOUR));
+        this.pioche.add(new OrdreCeleste(Origine.JOUR));
+        this.pioche.add(new Fourberie(Origine.NUIT));
+        this.pioche.add(new Diversion(Origine.NUIT));
+        this.pioche.add(new Concentration(Origine.NEANT));
+        this.pioche.add(new TrouNoir(Origine.NEANT));
+        this.pioche.add(new Phoenix(Origine.NEANT));
+        this.pioche.add(new InfluenceJour(null));
+        this.pioche.add(new InfluenceNuit(null));
+        this.pioche.add(new InfluenceNeant(null));
+        this.pioche.add(new InfluenceNulle(null));
+        this.pioche.add(new InfluenceNulle(null));
+        this.pioche.add(new Transe(null));
+        this.pioche.add(new Miroir(null));
+        this.pioche.add(new Bouleversement(null));
+        this.pioche.add(new Inquisition(null));
 
 
     }

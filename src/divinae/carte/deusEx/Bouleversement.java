@@ -12,6 +12,7 @@ public class Bouleversement extends DeusEx {
                 "Le tour de jeu se terminera\n" +
                 "normalement, mais sous la\n" +
                 "nouvelle influence.");
+        this.setNom("Bouleversement");
     }
 
     @Override
