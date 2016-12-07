@@ -6,8 +6,8 @@ import divinae.enumeration.Origine;
 
 public class Killinstred extends Divinite {
 
-    public Killinstred(Origine origine, String nom, Dogme dogme) {
-        super(origine, nom, dogme);
+    public Killinstred(Origine origine, Dogme[] dogme) {
+        super(origine,dogme);
         this.setDescriptionDivinite("Divinité machiavélique et manipulatrice, Killinstred cherche à influencer et contrôler ses ennemis.");
         this.setDescription("Peut obliger un joueur à poser une carte Apocalypse s'il en possède une.");
     }

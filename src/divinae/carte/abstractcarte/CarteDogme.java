@@ -3,18 +3,15 @@ package divinae.carte.abstractcarte;
 import divinae.enumeration.*;
 
 public abstract class CarteDogme  extends Carte{
-    private Dogme dogme;
-    public CarteDogme(Origine origine,String nom,Dogme dogme)
+    private Dogme[] dogme;
+    public CarteDogme(Origine origine,Dogme[] dogme)
     {
-        super(origine,nom);
+        super(origine);
         this.dogme=dogme;
     }
 
-    public Dogme getDogme() {
+    public Dogme[] getDogme() {
         return dogme;
     }
 
-    public void setDogme(Dogme dogme) {
-        this.dogme = dogme;
-    }
 }

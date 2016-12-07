@@ -5,8 +5,8 @@ import divinae.enumeration.Origine;
 
 public class Transe extends DeusEx {
 
-    public Transe(Origine origine, String nom) {
-        super(origine, nom);
+    public Transe(Origine origine) {
+        super(origine);
         this.setDescription("Permet de récupérer les effets\n" +
                 "bénéfiques d'une carte\n" +
                 "d'Action posée par une autre\n" +

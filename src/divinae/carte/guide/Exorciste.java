@@ -5,8 +5,8 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 public class Exorciste extends GuideSpirituel{
-    public Exorciste(Origine origine, String nom, Dogme dogme) {
-        super(origine, nom, dogme);
+    public Exorciste(Origine origine, Dogme[] dogme) {
+        super(origine, dogme);
         this.setDescription("Sacrifice :\nUne Divinité d'Origine Nuit\n" +
                 "ou ayant les Dogmes\n" +
                 "Mystique et Chaos reprend\n" +

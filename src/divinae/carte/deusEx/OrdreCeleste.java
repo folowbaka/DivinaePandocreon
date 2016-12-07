@@ -5,9 +5,9 @@ import divinae.enumeration.Origine;
 
 public class OrdreCeleste extends DeusEx {
 
-    public OrdreCeleste(Origine origine, String nom)
+    public OrdreCeleste(Origine origine)
     {
-        super(origine, nom);
+        super(origine);
         this.setDescription("Vous récupérez un des\n" +
                 "Guides Spirituels posés\n" +
                 "devant une autre Divinité et\n" +

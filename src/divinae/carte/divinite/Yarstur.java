@@ -6,8 +6,8 @@ import divinae.enumeration.Origine;
 
 public class Yarstur extends Divinite {
 
-    public Yarstur(Origine origine, String nom, Dogme dogme) {
-        super(origine,nom, dogme);
+    public Yarstur(Origine origine, Dogme[] dogme) {
+        super(origine,dogme);
         this.setDescriptionDivinite("Dernier pur du jour, Yarstur combat le Néant sous toutes ses formes");
         this.setDescription("Peut détruire toutes les cartes de Croyants au centre de la table d'Origine Néant.");
     }

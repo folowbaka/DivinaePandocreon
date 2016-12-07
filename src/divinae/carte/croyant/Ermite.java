@@ -6,8 +6,8 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 public class Ermite extends Croyant {
-    public Ermite(Origine origine, String nom, Dogme dogme) {
-        super(origine, nom, dogme);
+    public Ermite(Origine origine, Dogme[] dogme) {
+        super(origine, dogme);
         this.setDescription("Sacrifice :\nImpose le sacrifice d'un\n" +
                 "Croyant d'un autre joueur,\n" +
                 "qui choisit la carte. La\n" +

@@ -6,8 +6,8 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 public class Travailleur extends Croyant {
-    public Travailleur(Origine origine,String nom, Dogme dogme) {
-        super(origine, nom, dogme);
+    public Travailleur(Origine origine, Dogme[] dogme) {
+        super(origine,dogme);
         this.setDescription("Sacrifice :\nEmpêche une Divinité\n" +
                 "possédant le Dogme Nature\n" +
                 "ou Mystique de sacrifier une\n" +

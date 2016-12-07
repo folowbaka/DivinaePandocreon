@@ -6,8 +6,8 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 public class Demon extends Croyant {
-    public Demon(Origine origine,String nom, Dogme dogme) {
-        super(origine, nom, dogme);
+    public Demon(Origine origine,Dogme[] dogme) {
+        super(origine,dogme);
         this.setDescription("Sacrifice :\nDonne un point d'Action\n" +
                 "d'Origine Nuit.\n");
     }

@@ -5,8 +5,8 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 public class Anarchiste extends GuideSpirituel {
-    public Anarchiste(Origine origine, String nom, Dogme dogme) {
-        super(origine, nom, dogme);
+    public Anarchiste(Origine origine, Dogme[] dogme) {
+        super(origine, dogme);
         this.setDescription("Sacrifice : \nSacrifie un Guide Spirituel, si\n" +
                 "lui ou sa Divinité ne croit pas\n" +
                 "au Dogme Chaos. Les\n" +

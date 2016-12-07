@@ -5,9 +5,9 @@ import divinae.enumeration.Origine;
 
 public class Concentration extends DeusEx {
 
-    public Concentration(Origine origine,String nom)
+    public Concentration(Origine origine)
     {
-        super(origine, nom);
+        super(origine);
         this.setDescription("Vous récupérez un des\n" +
                 "Guides Spirituels posés\n" +
                 "devant une autre Divinité et\n" +

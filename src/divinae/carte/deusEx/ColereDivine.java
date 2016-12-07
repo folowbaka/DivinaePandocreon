@@ -5,9 +5,9 @@ import divinae.enumeration.Origine;
 
 public class ColereDivine extends DeusEx {
 
-    public ColereDivine(Origine origine, String nom)
+    public ColereDivine(Origine origine)
     {
-        super(origine,nom);
+        super(origine);
         this.setDescription("Détruit une carte Guide\n" +
                 "Spirituel d'Origine Nuit ou\n" +
                 "Néant, dont la capacité\n" +

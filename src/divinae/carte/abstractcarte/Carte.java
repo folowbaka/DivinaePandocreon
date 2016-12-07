@@ -10,10 +10,9 @@ public abstract class Carte {
     private String description;
     private String nom;
 
-    public Carte(Origine origine ,String nom)
+    public Carte(Origine origine)
     {
         this.origine=origine;
-        this.nom=nom;
     }
     public abstract void capacite();
 

@@ -6,8 +6,8 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 public class Vampire extends Croyant {
-    public Vampire(Origine origine,String nom, Dogme dogme) {
-        super(origine,nom, dogme);
+    public Vampire(Origine origine, Dogme[] dogme) {
+        super(origine,dogme);
         this.setDescription("Sacrifice :\nImpose le sacrifice d'un\n" +
                 "Croyant d'un autre joueur.\n" +
                 "Celui-ci choisit le sacrifié. La\n" +

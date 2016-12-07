@@ -5,8 +5,8 @@ import divinae.enumeration.Origine;
 
 public class Phoenix extends DeusEx {
 
-    public Phoenix(Origine origine, String nom) {
-        super(origine, nom);
+    public Phoenix(Origine origine) {
+        super(origine);
         this.setDescription("Permet de bénéficier de la\n" +
                 "capacité spéciale de l'un de\n" +
                 "vos Croyants ou Guides\n" +

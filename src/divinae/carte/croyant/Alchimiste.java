@@ -6,8 +6,8 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 public class Alchimiste extends Croyant {
-    public Alchimiste(Origine origine,String nom, Dogme dogme) {
-        super(origine,nom, dogme);
+    public Alchimiste(Origine origine, Dogme[] dogme) {
+        super(origine, dogme);
         this.setDescription("Sacrifice :\nEmpêche une Divinité\n" +
                 "possédant le Dogme Humain\n" +
                 "ou Mystique de sacrifier une\n" +

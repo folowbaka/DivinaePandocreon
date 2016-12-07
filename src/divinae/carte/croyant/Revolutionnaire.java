@@ -6,8 +6,8 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 public class Revolutionnaire extends Croyant {
-    public Revolutionnaire(Origine origine, String nom, Dogme dogme) {
-        super(origine,nom, dogme);
+    public Revolutionnaire(Origine origine,Dogme[] dogme) {
+        super(origine,dogme);
         this.setDescription("Sacrifice :\nImposez le sacrifice d'une\n" +
                 "carte de Croyants à autant de\n" +
                 "Divinités que vous le voulez.\n" +

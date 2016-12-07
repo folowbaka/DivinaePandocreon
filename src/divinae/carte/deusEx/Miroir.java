@@ -5,9 +5,9 @@ import divinae.enumeration.Origine;
 
 public class Miroir extends DeusEx {
 
-    public Miroir(Origine origine,String nom)
+    public Miroir(Origine origine)
     {
-        super(origine, nom);
+        super(origine);
         this.setDescription("Retourne les effets d'une carte\n" +
                 "d'Action sur la Divinité qui\n" +
                 "l'a posée");

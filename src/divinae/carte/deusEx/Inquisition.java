@@ -5,9 +5,9 @@ import divinae.enumeration.Origine;
 
 public class Inquisition extends DeusEx {
 
-    public Inquisition(Origine origine, String nom)
+    public Inquisition(Origine origine)
     {
-        super(origine, nom);
+        super(origine);
         this.setDescription("Choisissez un des Guides\n" +
                 "Spirituels d'un autre joueur,\n" +
                 "et l'un des votres. Lancez le\n" +

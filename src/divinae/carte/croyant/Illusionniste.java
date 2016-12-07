@@ -6,8 +6,8 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 public class Illusionniste extends Croyant {
-    public Illusionniste(Origine origine,String nom, Dogme dogme) {
-        super(origine, nom, dogme);
+    public Illusionniste(Origine origine, Dogme[] dogme) {
+        super(origine,dogme);
         this.setDescription("Sacrifice :\nVous bénéficiez de la capacité\n" +
                 "spéciale de sacrifice d'une\n" +
                 "carte de Croyants\n" +

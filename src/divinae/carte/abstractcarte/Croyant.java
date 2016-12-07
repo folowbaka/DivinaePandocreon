@@ -5,7 +5,13 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 public abstract class Croyant extends CarteDogme{
-    public Croyant(Origine origine,String nom, Dogme dogme) {
-        super(origine,nom, dogme);
+    private int nbCroyant;
+    public Croyant(Origine origine,Dogme[] dogme)
+    {
+        super(origine,dogme);
+    }
+    public void setNbCroyant(int nbCroyant)
+    {
+        this.nbCroyant=nbCroyant;
     }
 }

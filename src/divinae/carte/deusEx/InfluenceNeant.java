@@ -5,9 +5,9 @@ import divinae.enumeration.Origine;
 
 public class InfluenceNeant extends DeusEx {
 
-    public InfluenceNeant(Origine origine,String nom)
+    public InfluenceNeant(Origine origine)
     {
-        super(origine, nom);
+        super(origine);
         this.setDescription("Annule la capacité spéciale\n" +
                 "d'une carte d'Action d'Origine\n" +
                 "Jour ou Nuit.");

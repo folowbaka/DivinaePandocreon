@@ -5,9 +5,9 @@ import divinae.enumeration.Origine;
 
 public class Stase extends DeusEx {
 
-    public Stase(Origine origine, String nom)
+    public Stase(Origine origine)
     {
-        super(origine, nom);
+        super(origine);
         this.setDescription("Protège un Guide Spirituel et\n" +
                 "ses Croyants jusqu'à ce que\n" +
                 "cette carte soit annulée ou\n" +

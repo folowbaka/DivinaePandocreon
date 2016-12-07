@@ -6,8 +6,8 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 public class Pillar extends Croyant {
-    public Pillar(Origine origine,String nom, Dogme dogme) {
-        super(origine,nom, dogme);
+    public Pillar(Origine origine,Dogme[] dogme) {
+        super(origine,dogme);
         this.setDescription("Sacrifice :\nRécupérez les points d'Action\n" +
                 "d'une Divinité n'ayant pas\n" +
                 "encore joué durant ce tour.\n" +

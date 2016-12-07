@@ -13,6 +13,7 @@ public class Joueur {
     {
         this.nom=nom;
         this.peutSacrifier=true;
+        this.pointsAction=new HashMap<String,Integer>();
         this.pointsAction.put("JOUR",0);
         this.pointsAction.put("NUIT",0);
         this.pointsAction.put("NEANT",0);
