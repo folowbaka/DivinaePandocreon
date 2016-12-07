@@ -13,8 +13,8 @@ public class Moine extends Croyant {
         this.setNbCroyant(2);
     }
     public void capacite() {
-        /*if (joueur.peutSacrifier){
-            joueur.pointJour++;
-        }*/
+
+        joueur.pointJour++;
+
     }
 }

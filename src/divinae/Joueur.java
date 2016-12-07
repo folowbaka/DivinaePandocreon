@@ -1,5 +1,7 @@
 package divinae;
 
+import divinae.carte.abstractcarte.Divinite;
+
 import java.util.HashMap;
 
 public class Joueur {
@@ -7,9 +9,10 @@ public class Joueur {
     private String nom;
     private HashMap<String,Integer>pointsAction;
     private Boolean peutSacrifier;
+    protected Divinite divinite;
 
 
-    public Joueur(String nom)
+    public Joueur(String nom, Divinite divinite)
     {
         this.nom=nom;
         this.peutSacrifier=true;
