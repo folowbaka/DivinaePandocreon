@@ -6,8 +6,9 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 public class Lycanthrope extends Croyant {
-    public Lycanthrope(Origine origine, Dogme[] dogme) {
-        super(origine, dogme);
+
+    public Lycanthrope( Dogme[] dogme) {
+        super(Origine.NUIT, dogme);
         this.setDescription("Sacrifice :\nRetirez tous les Croyants\n" +
                 "attachés à l'un des Guides\n" +
                 "Spirituels d'une autre\n" +
@@ -15,6 +16,8 @@ public class Lycanthrope extends Croyant {
                 "reviennent au milieu de la\n" +
                 "table, le Guide Spirituel est\n" +
                 "défaussé.");
+        this.setNom("lycanthrope");
+        this.setNbCroyant(4);
     }
     public void capacite() {
 

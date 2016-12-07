@@ -6,9 +6,10 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 public class Moine extends Croyant {
-    public Moine(Origine origine, Dogme[] dogme) {
-        super(origine,dogme);
+    public Moine(Dogme[] dogme) {
+        super(Origine.JOUR,dogme);
         this.setDescription("Sacrifice :\nDonne un point d'Action d'Origine Jour");
+        this.setNom("Moine");
         this.setNbCroyant(2);
     }
     public void capacite() {
