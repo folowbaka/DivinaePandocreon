@@ -17,12 +17,19 @@ public class Travailleur extends Croyant {
         this.setNom("Travailleur");
         this.setNbCroyant(2);
     }
-    public void capacite(Joueur j) {
+
+    @Override
+    public void capacite()
+    {
+
+    }
+
+    /*public void capacite(Joueur j) {
         if (j.divinite.getDogme()=="NATURE" || j.divinite.getDogme()=="MYSTIQUE"){
             j.peutSacrifier=false;
         }
         else {
             System.out.println("La divinité choisie est de mauvais type.");
         }
-    }
+    }*/
 }
