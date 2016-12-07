@@ -26,6 +26,20 @@ public class Joueur {
     {
         this.divinite=divinite;
     }
+    public void ajoutPoints(Int ajout, String origine){
+        this.pointsAction.get(origine)+=ajout;
+    }
+    public void denySacrifice(){
+        this.peutSacrifier=false;
+    }
+    public void allowSacrifice(){
+        this.peutSacrifier=true;
+    }
+    public void pioche(Partie partie){
+
+    }
+
+
     public void ajoutPoints(Origine originePoint)
     {
         Origine origineDiv=this.divinite.getOrigine();

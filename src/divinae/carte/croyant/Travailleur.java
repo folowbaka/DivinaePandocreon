@@ -7,7 +7,9 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 public class Travailleur extends Croyant {
-    public Travailleur(Dogme[] dogme) {
+    private Int numero;
+
+    public Travailleur(Dogme[] dogme, Int numero) {
         super(Origine.JOUR,dogme);
         this.setDescription("Sacrifice :\nEmpêche une Divinité\n" +
                 "possédant le Dogme Nature\n" +
@@ -18,18 +20,30 @@ public class Travailleur extends Croyant {
         this.setNbCroyant(2);
     }
 
-    @Override
-    public void capacite()
-    {
+
+    public void capacite(Joueur j) {
+        switch(numero){
+            case 1 :
+                if (j.divinite.getDogme()=="NATURE" || j.divinite.getDogme()=="MYSTIQUE"){
+                    j.denySacrifice();
+                }
+                else {
+                    System.out.println("La divinité choisie est de mauvais type.");
+                }
+            break;
+            case 2 :
+                if (j.divinite.getDogme()=="CHAOS" || j.divinite.getDogme()=="MYSTIQUE"){
+                    j.denySacrifice();
+                }
+                else {
+                    System.out.println("La divinité choisie est de mauvais type.");
+                }
+            break;
+            case 3 :
+
+
+
+        }
 
     }
-
-    /*public void capacite(Joueur j) {
-        if (j.divinite.getDogme()=="NATURE" || j.divinite.getDogme()=="MYSTIQUE"){
-            j.peutSacrifier=false;
-        }
-        else {
-            System.out.println("La divinité choisie est de mauvais type.");
-        }
-    }*/
 }

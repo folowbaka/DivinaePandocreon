@@ -12,9 +12,9 @@ public class Moine extends Croyant {
         this.setNom("Moine");
         this.setNbCroyant(2);
     }
-    public void capacite() {
+    public void capacite(Joueur joueur) {
 
-        joueur.pointJour++;
+        joueur.ajoutPoints(1, "JOUR");
 
     }
 }

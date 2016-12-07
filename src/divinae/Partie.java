@@ -177,6 +177,8 @@ public class Partie {
 
     }
 
+
+
     @Override
     public String toString() {
         return "Partie{" +
