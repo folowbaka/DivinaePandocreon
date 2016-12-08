@@ -7,9 +7,9 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 public class Travailleur extends Croyant {
-    private Int numero;
+    private int numero;
 
-    public Travailleur(Dogme[] dogme, Int numero) {
+    public Travailleur(Dogme[] dogme, int numero) {
         super(Origine.JOUR,dogme);
         this.setDescription("Sacrifice :\nEmpêche une Divinité\n" +
                 "possédant le Dogme Nature\n" +
@@ -22,7 +22,7 @@ public class Travailleur extends Croyant {
 
 
     public void capacite(Joueur j) {
-        switch(numero){
+        /*switch(numero){
             case 1 :
                 if (j.divinite.getDogme()=="NATURE" || j.divinite.getDogme()=="MYSTIQUE"){
                     j.denySacrifice();
@@ -43,7 +43,10 @@ public class Travailleur extends Croyant {
 
 
 
-        }
+        */}
+
+    @Override
+    public void capacite() {
 
     }
 }

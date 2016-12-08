@@ -13,7 +13,8 @@ import java.util.Scanner;
 public class InterfaceCommand {
 
 
-    public InterfaceCommand() {
+    public InterfaceCommand()
+    {
 
 
     }
@@ -49,5 +50,27 @@ public class InterfaceCommand {
 
         }
         return nomJoueur;
+    }
+    public static void jouer(Joueur j,Partie p)
+    {
+        System.out.println("C'est à vous de jouer joueur : "+j.getNom());
+        boolean tour=true;
+        Scanner sc=new Scanner(System.in);
+        int choix;
+        while(tour)
+        {       InterfaceCommand.afficheCarteJoueur(j);
+                System.out.println("---------------0-Terminer Tour");
+                choix=sc.nextInt();
+                if(choix==0)
+                    tour=false;
+
+        }
+    }
+    public static void afficheCarteJoueur(Joueur j)
+    {
+        for(int i=0;i<j.getMain().size();i++)
+        {
+            System.out.println("Carte "+(i+1)+" : "+j.getMain().get(i).getNom());
+        }
     }
 }

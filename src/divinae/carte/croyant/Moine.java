@@ -17,4 +17,9 @@ public class Moine extends Croyant {
         joueur.ajoutPoints(1, "JOUR");
 
     }
+
+    @Override
+    public void capacite() {
+
+    }
 }

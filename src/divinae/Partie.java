@@ -41,6 +41,7 @@ public class Partie {
         this.pioche= new ArrayList<Carte>();
         remplirPioche();
         this.distribDivinite();
+        this.distribCarte();
         this.commencerPartie();
     }
     public void commencerPartie()
@@ -52,6 +53,7 @@ public class Partie {
         while(j<this.joueur.size())
         {
             this.joueur.get(j).ajoutPoints(origineTour);
+            InterfaceCommand.jouer(this.joueur.get(j),this);
             System.out.println(this.joueur.get(j));
             j++;
         }
@@ -86,6 +88,20 @@ public class Partie {
             this.joueur.get(i).setDivinite(divin.remove(rd.nextInt(divin.size())));
         }
     }
+    public void distribCarte()
+    {
+        for(int i=0;i<this.joueur.size();i++)
+        {
+            for(int j=0;j<7;j++)
+            {
+                this.joueur.get(i).pioche(this);
+            }
+        }
+    }
+    public ArrayList<Carte> getPioche()
+    {
+        return this.pioche;
+    }
     public void remplirPioche()
     {
         //Ajout Croyant
@@ -94,9 +110,9 @@ public class Partie {
         this.pioche.add(new Moine(new Dogme[]{Dogme.SYMBOLE,Dogme.MYSTIQUE,Dogme.CHAOS}));
         this.pioche.add(new Moine(new Dogme[]{Dogme.MYSTIQUE,Dogme.NATURE,Dogme.SYMBOLE}));
         this.pioche.add(new Moine(new Dogme[]{Dogme.MYSTIQUE,Dogme.NATURE,Dogme.CHAOS}));
-        this.pioche.add(new Travailleur(new Dogme[]{Dogme.SYMBOLE,Dogme.HUMAIN,Dogme.CHAOS}));
-        this.pioche.add(new Travailleur(new Dogme[]{Dogme.HUMAIN,Dogme.NATURE,Dogme.SYMBOLE}));
-        this.pioche.add(new Travailleur(new Dogme[]{Dogme.MYSTIQUE,Dogme.MYSTIQUE,Dogme.CHAOS}));
+        this.pioche.add(new Travailleur(new Dogme[]{Dogme.SYMBOLE,Dogme.HUMAIN,Dogme.CHAOS},1));
+        this.pioche.add(new Travailleur(new Dogme[]{Dogme.HUMAIN,Dogme.NATURE,Dogme.SYMBOLE},2));
+        this.pioche.add(new Travailleur(new Dogme[]{Dogme.MYSTIQUE,Dogme.MYSTIQUE,Dogme.CHAOS},3));
         this.pioche.add(new Ermite(new Dogme[]{Dogme.MYSTIQUE,Dogme.NATURE,Dogme.CHAOS}));
         this.pioche.add(new Ermite(new Dogme[]{Dogme.MYSTIQUE,Dogme.NATURE,Dogme.SYMBOLE}));
         this.pioche.add(new Integriste(new Dogme[]{Dogme.HUMAIN,Dogme.NATURE,Dogme.CHAOS}));

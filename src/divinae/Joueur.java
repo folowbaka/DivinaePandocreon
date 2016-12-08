@@ -1,8 +1,10 @@
 package divinae;
 
+import divinae.carte.abstractcarte.Carte;
 import divinae.carte.abstractcarte.Divinite;
 import divinae.enumeration.Origine;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Joueur {
@@ -11,7 +13,7 @@ public class Joueur {
     private HashMap<String,Integer>pointsAction;
     private Boolean peutSacrifier;
     private Divinite divinite;
-
+    private ArrayList<Carte> main;
 
     public Joueur(String nom)
     {
@@ -21,13 +23,15 @@ public class Joueur {
         this.pointsAction.put("JOUR",0);
         this.pointsAction.put("NUIT",0);
         this.pointsAction.put("NEANT",0);
+        this.main=new ArrayList<Carte>();
     }
     public void setDivinite(Divinite divinite)
     {
         this.divinite=divinite;
     }
-    public void ajoutPoints(Int ajout, String origine){
-        this.pointsAction.get(origine)+=ajout;
+
+    public void ajoutPoints(int ajout, String origine){
+        //this.pointsAction.get(origine)+=ajout;
     }
     public void denySacrifice(){
         this.peutSacrifier=false;
@@ -36,7 +40,8 @@ public class Joueur {
         this.peutSacrifier=true;
     }
     public void pioche(Partie partie){
-
+        int taillePioche=partie.getPioche().size()-1;
+        this.main.add(partie.getPioche().remove(taillePioche));
     }
 
 
@@ -81,7 +86,14 @@ public class Joueur {
                 break;
         }
     }
-
+    public String getNom()
+    {
+        return this.nom;
+    }
+    public ArrayList<Carte> getMain()
+    {
+        return this.main;
+    }
     @Override
     public String toString() {
         return "Joueur{" +
