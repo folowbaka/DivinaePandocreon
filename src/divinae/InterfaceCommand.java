@@ -57,14 +57,69 @@ public class InterfaceCommand {
         boolean tour=true;
         Scanner sc=new Scanner(System.in);
         int choix;
+        boolean defausser=false;
         while(tour)
         {       InterfaceCommand.afficheCarteJoueur(j);
+                System.out.println("---------------1-Défausser Carte");
+                System.out.println("---------------2-Compléter main");
+                System.out.println("---------------3-Jouer Carte");
                 System.out.println("---------------0-Terminer Tour");
-                choix=sc.nextInt();
-                if(choix==0)
+                do
+                {
+                    choix = sc.nextInt();
+                    switch (choix) {
+                        case 1:
+                            if(!j.getMain().isEmpty() &&!defausser)
+                            {
+                                InterfaceCommand.choixDefausseCarte(j, p);
+                                defausser=true;
+                            }
+                            else
+                                System.out.println("Votre main est déjà vide ou vous avez déjà défaussé des cartes pendant ce tour");
+                            System.out.println("---------------2-Compléter main");
+                            System.out.println("---------------3-Jouer Carte");
+                            break;
+                        case 2:
+                                if(j.getMain().size()!=Joueur.TAILLEMAIN)
+                                {
+                                    j.completerMain(p);
+                                    InterfaceCommand.afficheCarteJoueur(j);
+                                }
+                                else
+                                    System.out.println("Votre main est déja pleine");
+                                System.out.println("---------------3-Jouer Carte");
+                            break;
+                        case 3:
+                            j.jouer(j.getMain().get(choix-1));
+                            tour=false;
+                            break;
+                        case 0:
+                            tour = false;
+                    }
+                    System.out.println("---------------0-Terminer Tour");
+                }while(choix>0 && choix<3);
+                /*if(choix==0)
                     tour=false;
+                else
+                {
+                    j.jouer(j.getMain().get(choix-1));
+                }*/
 
         }
+    }
+    public static void choixDefausseCarte(Joueur j,Partie p) {
+        Scanner sc=new Scanner(System.in);
+        int choixCarte;
+        do {
+            InterfaceCommand.afficheCarteJoueur(j);
+            System.out.println("Quel carte voulez vous défausser?");
+            System.out.println("0------------Quitter1");
+            choixCarte=sc.nextInt();
+            if(choixCarte<=j.getMain().size() && choixCarte>0)
+            j.defausseCarte(choixCarte-1,p);
+            else if(choixCarte!=0)
+                System.out.println("Choix invalide");
+        }while (!j.getMain().isEmpty() && choixCarte>0);
     }
     public static void afficheCarteJoueur(Joueur j)
     {

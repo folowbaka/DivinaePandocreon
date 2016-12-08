@@ -1,6 +1,7 @@
 package divinae;
 
 import divinae.carte.abstractcarte.Carte;
+import divinae.carte.abstractcarte.Croyant;
 import divinae.carte.abstractcarte.Divinite;
 import divinae.enumeration.Origine;
 
@@ -14,6 +15,7 @@ public class Joueur {
     private Boolean peutSacrifier;
     private Divinite divinite;
     private ArrayList<Carte> main;
+    public  static int TAILLEMAIN=7;
 
     public Joueur(String nom)
     {
@@ -43,8 +45,14 @@ public class Joueur {
         int taillePioche=partie.getPioche().size()-1;
         this.main.add(partie.getPioche().remove(taillePioche));
     }
-
-
+    public void completerMain(Partie p)
+    {
+        int tailleMain=this.main.size();
+        for(int i=tailleMain;i<TAILLEMAIN;i++)
+        {
+            this.pioche(p);
+        }
+    }
     public void ajoutPoints(Origine originePoint)
     {
         Origine origineDiv=this.divinite.getOrigine();
@@ -85,6 +93,19 @@ public class Joueur {
                 }
                 break;
         }
+    }
+    public void jouer(Carte c)
+    {
+        System.out.println(c.getNom());
+        if(c instanceof Croyant)
+        {
+            System.out.println("TA VU JE SUIS UN CROYANT");
+        }
+    }
+    public void defausseCarte(int carte,Partie p)
+    {
+        if(!this.getMain().isEmpty())
+        p.getDefausse().add(this.getMain().remove(carte));
     }
     public String getNom()
     {

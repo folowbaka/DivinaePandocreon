@@ -20,6 +20,7 @@ import static java.util.Collections.shuffle;
 public class Partie {
     private ArrayList<Joueur> joueur;
     private ArrayList<Carte> pioche;
+    private ArrayList<Carte> defausse;
     private static Partie ourInstance = null;
 
     public static Partie getInstance(String[] nomJoueur)
@@ -39,6 +40,7 @@ public class Partie {
             this.joueur.add(new Joueur(nomJoueur[i]));
         }
         this.pioche= new ArrayList<Carte>();
+        this.defausse= new ArrayList<Carte>();
         remplirPioche();
         this.distribDivinite();
         this.distribCarte();
@@ -101,6 +103,10 @@ public class Partie {
     public ArrayList<Carte> getPioche()
     {
         return this.pioche;
+    }
+    public ArrayList<Carte> getDefausse()
+    {
+        return this.defausse;
     }
     public void remplirPioche()
     {
