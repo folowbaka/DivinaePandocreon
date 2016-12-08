@@ -94,10 +94,11 @@ public class Joueur {
                 break;
         }
     }
-    public void jouer(Carte c)
+    public void jouer(int c,Partie p)
     {
-        System.out.println(c.getNom());
-        if(c instanceof Croyant)
+        Carte carte=this.getMain().get(c);
+        System.out.println(carte.getNom());
+        if(carte instanceof Croyant)
         {
             System.out.println("TA VU JE SUIS UN CROYANT");
         }

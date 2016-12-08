@@ -90,7 +90,7 @@ public class InterfaceCommand {
                                 System.out.println("---------------3-Jouer Carte");
                             break;
                         case 3:
-                            j.jouer(j.getMain().get(choix-1));
+                            InterfaceCommand.choixJouerCarte(j,p);
                             tour=false;
                             break;
                         case 0:
@@ -113,10 +113,25 @@ public class InterfaceCommand {
         do {
             InterfaceCommand.afficheCarteJoueur(j);
             System.out.println("Quel carte voulez vous défausser?");
-            System.out.println("0------------Quitter1");
+            System.out.println("0------------Quitter");
             choixCarte=sc.nextInt();
             if(choixCarte<=j.getMain().size() && choixCarte>0)
             j.defausseCarte(choixCarte-1,p);
+            else if(choixCarte!=0)
+                System.out.println("Choix invalide");
+        }while (!j.getMain().isEmpty() && choixCarte>0);
+    }
+    public static void choixJouerCarte(Joueur j,Partie p)
+    {
+        Scanner sc=new Scanner(System.in);
+        int choixCarte;
+        do {
+            InterfaceCommand.afficheCarteJoueur(j);
+            System.out.println("Quel carte voulez vous jouer?");
+            System.out.println("0------------Quitter");
+            choixCarte=sc.nextInt();
+            if(choixCarte<=j.getMain().size() && choixCarte>0)
+                j.jouer(choixCarte-1,p);
             else if(choixCarte!=0)
                 System.out.println("Choix invalide");
         }while (!j.getMain().isEmpty() && choixCarte>0);
