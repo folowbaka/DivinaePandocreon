@@ -1,7 +1,11 @@
 package divinae;
 
+import divinae.carte.divinite.Brewalen;
+import divinae.enumeration.Dogme;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.*;
 
 /**
  * Created by david on 21/11/2016.
@@ -9,6 +13,7 @@ import java.util.Scanner;
 public class DivinaePandocreon {
 
     public static void main(String[] args) {
+
         boolean creerpartie = false;
         Scanner choixUtilisateur = new Scanner(System.in);
         int choix=-1;
@@ -37,5 +42,6 @@ public class DivinaePandocreon {
 
         }
         return;
+
     }
 }

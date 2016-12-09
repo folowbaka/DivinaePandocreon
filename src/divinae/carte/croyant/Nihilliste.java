@@ -17,7 +17,6 @@ public class Nihilliste extends Croyant {
         this.setNbCroyant(4);
     }
 
-    @Override
     public void capacite(Joueur j, Partie p) {
 
     }

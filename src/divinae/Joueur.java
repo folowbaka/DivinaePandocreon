@@ -33,7 +33,9 @@ public class Joueur {
     {
         this.divinite=divinite;
     }
-
+    public Divinite getDivinite(){
+        return this.divinite;
+    }
     public void ajoutPoints(int ajout, String origine){
         //this.pointsAction.get(origine)+=ajout;
     }
