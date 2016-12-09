@@ -1,5 +1,6 @@
 package divinae;
 
+import com.sun.org.apache.xpath.internal.operations.Or;
 import divinae.carte.abstractcarte.Carte;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.carte.abstractcarte.Divinite;
@@ -98,20 +99,15 @@ public class Joueur {
     public void jouer(int c,Partie p)
     {
         Carte carte=this.getMain().get(c);
-        System.out.println(carte.getNom());
-        if(carte instanceof Croyant)
+        int point=this.pointsAction.get(carte.getOrigine().toString());
+        if(point<=0 && carte.getOrigine()!=Origine.NEANT && carte.getOrigine()!=null)
         {
-            System.out.println("TA VU JE SUIS UN CROYANT");
-            p.getCentreTable().add((Croyant) carte);
+                System.out.println("Vous n'avez pas assez de points pour jouer");
+                return ;
         }
-        else if(carte instanceof GuideSpirituel)
+        if(point>0)
         {
-            System.out.println("TA VU JE SUIS UN Guide");
-            this.divinite.getGuideDivinite().add((GuideSpirituel) carte);
-        }
-        else
-        {
-            carte.capacite(this,p);
+
         }
     }
     public void defausseCarte(int carte,Partie p)

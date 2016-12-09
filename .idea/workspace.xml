@@ -2,67 +2,62 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b109f6b2-024a-402f-8c2a-ff2e4afd4066" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/Apocalypse.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/Apocalypse.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/abstractcarte/CarteDogme.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/abstractcarte/CarteDogme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/abstractcarte/Divinite.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/abstractcarte/Divinite.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Aliene.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Aliene.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Demon.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Demon.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Diplomate.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Diplomate.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Ermite.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Ermite.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Esprit.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Esprit.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/GuerrierSaint.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/GuerrierSaint.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Illusionniste.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Illusionniste.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Integriste.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Integriste.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Lycanthrope.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Lycanthrope.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Pillar.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Pillar.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Revenant.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Revenant.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Revolutionnaire.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Revolutionnaire.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Travailleur.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Travailleur.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Vampire.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Vampire.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Bouleversement.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Bouleversement.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/ColereDivine.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/ColereDivine.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Concentration.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Concentration.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Diversion.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Diversion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Fourberie.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Fourberie.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/InfluenceJour.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/InfluenceJour.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/InfluenceNeant.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/InfluenceNeant.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/InfluenceNuit.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/InfluenceNuit.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/InfluenceNulle.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/InfluenceNulle.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Inquisition.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Inquisition.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Miroir.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Miroir.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/OrdreCeleste.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/OrdreCeleste.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Phoenix.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Phoenix.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Stase.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Stase.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Transe.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Transe.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/TrouNoir.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/TrouNoir.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Brewalen.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Brewalen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Drinded.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Drinded.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Gorpa.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Gorpa.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Gwenghelen.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Gwenghelen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Killinstred.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Killinstred.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Llewella.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Llewella.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/PuiTara.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/PuiTara.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Romtec.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Romtec.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Shingva.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Shingva.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Yarstur.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Yarstur.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Anarchiste.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Anarchiste.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Ascete.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Ascete.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Clerc.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Clerc.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Devin.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Devin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Exorciste.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Exorciste.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Martyr.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Martyr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Messie.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Messie.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Paladin.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Paladin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Shaman.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Shaman.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Sorcier.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Sorcier.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Tyran.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Tyran.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/Joueur.java" afterPath="$PROJECT_DIR$/src/divinae/Joueur.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/Partie.java" afterPath="$PROJECT_DIR$/src/divinae/Partie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/Apocalypse.java" afterPath="$PROJECT_DIR$/src/divinae/carte/Apocalypse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/abstractcarte/Carte.java" afterPath="$PROJECT_DIR$/src/divinae/carte/abstractcarte/Carte.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/abstractcarte/Divinite.java" afterPath="$PROJECT_DIR$/src/divinae/carte/abstractcarte/Divinite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/croyant/Alchimiste.java" afterPath="$PROJECT_DIR$/src/divinae/carte/croyant/Alchimiste.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/croyant/Aliene.java" afterPath="$PROJECT_DIR$/src/divinae/carte/croyant/Aliene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/croyant/Demon.java" afterPath="$PROJECT_DIR$/src/divinae/carte/croyant/Demon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/croyant/Diplomate.java" afterPath="$PROJECT_DIR$/src/divinae/carte/croyant/Diplomate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/croyant/Ermite.java" afterPath="$PROJECT_DIR$/src/divinae/carte/croyant/Ermite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/croyant/Esprit.java" afterPath="$PROJECT_DIR$/src/divinae/carte/croyant/Esprit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/croyant/GuerrierSaint.java" afterPath="$PROJECT_DIR$/src/divinae/carte/croyant/GuerrierSaint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/croyant/Illusionniste.java" afterPath="$PROJECT_DIR$/src/divinae/carte/croyant/Illusionniste.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/croyant/Integriste.java" afterPath="$PROJECT_DIR$/src/divinae/carte/croyant/Integriste.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/croyant/Lycanthrope.java" afterPath="$PROJECT_DIR$/src/divinae/carte/croyant/Lycanthrope.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/croyant/Moine.java" afterPath="$PROJECT_DIR$/src/divinae/carte/croyant/Moine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/croyant/Nihilliste.java" afterPath="$PROJECT_DIR$/src/divinae/carte/croyant/Nihilliste.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/croyant/Pillar.java" afterPath="$PROJECT_DIR$/src/divinae/carte/croyant/Pillar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/croyant/Revenant.java" afterPath="$PROJECT_DIR$/src/divinae/carte/croyant/Revenant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/croyant/Revolutionnaire.java" afterPath="$PROJECT_DIR$/src/divinae/carte/croyant/Revolutionnaire.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/croyant/Travailleur.java" afterPath="$PROJECT_DIR$/src/divinae/carte/croyant/Travailleur.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/croyant/Vampire.java" afterPath="$PROJECT_DIR$/src/divinae/carte/croyant/Vampire.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/deusEx/Bouleversement.java" afterPath="$PROJECT_DIR$/src/divinae/carte/deusEx/Bouleversement.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/deusEx/ColereDivine.java" afterPath="$PROJECT_DIR$/src/divinae/carte/deusEx/ColereDivine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/deusEx/Concentration.java" afterPath="$PROJECT_DIR$/src/divinae/carte/deusEx/Concentration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/deusEx/Diversion.java" afterPath="$PROJECT_DIR$/src/divinae/carte/deusEx/Diversion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/deusEx/Fourberie.java" afterPath="$PROJECT_DIR$/src/divinae/carte/deusEx/Fourberie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/deusEx/InfluenceJour.java" afterPath="$PROJECT_DIR$/src/divinae/carte/deusEx/InfluenceJour.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/deusEx/InfluenceNeant.java" afterPath="$PROJECT_DIR$/src/divinae/carte/deusEx/InfluenceNeant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/deusEx/InfluenceNuit.java" afterPath="$PROJECT_DIR$/src/divinae/carte/deusEx/InfluenceNuit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/deusEx/InfluenceNulle.java" afterPath="$PROJECT_DIR$/src/divinae/carte/deusEx/InfluenceNulle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/deusEx/Inquisition.java" afterPath="$PROJECT_DIR$/src/divinae/carte/deusEx/Inquisition.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/deusEx/Miroir.java" afterPath="$PROJECT_DIR$/src/divinae/carte/deusEx/Miroir.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/deusEx/OrdreCeleste.java" afterPath="$PROJECT_DIR$/src/divinae/carte/deusEx/OrdreCeleste.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/deusEx/Phoenix.java" afterPath="$PROJECT_DIR$/src/divinae/carte/deusEx/Phoenix.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/deusEx/Stase.java" afterPath="$PROJECT_DIR$/src/divinae/carte/deusEx/Stase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/deusEx/Transe.java" afterPath="$PROJECT_DIR$/src/divinae/carte/deusEx/Transe.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/deusEx/TrouNoir.java" afterPath="$PROJECT_DIR$/src/divinae/carte/deusEx/TrouNoir.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/divinite/Brewalen.java" afterPath="$PROJECT_DIR$/src/divinae/carte/divinite/Brewalen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/divinite/Drinded.java" afterPath="$PROJECT_DIR$/src/divinae/carte/divinite/Drinded.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/divinite/Gorpa.java" afterPath="$PROJECT_DIR$/src/divinae/carte/divinite/Gorpa.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/divinite/Gwenghelen.java" afterPath="$PROJECT_DIR$/src/divinae/carte/divinite/Gwenghelen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/divinite/Killinstred.java" afterPath="$PROJECT_DIR$/src/divinae/carte/divinite/Killinstred.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/divinite/Llewella.java" afterPath="$PROJECT_DIR$/src/divinae/carte/divinite/Llewella.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/divinite/PuiTara.java" afterPath="$PROJECT_DIR$/src/divinae/carte/divinite/PuiTara.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/divinite/Romtec.java" afterPath="$PROJECT_DIR$/src/divinae/carte/divinite/Romtec.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/divinite/Shingva.java" afterPath="$PROJECT_DIR$/src/divinae/carte/divinite/Shingva.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/divinite/Yarstur.java" afterPath="$PROJECT_DIR$/src/divinae/carte/divinite/Yarstur.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/guide/Anarchiste.java" afterPath="$PROJECT_DIR$/src/divinae/carte/guide/Anarchiste.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/guide/Ascete.java" afterPath="$PROJECT_DIR$/src/divinae/carte/guide/Ascete.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/guide/Clerc.java" afterPath="$PROJECT_DIR$/src/divinae/carte/guide/Clerc.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/guide/Devin.java" afterPath="$PROJECT_DIR$/src/divinae/carte/guide/Devin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/guide/Exorciste.java" afterPath="$PROJECT_DIR$/src/divinae/carte/guide/Exorciste.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/guide/Martyr.java" afterPath="$PROJECT_DIR$/src/divinae/carte/guide/Martyr.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/guide/Messie.java" afterPath="$PROJECT_DIR$/src/divinae/carte/guide/Messie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/guide/Paladin.java" afterPath="$PROJECT_DIR$/src/divinae/carte/guide/Paladin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/guide/Shaman.java" afterPath="$PROJECT_DIR$/src/divinae/carte/guide/Shaman.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/guide/Sorcier.java" afterPath="$PROJECT_DIR$/src/divinae/carte/guide/Sorcier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/guide/Tyran.java" afterPath="$PROJECT_DIR$/src/divinae/carte/guide/Tyran.java" />
     </list>
     <ignored path="DivinaePandocreon.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,51 +79,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="Clerc.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/divinae/carte/guide/Clerc.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Devin.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/divinae/carte/guide/Devin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Apocalypse.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Apocalypse.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/divinae/carte/Apocalypse.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="429">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Exorciste.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/divinae/carte/guide/Exorciste.java">
+      <file leaf-file-name="Partie.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/divinae/Partie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="-2442">
+              <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Martyr.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/divinae/carte/guide/Martyr.java">
+      <file leaf-file-name="DivinaePandocreon.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/divinae/DivinaePandocreon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="215">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InterfaceCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/divinae/InterfaceCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-759">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Joueur.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/divinae/Joueur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1285">
+              <caret line="130" column="52" lean-forward="true" selection-start-line="130" selection-start-column="52" selection-end-line="130" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Origine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/divinae/enumeration/Origine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -138,18 +143,10 @@
         <entry file="file://$PROJECT_DIR$/src/divinae/carte/guide/Messie.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="561">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Shaman.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/divinae/carte/guide/Shaman.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -158,8 +155,10 @@
         <entry file="file://$PROJECT_DIR$/src/divinae/carte/guide/Paladin.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="627">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -168,8 +167,10 @@
         <entry file="file://$PROJECT_DIR$/src/divinae/carte/guide/Tyran.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="561">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -178,8 +179,10 @@
         <entry file="file://$PROJECT_DIR$/src/divinae/carte/guide/Sorcier.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="660">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -206,8 +209,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/divinae/carte/croyant/Ermite.java" />
-        <option value="$PROJECT_DIR$/src/divinae/carte/croyant/Esprit.java" />
         <option value="$PROJECT_DIR$/src/divinae/carte/croyant/GuerrierSaint.java" />
         <option value="$PROJECT_DIR$/src/divinae/carte/croyant/Illusionniste.java" />
         <option value="$PROJECT_DIR$/src/divinae/carte/croyant/Integriste.java" />
@@ -257,6 +258,8 @@
         <option value="$PROJECT_DIR$/src/divinae/carte/guide/Tyran.java" />
         <option value="$PROJECT_DIR$/src/divinae/carte/guide/Sorcier.java" />
         <option value="$PROJECT_DIR$/src/divinae/carte/Apocalypse.java" />
+        <option value="$PROJECT_DIR$/src/divinae/enumeration/Origine.java" />
+        <option value="$PROJECT_DIR$/src/divinae/Joueur.java" />
       </list>
     </option>
   </component>
@@ -289,7 +292,6 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -338,12 +340,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="enumeration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DivinaePandocreon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DivinaePandocreon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="divinae" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="carte" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -557,6 +582,7 @@
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
       <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -681,6 +707,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -734,12 +766,21 @@
       <workItem from="1481213813006" duration="29000" />
       <workItem from="1481288861036" duration="59000" />
       <workItem from="1481288944517" duration="128000" />
-      <workItem from="1481289080767" duration="2074000" />
+      <workItem from="1481289080767" duration="2524000" />
+      <workItem from="1481292746240" duration="3206000" />
     </task>
+    <task id="LOCAL-00001" summary="Modification de capaciter">
+      <created>1481291304650</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1481291304650</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2927000" />
+    <option name="totallyTimeSpent" value="6583000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2762" height="1770" extended-state="6" />
@@ -749,13 +790,13 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969853" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32969853" sideWeight="0.501462" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32841566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32969853" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32969853" sideWeight="0.49853802" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969853" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26864034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26827484" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -786,6 +827,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Modification de capaciter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modification de capaciter" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -795,46 +840,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/divinae/carte/croyant/Ermite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/divinae/carte/croyant/Esprit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/divinae/carte/croyant/GuerrierSaint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="27" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/divinae/carte/croyant/Illusionniste.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/divinae/carte/croyant/Integriste.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/divinae/carte/croyant/Lycanthrope.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="691">
@@ -1128,7 +1133,7 @@
     <entry file="file://$PROJECT_DIR$/src/divinae/carte/guide/Clerc.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1136,7 +1141,7 @@
     <entry file="file://$PROJECT_DIR$/src/divinae/carte/guide/Devin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1144,7 +1149,7 @@
     <entry file="file://$PROJECT_DIR$/src/divinae/carte/guide/Exorciste.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1152,47 +1157,57 @@
     <entry file="file://$PROJECT_DIR$/src/divinae/carte/guide/Martyr.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/divinae/carte/guide/Messie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/divinae/carte/guide/Shaman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/divinae/carte/guide/Paladin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/divinae/carte/guide/Tyran.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/divinae/carte/guide/Sorcier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/divinae/carte/guide/Shaman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1200,7 +1215,47 @@
     <entry file="file://$PROJECT_DIR$/src/divinae/carte/Apocalypse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/divinae/Partie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2442">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/divinae/DivinaePandocreon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/divinae/InterfaceCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-759">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/divinae/enumeration/Origine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/divinae/Joueur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1285">
+          <caret line="130" column="52" lean-forward="true" selection-start-line="130" selection-start-column="52" selection-end-line="130" selection-end-column="52" />
           <folding />
         </state>
       </provider>
