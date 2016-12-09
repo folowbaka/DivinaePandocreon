@@ -1,79 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b109f6b2-024a-402f-8c2a-ff2e4afd4066" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/JoueurVirtuel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/Apocalypse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/abstractcarte/CarteDogme.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/abstractcarte/Croyant.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/abstractcarte/DeusEx.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/abstractcarte/Divinite.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/abstractcarte/GuideSpirituel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Aliene.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Demon.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Diplomate.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Ermite.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Esprit.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/GuerrierSaint.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Illusionniste.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Integriste.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Lycanthrope.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Pillar.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Revenant.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Revolutionnaire.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Travailleur.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Vampire.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Bouleversement.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/ColereDivine.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Concentration.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Diversion.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Fourberie.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/InfluenceJour.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/InfluenceNeant.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/InfluenceNuit.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/InfluenceNulle.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Inquisition.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Miroir.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/OrdreCeleste.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Phoenix.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Stase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/Transe.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/deusEx/TrouNoir.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Brewalen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Drinded.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Gorpa.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Gwenghelen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Killinstred.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Llewella.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/PuiTara.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Romtec.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Shingva.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/divinite/Yarstur.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Anarchiste.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Ascete.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Clerc.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Devin.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Exorciste.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Martyr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Messie.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Paladin.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Shaman.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Sorcier.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Tyran.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/Strategie.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/Strategie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/enumeration/Dogme.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/enumeration/Dogme.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/enumeration/Origine.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/enumeration/Origine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/strategie/Prudent.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/strategie/Prudent.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/DivinaePandocreon.java" afterPath="$PROJECT_DIR$/src/divinae/DivinaePandocreon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/Joueur.java" afterPath="$PROJECT_DIR$/src/divinae/Joueur.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/Partie.java" afterPath="$PROJECT_DIR$/src/divinae/Partie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/croyant/Alchimiste.java" afterPath="$PROJECT_DIR$/src/divinae/carte/croyant/Alchimiste.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/croyant/Nihilliste.java" afterPath="$PROJECT_DIR$/src/divinae/carte/croyant/Nihilliste.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/carte/croyant/Travailleur.java" afterPath="$PROJECT_DIR$/src/divinae/carte/croyant/Travailleur.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/enumeration/Dogme.java" afterPath="$PROJECT_DIR$/src/divinae/enumeration/Dogme.java" />
-    </list>
+    <list default="true" id="b109f6b2-024a-402f-8c2a-ff2e4afd4066" name="Default" comment="" />
     <ignored path="DivinaePandocreon.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -97,8 +25,8 @@
       <file leaf-file-name="Partie.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/divinae/Partie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="137" column="95" selection-start-line="137" selection-start-column="95" selection-end-line="137" selection-end-column="95" />
+            <state relative-caret-position="212">
+              <caret line="130" column="90" selection-start-line="130" selection-start-column="90" selection-end-line="130" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -958,7 +886,7 @@
       <workItem from="1481288944517" duration="128000" />
       <workItem from="1481289080767" duration="2524000" />
       <workItem from="1481292746240" duration="3206000" />
-      <workItem from="1481321201115" duration="4154000" />
+      <workItem from="1481321201115" duration="4235000" />
     </task>
     <task id="LOCAL-00001" summary="Modification de capaciter">
       <created>1481291304650</created>
@@ -971,7 +899,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10737000" />
+    <option name="totallyTimeSpent" value="10818000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -1470,8 +1398,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/divinae/Partie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="137" column="95" selection-start-line="137" selection-start-column="95" selection-end-line="137" selection-end-column="95" />
+        <state relative-caret-position="212">
+          <caret line="130" column="90" selection-start-line="130" selection-start-column="90" selection-end-line="130" selection-end-column="90" />
           <folding />
         </state>
       </provider>
