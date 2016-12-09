@@ -103,10 +103,24 @@ public class Joueur {
         if(point<=0 && carte.getOrigine()!=Origine.NEANT && carte.getOrigine()!=null)
         {
                 System.out.println("Vous n'avez pas assez de points pour jouer");
-                return ;
+                return ;Action.get("JOUR")>1)
+            {
+                Scanner sc=new Scanner(System.in);
         }
         if(point>0)
         {
+            this.pointsAction.put(carte.getOrigine().toString(),point-1);
+
+        }
+        else if(point <=0 && carte.getOrigine()==Origine.NEANT)
+        {
+            if(this.pointsAction.get("NUIT")>1 && this.points
+
+            }
+            if(this.pointsAction.get("NUIT")>1)
+            {
+
+            }
 
         }
     }
