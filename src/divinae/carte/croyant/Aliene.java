@@ -1,6 +1,7 @@
 package divinae.carte.croyant;
 
 import divinae.Joueur;
+import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
@@ -16,7 +17,9 @@ public class Aliene extends Croyant {
         this.setNom("Aliéné");
         this.setNbCroyant(2);
     }
-    public void capacite() {
+
+    @Override
+    public void capacite(Joueur j, Partie p) {
 
     }
 }

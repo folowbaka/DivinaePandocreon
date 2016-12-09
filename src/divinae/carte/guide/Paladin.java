@@ -1,5 +1,7 @@
 package divinae.carte.guide;
 
+import divinae.Joueur;
+import divinae.Partie;
 import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
@@ -18,7 +20,7 @@ public class Paladin extends GuideSpirituel{
     }
 
     @Override
-    public void capacite() {
+    public void capacite(Joueur j, Partie p) {
 
     }
 }

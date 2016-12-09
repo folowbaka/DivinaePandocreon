@@ -1,6 +1,7 @@
 package divinae.carte.croyant;
 
 import divinae.Joueur;
+import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
@@ -15,6 +16,11 @@ public class GuerrierSaint extends Croyant {
                 "centre de la table.");
         this.setNom("Guerrier Saint");
         this.setNbCroyant(4);
+    }
+
+    @Override
+    public void capacite(Joueur j, Partie p) {
+
     }
 
     public void capacite() {

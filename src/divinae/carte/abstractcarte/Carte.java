@@ -1,7 +1,7 @@
 package divinae.carte.abstractcarte;
 
 import divinae.enumeration.Origine;
-
+import divinae.*;
 /**
  * Created by Folow on 10/11/2016.
  */
@@ -14,7 +14,7 @@ public abstract class Carte {
     {
         this.origine=origine;
     }
-    public abstract void capacite();
+    public abstract void capacite(Joueur j,Partie p);
 
     public Origine getOrigine() {
         return origine;

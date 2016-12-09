@@ -1,5 +1,7 @@
 package divinae.carte.divinite;
 
+import divinae.Joueur;
+import divinae.Partie;
 import divinae.carte.abstractcarte.Divinite;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
@@ -13,7 +15,8 @@ public class Drinded extends Divinite {
     }
 
     @Override
-    public void capacite() {
+    public void capacite(Joueur j, Partie p) {
 
     }
+
 }

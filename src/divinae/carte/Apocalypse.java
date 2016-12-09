@@ -1,5 +1,7 @@
 package divinae.carte;
 
+import divinae.Joueur;
+import divinae.Partie;
 import divinae.carte.abstractcarte.Carte;
 import divinae.enumeration.Origine;
 
@@ -11,7 +13,7 @@ public class Apocalypse extends Carte {
     }
 
     @Override
-    public void capacite() {
+    public void capacite(Joueur j, Partie p) {
 
     }
 }

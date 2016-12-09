@@ -1,6 +1,7 @@
 package divinae.carte.croyant;
 
 import divinae.Joueur;
+import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
@@ -17,7 +18,9 @@ public class Illusionniste extends Croyant {
         this.setNom("Illusionniste");
         this.setNbCroyant(4);
     }
-    public void capacite() {
+
+    @Override
+    public void capacite(Joueur j, Partie p) {
 
     }
 }

@@ -2,6 +2,7 @@ package divinae;
 
 import divinae.carte.Apocalypse;
 import divinae.carte.abstractcarte.Carte;
+import divinae.carte.abstractcarte.Croyant;
 import divinae.carte.abstractcarte.Divinite;
 import divinae.carte.croyant.*;
 import divinae.carte.deusEx.*;
@@ -21,6 +22,7 @@ public class Partie {
     private ArrayList<Joueur> joueur;
     private ArrayList<Carte> pioche;
     private ArrayList<Carte> defausse;
+    private ArrayList<Croyant> centreTable;
     private static Partie ourInstance = null;
 
     public static Partie getInstance(String[] nomJoueur)
@@ -41,6 +43,7 @@ public class Partie {
         }
         this.pioche= new ArrayList<Carte>();
         this.defausse= new ArrayList<Carte>();
+        this.centreTable=new ArrayList<Croyant>();
         remplirPioche();
         this.distribDivinite();
         this.distribCarte();
@@ -108,6 +111,7 @@ public class Partie {
     {
         return this.defausse;
     }
+    public ArrayList<Croyant> getCentreTable(){return this.centreTable;}
     public void remplirPioche()
     {
         //Ajout Croyant

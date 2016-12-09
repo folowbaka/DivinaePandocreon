@@ -1,6 +1,7 @@
 package divinae.carte.croyant;
 
 import divinae.Joueur;
+import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.carte.abstractcarte.Divinite;
 import divinae.enumeration.Dogme;
@@ -21,7 +22,7 @@ public class Travailleur extends Croyant {
     }
 
 
-    public void capacite(Joueur j) {
+    public void capacite(Joueur j,Partie p) {
         /*switch(numero){
             case 1 :
                 if (j.divinite.getDogme()=="NATURE" || j.divinite.getDogme()=="MYSTIQUE"){
@@ -45,8 +46,4 @@ public class Travailleur extends Croyant {
 
         */}
 
-    @Override
-    public void capacite() {
-
-    }
 }

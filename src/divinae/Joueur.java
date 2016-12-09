@@ -3,6 +3,7 @@ package divinae;
 import divinae.carte.abstractcarte.Carte;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.carte.abstractcarte.Divinite;
+import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Origine;
 
 import java.util.ArrayList;
@@ -101,6 +102,16 @@ public class Joueur {
         if(carte instanceof Croyant)
         {
             System.out.println("TA VU JE SUIS UN CROYANT");
+            p.getCentreTable().add((Croyant) carte);
+        }
+        else if(carte instanceof GuideSpirituel)
+        {
+            System.out.println("TA VU JE SUIS UN Guide");
+            this.divinite.getGuideDivinite().add((GuideSpirituel) carte);
+        }
+        else
+        {
+            carte.capacite(this,p);
         }
     }
     public void defausseCarte(int carte,Partie p)

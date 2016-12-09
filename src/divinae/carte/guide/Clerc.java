@@ -1,5 +1,7 @@
 package divinae.carte.guide;
 
+import divinae.Joueur;
+import divinae.Partie;
 import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
@@ -17,7 +19,9 @@ public class Clerc extends GuideSpirituel {
         this.setNom("Clerc");
         this.setNbMaxCroyant(2);
     }
-    public void capacite() {
+
+    @Override
+    public void capacite(Joueur j, Partie p) {
 
     }
 }

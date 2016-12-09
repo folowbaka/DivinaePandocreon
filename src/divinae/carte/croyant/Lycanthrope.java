@@ -1,6 +1,7 @@
 package divinae.carte.croyant;
 
 import divinae.Joueur;
+import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
@@ -19,7 +20,9 @@ public class Lycanthrope extends Croyant {
         this.setNom("lycanthrope");
         this.setNbCroyant(4);
     }
-    public void capacite() {
+
+    @Override
+    public void capacite(Joueur j, Partie p) {
 
     }
 }

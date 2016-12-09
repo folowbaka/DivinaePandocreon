@@ -1,5 +1,7 @@
 package divinae.carte.deusEx;
 
+import divinae.Joueur;
+import divinae.Partie;
 import divinae.carte.abstractcarte.DeusEx;
 import divinae.enumeration.Origine;
 
@@ -15,7 +17,7 @@ public class Miroir extends DeusEx {
     }
 
     @Override
-    public void capacite() {
+    public void capacite(Joueur j, Partie p) {
 
     }
 }
