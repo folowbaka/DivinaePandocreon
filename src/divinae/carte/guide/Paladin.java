@@ -7,8 +7,8 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 public class Paladin extends GuideSpirituel{
-    public Paladin(Origine origine, Dogme[] dogme) {
-        super(origine,dogme);
+    public Paladin(Origine origine, Dogme[] dogme,int nbMaxCroyant) {
+        super(origine,dogme,nbMaxCroyant);
         this.setDescription("Sacrifice :\nTous les Croyants, d'Origine\n" +
                 "Nuit ou Néant et ayant le\n" +
                 "Dogme Nature, actuellement\n" +
@@ -16,7 +16,6 @@ public class Paladin extends GuideSpirituel{
                 "Les capacités spéciales ne sont\n" +
                 "pas jouées.");
         this.setNom("Paladin");
-        this.setNbMaxCroyant(3);
     }
 
     @Override

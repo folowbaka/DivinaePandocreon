@@ -7,14 +7,13 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 public class Tyran extends GuideSpirituel {
-    public Tyran(Origine origine, Dogme[] dogme) {
-        super(origine, dogme);
+    public Tyran(Origine origine, Dogme[] dogme,int nbMaxCroyant) {
+        super(origine, dogme,nbMaxCroyant);
         this.setDescription("Sacrifice :\nDéfausse tous les Croyants\n" +
                 "ayant le Dogme Mystique\n" +
                 "actuellement au centre de la\n" +
                 "table.\n");
         this.setNom("Tyran");
-        this.setNbMaxCroyant(3);
     }
 
     @Override

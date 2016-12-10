@@ -7,8 +7,8 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 public class Exorciste extends GuideSpirituel{
-    public Exorciste(Origine origine, Dogme[] dogme) {
-        super(origine, dogme);
+    public Exorciste(Origine origine, Dogme[] dogme,int nbMaxCroyant) {
+        super(origine, dogme,nbMaxCroyant);
         this.setDescription("Sacrifice :\nUne Divinité d'Origine Nuit\n" +
                 "ou ayant les Dogmes\n" +
                 "Mystique et Chaos reprend\n" +
@@ -17,7 +17,6 @@ public class Exorciste extends GuideSpirituel{
                 "Croyants qui y étaient\n" +
                 "attachés sont défaussés.");
         this.setNom("Exorciste");
-        this.setNbMaxCroyant(1);
     }
 
     @Override

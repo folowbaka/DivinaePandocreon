@@ -7,8 +7,8 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 public class Shaman extends GuideSpirituel {
-    public Shaman(Origine origine, Dogme[] dogme) {
-        super(origine,dogme);
+    public Shaman(Origine origine, Dogme[] dogme,int nbMaxCroyant) {
+        super(origine,dogme,nbMaxCroyant);
         this.setDescription("Sacrifice :\nSacrifie tous les Croyants\n" +
                 "d'Origine Néant d'une\n" +
                 "Divinité ayant le Dogme\n" +
@@ -16,7 +16,6 @@ public class Shaman extends GuideSpirituel {
                 "spécials sont jouées\n" +
                 "normalement.\n");
         this.setNom("Shaman");
-        this.setNbMaxCroyant(3);
     }
 
     @Override

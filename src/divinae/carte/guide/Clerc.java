@@ -7,8 +7,8 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 public class Clerc extends GuideSpirituel {
-    public Clerc(Origine origine, Dogme[] dogme) {
-        super(origine,dogme);
+    public Clerc(Origine origine, Dogme[] dogme,int nbMaxCroyant) {
+        super(origine,dogme,nbMaxCroyant);
         this.setDescription("Sacrifice :\n" +
                 "Fait gagner un nombre de\n" +
                 "points d'Action égal au\n" +
@@ -17,7 +17,6 @@ public class Clerc extends GuideSpirituel {
                 "points d'Action est au choix\n" +
                 "du joueur.\n");
         this.setNom("Clerc");
-        this.setNbMaxCroyant(2);
     }
 
     @Override

@@ -1,6 +1,7 @@
 package divinae;
 
 import divinae.carte.abstractcarte.Carte;
+import divinae.carte.abstractcarte.GuideSpirituel;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -54,6 +55,7 @@ public class InterfaceCommand {
     public static void jouer(Joueur j,Partie p)
     {
         System.out.println("C'est à vous de jouer joueur : "+j.getNom());
+        System.out.println(j);
         boolean tour=true;
         Scanner sc=new Scanner(System.in);
         int choix;
