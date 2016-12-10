@@ -2,6 +2,7 @@ package divinae.carte.abstractcarte;
 
 import divinae.Partie;
 import divinae.Joueur;
+import divinae.Joueur;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
@@ -15,7 +16,7 @@ public abstract class GuideSpirituel extends CarteDogme {
         this.croyantRattache=new Croyant[nbMaxCroyant];
 
     }
-    public void rattacher(Joueur j,Partie p)
+    public void rattacher(Partie p)
     {
         ArrayList<Croyant> centre=p.getCentreTable();
         if(centre.isEmpty())
@@ -32,7 +33,7 @@ public abstract class GuideSpirituel extends CarteDogme {
                 int k=0;
                 while(k<centre.get(i).getDogme().length && nbCroyant<croyantMax && !dogmeTrouve)
                 {
-                    if(this.getDogme()[j]==centre.get(i).getDogme()[k]&& nbCroyant<croyantMax)
+                    if(this.getDogme()[j]==centre.get(i).getDogme()[k]&& nbCroyant<croyantMax && centre.get(i).getRattachable())
                     {
                         this.croyantRattache[nbCroyant]=centre.remove(i);
                         i--;

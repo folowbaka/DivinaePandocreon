@@ -154,7 +154,7 @@ public class Joueur {
         else if(carte instanceof GuideSpirituel)
         {
             this.divinite.getGuideDivinite().add((GuideSpirituel) this.getMain().remove(c));
-            ((GuideSpirituel) carte).rattacher(this,p);
+            ((GuideSpirituel) carte).rattacher(p);
 
         }
         else
