@@ -35,7 +35,7 @@ public class Joueur {
         return this.divinite;
     }
     public void ajoutPoints(int ajout, String origine){
-        //this.pointsAction.get(origine)+=ajout;
+        this.pointsAction.put(origine, this.pointsAction.get(origine)+ajout);
     }
     public void denySacrifice(){
         this.peutSacrifier=false;

@@ -13,14 +13,8 @@ public class Moine extends Croyant {
         this.setNom("Moine");
         this.setNbCroyant(2);
     }
-    public void capacite(Joueur joueur) {
-
+    public void capacite(Joueur joueur, Partie p) {
         joueur.ajoutPoints(1, "JOUR");
-
     }
 
-    @Override
-    public void capacite(Joueur j, Partie p) {
-
-    }
 }

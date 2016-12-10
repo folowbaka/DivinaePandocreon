@@ -39,16 +39,28 @@ public class Travailleur extends Croyant {
     }
 
     public void capacite(Joueur j,Partie p) {
-        /*switch(numero) {
+        Boolean boolcontient = false;
+        switch(numero) {
+
             case 1:
-                if (j.getDivinite().getDogme().contains(Dogme.NATURE) || j.getDivinite().getDogme().contains(Dogme.MYSTIQUE)) {
+                for (int i=0; i<j.getDivinite().getDogme().length;i++){
+                    if (j.getDivinite().getDogme()[i]==Dogme.NATURE || j.getDivinite().getDogme()[i]==Dogme.MYSTIQUE){
+                        boolcontient = true;
+                    }
+                }
+                if (boolcontient) {
                     j.denySacrifice();
                 } else {
                     System.out.println("La divinité choisie est de mauvais type.");
                 }
                 break;
             case 2:
-                if (j.getDivinite().getDogme().contains(Dogme.CHAOS) || j.getDivinite().getDogme().contains(Dogme.MYSTIQUE)) {
+                for (int i=0; i<j.getDivinite().getDogme().length;i++){
+                    if (j.getDivinite().getDogme()[i]==Dogme.CHAOS || j.getDivinite().getDogme()[i]==Dogme.MYSTIQUE){
+                        boolcontient = true;
+                    }
+                }
+                if (boolcontient) {
                     j.denySacrifice();
                 } else {
                     System.out.println("La divinité choisie est de mauvais type.");
@@ -57,7 +69,8 @@ public class Travailleur extends Croyant {
             case 3:
 
 
-        }*/
+
+        }
 
 
 
