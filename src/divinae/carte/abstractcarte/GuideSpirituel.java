@@ -1,5 +1,6 @@
 package divinae.carte.abstractcarte;
 
+import divinae.Partie;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
@@ -13,5 +14,9 @@ public abstract class GuideSpirituel extends CarteDogme {
     public void setNbMaxCroyant(int nbMaxCroyant)
     {
         this.nbMaxCroyant=nbMaxCroyant;
+    }
+    public void rattacher(Partie p)
+    {
+
     }
 }

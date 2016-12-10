@@ -1,14 +1,12 @@
 package divinae;
 
 import com.sun.org.apache.xpath.internal.operations.Or;
-import divinae.carte.abstractcarte.Carte;
-import divinae.carte.abstractcarte.Croyant;
-import divinae.carte.abstractcarte.Divinite;
-import divinae.carte.abstractcarte.GuideSpirituel;
+import divinae.carte.abstractcarte.*;
 import divinae.enumeration.Origine;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class Joueur {
 
@@ -109,8 +107,61 @@ public class Joueur {
         }
         if(point>0)
         {
-
+            this.pointsAction.put(carte.getOrigine().toString(),point-1);
         }
+        else if(point<=0 && carte.getOrigine()==Origine.NEANT)
+        {
+            Scanner sc=new Scanner(System.in);
+            int choixPoint;
+            if(this.pointsAction.get("NUIT")>1 && this.pointsAction.get("JOUR")>1)
+            {
+                System.out.println("1---------Dépenser 2 points Nuit?");
+                System.out.println("2---------Dépenser 2 points Jour?");
+                System.out.println("0---------Annuler");
+                choixPoint=sc.nextInt();
+                if(choixPoint==0)
+                    return;
+                if(choixPoint==1)
+                    this.pointsAction.put("NUIT",this.pointsAction.get("NUIT")-2);
+                if(choixPoint==2)
+                    this.pointsAction.put("JOUR",this.pointsAction.get("JOUR")-2);
+            }
+            else if(this.pointsAction.get("NUIT")>1)
+            {
+                System.out.println("1---------Dépenser 2 points Nuit?");
+                System.out.println("0---------Annuler");
+                choixPoint=sc.nextInt();
+                if(choixPoint==0)
+                    return;
+                if(choixPoint==1)
+                    this.pointsAction.put("NUIT",this.pointsAction.get("NUIT")-2);
+            }
+            else
+            {
+                System.out.println("1---------Dépenser 2 points Jour?");
+                System.out.println("0---------Annuler");
+                choixPoint=sc.nextInt();
+                if(choixPoint==0)
+                    return;
+                if(choixPoint==1)
+                    this.pointsAction.put("JOUR",this.pointsAction.get("JOUR")-2);
+            }
+        }
+        if(carte instanceof Croyant)
+        {
+            p.getCentreTable().add((Croyant) this.getMain().remove(c));
+        }
+        else if(carte instanceof GuideSpirituel)
+        {
+            this.divinite.getGuideDivinite().add((GuideSpirituel) this.getMain().remove(c));
+        }
+        else
+        {
+                this.getMain().get(c).capacite(this,p);
+                this.defausseCarte(c,p);
+        }
+
+
     }
     public void defausseCarte(int carte,Partie p)
     {
