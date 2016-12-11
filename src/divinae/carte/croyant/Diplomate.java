@@ -1,5 +1,6 @@
 package divinae.carte.croyant;
 
+import divinae.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
@@ -19,6 +20,9 @@ public class Diplomate extends Croyant {
 
     @Override
     public void capacite(Joueur j, Partie p) {
-
+        Origine origineTour=p.lancerDes();
+        System.out.println(origineTour);
+        p.setInfluenceTour(origineTour);
+        j.ajoutPoints(origineTour);
     }
 }

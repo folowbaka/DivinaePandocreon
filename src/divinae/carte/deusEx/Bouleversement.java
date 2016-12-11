@@ -19,6 +19,8 @@ public class Bouleversement extends DeusEx {
 
     @Override
     public void capacite(Joueur j, Partie p) {
-
+        Origine origineTour=p.lancerDes();
+        System.out.println(origineTour);
+        p.setInfluenceTour(origineTour);
     }
 }

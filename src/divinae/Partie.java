@@ -24,6 +24,7 @@ public class Partie {
     private ArrayList<Carte> defausse;
     private ArrayList<Croyant> centreTable;
     private static Partie ourInstance = null;
+    private Origine influenceTour;
 
     public static Partie getInstance(String[] nomJoueur)
     {
@@ -54,6 +55,7 @@ public class Partie {
 
         int j=0;
         Origine origineTour=this.lancerDes();
+        this.setInfluenceTour(origineTour);
         System.out.println(origineTour);
         while(j<this.joueur.size())
         {
@@ -115,6 +117,13 @@ public class Partie {
         return this.joueur;
     }
     public ArrayList<Croyant> getCentreTable(){return this.centreTable;}
+    public Origine getInfluenceTour() {
+        return influenceTour;
+    }
+    public void setInfluenceTour(Origine influenceTour) {
+        this.influenceTour = influenceTour;
+    }
+
     public void remplirPioche()
     {
         //Ajout Croyant

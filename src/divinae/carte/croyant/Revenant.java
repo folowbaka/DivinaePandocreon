@@ -20,6 +20,9 @@ public class Revenant extends Croyant {
 
     @Override
     public void capacite(Joueur j, Partie p) {
-
+        Origine origineTour=p.lancerDes();
+        System.out.println(origineTour);
+        p.setInfluenceTour(origineTour);
+        j.ajoutPoints(origineTour);
     }
 }
