@@ -24,7 +24,7 @@ public class Clerc extends GuideSpirituel {
     @Override
     public void capacite(Joueur j, Partie p) {
         int compteur = 0;
-        for (int i = 0; i< this.getCroyantRattache().length(); i++){
+        for (int i = 0; i< this.getCroyantRattache().length; i++){
             if (this.getCroyantRattache()[i] != null){
                 compteur++;
             }
