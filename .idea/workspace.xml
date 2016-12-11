@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b109f6b2-024a-402f-8c2a-ff2e4afd4066" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/InterfaceCommand.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/InterfaceCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/Joueur$1.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/Joueur$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/Joueur.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/Joueur.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/Partie.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/Partie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/Apocalypse.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/Apocalypse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/abstractcarte/GuideSpirituel.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/abstractcarte/GuideSpirituel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Clerc.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/guide/Clerc.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/InterfaceCommand.java" afterPath="$PROJECT_DIR$/src/divinae/InterfaceCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/Joueur.java" afterPath="$PROJECT_DIR$/src/divinae/Joueur.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/Partie.java" afterPath="$PROJECT_DIR$/src/divinae/Partie.java" />
     </list>
     <ignored path="DivinaePandocreon.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -810,7 +800,7 @@
       <workItem from="1481326023447" duration="3356000" />
       <workItem from="1481488335294" duration="7000" />
       <workItem from="1481488346632" duration="7200000" />
-      <workItem from="1481497658911" duration="141000" />
+      <workItem from="1481497658911" duration="427000" />
     </task>
     <task id="LOCAL-00001" summary="Modification de capaciter">
       <created>1481291304650</created>
@@ -833,11 +823,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481495162669</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="DIEU M A ENTENDU">
+      <created>1481497815980</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1481497815980</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21751000" />
+    <option name="totallyTimeSpent" value="22037000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -897,7 +894,8 @@
     <MESSAGE value="Modification de capaciter" />
     <MESSAGE value="Ajoute de rattacher  à faire pour les guide et fin de jouer" />
     <MESSAGE value="APOCALYPSEEEEEEEEEEEEEEEEEEE APOCALYPSUUUUUUUUUUUUU APOAPAOAPOAAPOAPAOPOAPAOAPA" />
-    <option name="LAST_COMMIT_MESSAGE" value="APOCALYPSEEEEEEEEEEEEEEEEEEE APOCALYPSUUUUUUUUUUUUU APOAPAOAPOAAPOAPAOPOAPAOAPA" />
+    <MESSAGE value="DIEU M A ENTENDU" />
+    <option name="LAST_COMMIT_MESSAGE" value="DIEU M A ENTENDU" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1080,6 +1078,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1105,6 +1104,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1112,6 +1112,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1119,6 +1120,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1126,6 +1128,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
