@@ -6,8 +6,8 @@ import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
-public class Pillar extends Croyant {
-    public Pillar(Dogme[] dogme) {
+public class Pillard extends Croyant {
+    public Pillard(Dogme[] dogme) {
         super(Origine.NUIT,dogme);
         this.setDescription("Sacrifice :\nRécupérez les points d'Action\n" +
                 "d'une Divinité n'ayant pas\n" +
@@ -21,6 +21,6 @@ public class Pillar extends Croyant {
 
     @Override
     public void capacite(Joueur j, Partie p) {
-
+        
     }
 }
