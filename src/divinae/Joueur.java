@@ -13,6 +13,7 @@ public class Joueur {
     private String nom;
     private HashMap<String,Integer>pointsAction;
     private Boolean peutSacrifier;
+    private Boolean peutRecevoirPoint;
     private Boolean aUtiliseCompetenceDivine;
     private Divinite divinite;
     private ArrayList<Carte> main;
@@ -22,6 +23,8 @@ public class Joueur {
     {
         this.nom=nom;
         this.peutSacrifier=true;
+        this.peutRecevoirPoint=true;
+        this.aUtiliseCompetenceDivine=false;
         this.pointsAction=new HashMap<String,Integer>();
         this.pointsAction.put("JOUR",0);
         this.pointsAction.put("NUIT",0);
@@ -46,6 +49,9 @@ public class Joueur {
     }
     public Boolean getaUtiliseCompetenceDivine() { return aUtiliseCompetenceDivine; }
     public void setaUtiliseCompetenceDivine(Boolean aUtiliseCompetenceDivine) { this.aUtiliseCompetenceDivine = aUtiliseCompetenceDivine;}
+    public Boolean getPeutRecevoirPoint() { return peutRecevoirPoint; }
+    public void setPeutRecevoirPoint(Boolean peutRecevoirPoint) {this.peutRecevoirPoint = peutRecevoirPoint;}
+
     public void pioche(Partie partie){
         int taillePioche=partie.getPioche().size()-1;
         this.main.add(partie.getPioche().remove(taillePioche));
@@ -65,42 +71,43 @@ public class Joueur {
     public void ajoutPoints(Origine originePoint)
     {
         Origine origineDiv=this.divinite.getOrigine();
-        switch(originePoint)
-        {
-            case JOUR:
-                switch(origineDiv)
-                {
-                    case JOUR:
-                        this.pointsAction.put("JOUR",2+this.pointsAction.get("JOUR"));
-                        break;
-                    case AUBE:
-                        this.pointsAction.put("JOUR",1+this.pointsAction.get("JOUR"));
-                        break;
-                }
-                break;
-            case NUIT:
-                switch (origineDiv)
-                {
-                    case NUIT:
-                        this.pointsAction.put("NUIT",2+this.pointsAction.get("NUIT"));
-                        break;
-                    case CREPUSCULE:
-                        this.pointsAction.put("NUIT",1+this.pointsAction.get("NUIT"));
-                        break;
+        if (this.getPeutRecevoirPoint()) {
+            switch (originePoint) {
+                case JOUR:
+                    switch (origineDiv) {
+                        case JOUR:
+                            this.pointsAction.put("JOUR", 2 + this.pointsAction.get("JOUR"));
+                            break;
+                        case AUBE:
+                            this.pointsAction.put("JOUR", 1 + this.pointsAction.get("JOUR"));
+                            break;
+                    }
+                    break;
+                case NUIT:
+                    switch (origineDiv) {
+                        case NUIT:
+                            this.pointsAction.put("NUIT", 2 + this.pointsAction.get("NUIT"));
+                            break;
+                        case CREPUSCULE:
+                            this.pointsAction.put("NUIT", 1 + this.pointsAction.get("NUIT"));
+                            break;
 
-                }
-                break;
-            case NEANT:
-                switch (origineDiv)
-                {
-                    case AUBE:
-                        this.pointsAction.put("NEANT",1+this.pointsAction.get("NEANT"));
-                        break;
-                    case CREPUSCULE:
-                        this.pointsAction.put("NEANT",1+this.pointsAction.get("NEANT"));
-                        break;
-                }
-                break;
+                    }
+                    break;
+                case NEANT:
+                    switch (origineDiv) {
+                        case AUBE:
+                            this.pointsAction.put("NEANT", 1 + this.pointsAction.get("NEANT"));
+                            break;
+                        case CREPUSCULE:
+                            this.pointsAction.put("NEANT", 1 + this.pointsAction.get("NEANT"));
+                            break;
+                    }
+                    break;
+            }
+        }
+        else{
+            System.out.println("Vous ne pouvez pas recevoir de points");
         }
     }
     public void jouer(int c,Partie p)

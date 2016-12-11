@@ -108,7 +108,10 @@ public class InterfaceCommand {
                     j.jouer(j.getMain().get(choix-1));
                 }*/
 
-        }
+        }//on reinitialise les valeurs peutmachin
+        j.setPeutRecevoirPoint(true);
+        j.allowSacrifice();
+
     }
     public static void choixDefausseCarte(Joueur j,Partie p) {
         Scanner sc=new Scanner(System.in);
