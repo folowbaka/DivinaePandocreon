@@ -192,7 +192,7 @@ public class InterfaceCommand {
         for(int i=0;i< joueur.getDivinite().getGuideDivinite().size();i++)
         {
             for (int j=0;j< joueur.getDivinite().getGuideDivinite().get(i).getCroyantRattache().length;j++){
-                System.out.println("Carte "+(i+1)+(j+1)" : "+joueur.getDivinite().getGuideDivinite().get(i).getCroyantRattache()[j].getNom());
+                System.out.println("Carte "+(i+1)+(j+1)+" : "+joueur.getDivinite().getGuideDivinite().get(i).getCroyantRattache()[j].getNom());
             }
         }
     }
