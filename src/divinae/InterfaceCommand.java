@@ -9,7 +9,7 @@ import java.util.InputMismatchException;
 import java.util.Iterator;
 import java.util.Scanner;
 
-/**
+/*
  * Created by david on 07/12/2016.
  */
 public class InterfaceCommand {
@@ -101,12 +101,6 @@ public class InterfaceCommand {
                     }
                     System.out.println("---------------0-Terminer Tour");
                 }while(choix>0 && choix<3);
-                /*if(choix==0)
-                    tour=false;
-                else
-                {
-                    j.jouer(j.getMain().get(choix-1));
-                }*/
 
         }//on reinitialise les valeurs peutmachin
         j.setPeutRecevoirPoint(true);

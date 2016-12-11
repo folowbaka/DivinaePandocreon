@@ -66,4 +66,12 @@ public abstract class GuideSpirituel extends CarteDogme {
         }
         return priere;
     }
+    public Croyant[] getCroyantRattache()
+    {
+        return this.croyantRattache;
+    }
+    public void setCroyantRattache(Croyant[] croyantRattache)
+    {
+        this.croyantRattache=croyantRattache;
+    }
 }
