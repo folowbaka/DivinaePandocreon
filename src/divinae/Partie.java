@@ -73,6 +73,18 @@ public class Partie {
                 InterfaceCommand.jouer(this.joueur.get(j), this);
                 if(!fintour && APOCALYPSE==false)
                     APOCALYPSE=true;
+                if(fintour && !APOCALYPSE)
+                {
+                    ArrayList<Joueur> joueur2=new ArrayList<Joueur>();
+                    for(int k=j;k<this.joueur.size();k++)
+                        joueur2.add(this.joueur.get(k));
+                    for(int k=0;k<j;k++)
+                        joueur2.add(this.joueur.get(k));
+                    this.joueur=null;
+                    this.joueur=joueur2;
+
+                }
+
                 System.out.println(this.joueur.get(j));
                 j++;
             }

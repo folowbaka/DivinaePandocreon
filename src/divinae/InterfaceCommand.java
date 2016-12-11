@@ -128,9 +128,11 @@ public class InterfaceCommand {
         do {
             InterfaceCommand.afficheCarteJoueur(j);
             System.out.println("Quel carte voulez vous jouer?");
+            if(!j.getaUtiliseCompetenceDivine())
+                System.out.println("8------------Divinité");
             System.out.println("0------------Quitter");
             choixCarte=sc.nextInt();
-            if(choixCarte<=j.getMain().size() && choixCarte>0)
+            if(choixCarte<=j.getMain().size()+1 && choixCarte>0)
                 j.jouer(choixCarte-1,p);
             else if(choixCarte!=0)
                 System.out.println("Choix invalide");
@@ -192,7 +194,7 @@ public class InterfaceCommand {
         for(int i=0;i< joueur.getDivinite().getGuideDivinite().size();i++)
         {
             for (int j=0;j< joueur.getDivinite().getGuideDivinite().get(i).getCroyantRattache().length;j++){
-                System.out.println("Carte "+(i+1)+(j+1)" : "+joueur.getDivinite().getGuideDivinite().get(i).getCroyantRattache()[j].getNom());
+                System.out.println("Carte "+(i+1)+(j+1)+" : "+joueur.getDivinite().getGuideDivinite().get(i).getCroyantRattache()[j].getNom());
             }
         }
     }

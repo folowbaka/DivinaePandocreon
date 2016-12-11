@@ -1,6 +1,5 @@
 package divinae;
-
-import com.sun.org.apache.xpath.internal.operations.Or;
+import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.carte.Apocalypse;
 import divinae.carte.abstractcarte.*;
 import divinae.enumeration.Origine;
@@ -115,6 +114,11 @@ public class Joueur {
     {
         Carte carte=this.getMain().get(c);
         int point=this.pointsAction.get(carte.getOrigine().toString());
+        if(c==7)
+        {
+            this.divinite.capacite(this, p);
+            this.aUtiliseCompetenceDivine=true;
+        }
         if(point<=0 && carte.getOrigine()!=Origine.NEANT && carte.getOrigine()!=null)
         {
                 System.out.println("Vous n'avez pas assez de points pour jouer");
