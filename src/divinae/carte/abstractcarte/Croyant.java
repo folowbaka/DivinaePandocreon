@@ -24,4 +24,8 @@ public abstract class Croyant extends CarteDogme{
     {
         return this.rattachable;
     }
+    public int getNbCroyant()
+    {
+        return this.nbCroyant;
+    }
 }

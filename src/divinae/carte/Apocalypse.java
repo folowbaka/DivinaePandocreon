@@ -13,7 +13,20 @@ public class Apocalypse extends Carte {
     }
 
     @Override
-    public void capacite(Joueur j, Partie p) {
+    public void capacite(Joueur j, Partie p)
+    {
+        for(int i=0;i<p.getJoueur().size();i++)
+        {
+            p.getJoueur().get(i).compterPriere();
+        }
 
+        if(p.getJoueur().size()>4)
+        {
+
+        }
+        else
+        {
+
+        }
     }
 }

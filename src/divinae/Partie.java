@@ -24,6 +24,7 @@ public class Partie {
     private ArrayList<Carte> defausse;
     private ArrayList<Croyant> centreTable;
     private static Partie ourInstance = null;
+    public static boolean PARTIENONFINIE=true;
     private Origine influenceTour;
 
     public static Partie getInstance(String[] nomJoueur)
@@ -53,16 +54,18 @@ public class Partie {
     public void commencerPartie()
     {
 
-        int j=0;
-        Origine origineTour=this.lancerDes();
-        this.setInfluenceTour(origineTour);
-        System.out.println(origineTour);
-        while(j<this.joueur.size())
+        while(PARTIENONFINIE)
         {
-            this.joueur.get(j).ajoutPoints(origineTour);
-            InterfaceCommand.jouer(this.joueur.get(j),this);
-            System.out.println(this.joueur.get(j));
-            j++;
+            int j=0;
+            Origine origineTour=this.lancerDes();
+            this.setInfluenceTour(origineTour);
+            System.out.println(origineTour);
+            while (j < this.joueur.size()) {
+                this.joueur.get(j).ajoutPoints(origineTour);
+                InterfaceCommand.jouer(this.joueur.get(j), this);
+                System.out.println(this.joueur.get(j));
+                j++;
+            }
         }
 
     }

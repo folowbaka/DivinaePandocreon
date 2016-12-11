@@ -184,6 +184,16 @@ public class Joueur {
         if(!this.getMain().isEmpty())
         p.getDefausse().add(this.getMain().remove(carte));
     }
+    public  int compterPriere()
+    {
+            int priere=0;
+            for(int i=0;i<this.divinite.getGuideDivinite().size();i++)
+            {
+                priere=priere+this.getDivinite().getGuideDivinite().get(i).priereGuide();
+            }
+            return priere;
+
+    }
     public String getNom()
     {
         return this.nom;
