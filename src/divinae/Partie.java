@@ -111,6 +111,9 @@ public class Partie {
     {
         return this.defausse;
     }
+    public ArrayList<Joueur> getJoueur(){
+        return this.joueur;
+    }
     public ArrayList<Croyant> getCentreTable(){return this.centreTable;}
     public void remplirPioche()
     {

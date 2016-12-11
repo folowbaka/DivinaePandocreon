@@ -18,6 +18,7 @@ public class Demon extends Croyant {
 
     @Override
     public void capacite(Joueur j, Partie p) {
+        j.ajoutPoints(1, "NUIT");
 
     }
 }

@@ -6,6 +6,7 @@ import divinae.carte.abstractcarte.Croyant;
 import divinae.carte.abstractcarte.Divinite;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
+import divinae.InterfaceCommand;
 import java.util.*;
 
 public class Travailleur extends Croyant {
@@ -40,6 +41,7 @@ public class Travailleur extends Croyant {
 
     public void capacite(Joueur j,Partie p) {
         Boolean boolcontient = false;
+        Joueur choixJoueur = InterfaceCommand.choixJoueur(p);
         switch(numero) {
 
             case 1:
@@ -49,7 +51,7 @@ public class Travailleur extends Croyant {
                     }
                 }
                 if (boolcontient) {
-                    j.denySacrifice();
+                    choixJoueur.denySacrifice();
                 } else {
                     System.out.println("La divinité choisie est de mauvais type.");
                 }
@@ -61,14 +63,14 @@ public class Travailleur extends Croyant {
                     }
                 }
                 if (boolcontient) {
-                    j.denySacrifice();
+                    choixJoueur.denySacrifice();
                 } else {
                     System.out.println("La divinité choisie est de mauvais type.");
                 }
                 break;
             case 3:
-
-
+                j.volerCarte(choixJoueur);
+                j.volerCarte(choixJoueur);
 
         }
 

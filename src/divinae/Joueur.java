@@ -43,9 +43,14 @@ public class Joueur {
     public void allowSacrifice(){
         this.peutSacrifier=true;
     }
+
     public void pioche(Partie partie){
         int taillePioche=partie.getPioche().size()-1;
         this.main.add(partie.getPioche().remove(taillePioche));
+    }
+    public void volerCarte(Joueur j){
+        int tailleMain=j.getMain().size()-1;
+        this.main.add(j.getMain().remove(tailleMain));
     }
     public void completerMain(Partie p)
     {

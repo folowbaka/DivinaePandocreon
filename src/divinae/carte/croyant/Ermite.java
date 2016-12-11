@@ -1,6 +1,7 @@
 package divinae.carte.croyant;
 
 import divinae.Joueur;
+import divinae.InterfaceCommand;
 import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
@@ -20,6 +21,8 @@ public class Ermite extends Croyant {
 
     @Override
     public void capacite(Joueur j, Partie p) {
+        Joueur choixJoueur = InterfaceCommand.choixJoueur(p);
+
 
     }
 }

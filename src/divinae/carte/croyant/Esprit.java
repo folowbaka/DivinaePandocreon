@@ -17,6 +17,6 @@ public class Esprit extends Croyant {
 
     @Override
     public void capacite(Joueur j, Partie p) {
-
+        j.ajoutPoints(1, "NEANT");
     }
 }

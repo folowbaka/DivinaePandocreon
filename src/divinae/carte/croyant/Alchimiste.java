@@ -1,5 +1,6 @@
 package divinae.carte.croyant;
 
+import divinae.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
@@ -37,6 +38,38 @@ public class Alchimiste extends Croyant {
 
     @Override
     public void capacite(Joueur j, Partie p) {
+        Boolean boolcontient = false;
+        Joueur choixJoueur = InterfaceCommand.choixJoueur(p);
+        switch (numero) {
 
+            case 1:
+                for (int i = 0; i < j.getDivinite().getDogme().length; i++) {
+                    if (j.getDivinite().getDogme()[i] == Dogme.HUMAIN || j.getDivinite().getDogme()[i] == Dogme.MYSTIQUE) {
+                        boolcontient = true;
+                    }
+                }
+                if (boolcontient) {
+                    choixJoueur.denySacrifice();
+                } else {
+                    System.out.println("La divinité choisie est de mauvais type.");
+                }
+                break;
+            case 2:
+                for (int i = 0; i < j.getDivinite().getDogme().length; i++) {
+                    if (j.getDivinite().getDogme()[i] == Dogme.HUMAIN || j.getDivinite().getDogme()[i] == Dogme.SYMBOLE) {
+                        boolcontient = true;
+                    }
+                }
+                if (boolcontient) {
+                    choixJoueur.denySacrifice();
+                } else {
+                    System.out.println("La divinité choisie est de mauvais type.");
+                }
+                break;
+            case 3:
+                j.volerCarte(choixJoueur);
+                j.volerCarte(choixJoueur);
+
+        }
     }
 }

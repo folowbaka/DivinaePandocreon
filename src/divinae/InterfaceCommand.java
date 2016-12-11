@@ -145,4 +145,27 @@ public class InterfaceCommand {
             System.out.println("Carte "+(i+1)+" : "+j.getMain().get(i).getNom());
         }
     }
+    public static Joueur choixJoueur(Partie p)
+    {
+        Scanner sc=new Scanner(System.in);
+        int choixJoueur;
+        do {
+            InterfaceCommand.afficheJoueurs(p);
+            System.out.println("Sur quel joueur voulez-vous appliquer l'effet de la carte?");
+            System.out.println("0------------Quitter");
+            choixJoueur=sc.nextInt();
+            if(choixJoueur>p.getJoueur().size() || choixJoueur<0)
+                System.out.println("Choix invalide");
+        }while (!p.getJoueur().isEmpty() && choixJoueur>0);
+        return p.getJoueur().get(choixJoueur);
+
+    }
+    public static void afficheJoueurs(Partie p){
+        for(int i=0;i<p.getJoueur().size();i++)
+        {
+            System.out.println("Joueur "+(i+1)+" : "+p.getJoueur().get(i).getNom());
+        }
+    }
+
+
 }
