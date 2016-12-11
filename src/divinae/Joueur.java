@@ -1,6 +1,7 @@
 package divinae;
 
 import com.sun.org.apache.xpath.internal.operations.Or;
+import divinae.carte.Apocalypse;
 import divinae.carte.abstractcarte.*;
 import divinae.enumeration.Origine;
 
@@ -173,6 +174,11 @@ public class Joueur {
         }
         else
         {
+            if(carte instanceof Apocalypse && !Partie.APOCALYPSE)
+            {
+                System.out.println("Carte Apocalypse non jouable ce tour");
+                return;
+            }
                 this.getMain().get(c).capacite(this,p);
                 this.defausseCarte(c,p);
         }
@@ -193,6 +199,17 @@ public class Joueur {
             }
             return priere;
 
+    }
+    public void libCroyant(Partie p)
+    {
+        for(int i=0;i<this.divinite.getGuideDivinite().size();)
+        {
+            for(int j=0;i<this.divinite.getGuideDivinite().get(i).getCroyantRattache().length;j++)
+            {
+                p.getCentreTable().add(this.divinite.getGuideDivinite().get(i).getCroyantRattache()[j]);
+            }
+            this.divinite.getGuideDivinite().get(i).setCroyantRattache(null);
+        }
     }
     public String getNom()
     {

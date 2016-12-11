@@ -25,6 +25,8 @@ public class Partie {
     private ArrayList<Croyant> centreTable;
     private static Partie ourInstance = null;
     public static boolean PARTIENONFINIE=true;
+    public static boolean APOCALYPSE=false;
+    private boolean fintour;
     private Origine influenceTour;
 
     public static Partie getInstance(String[] nomJoueur)
@@ -46,6 +48,7 @@ public class Partie {
         this.pioche= new ArrayList<Carte>();
         this.defausse= new ArrayList<Carte>();
         this.centreTable=new ArrayList<Croyant>();
+        this.fintour=false;
         remplirPioche();
         this.distribDivinite();
         this.distribCarte();
@@ -53,6 +56,7 @@ public class Partie {
     }
     public void commencerPartie()
     {
+        int tour=0;
 
         while(PARTIENONFINIE)
         {
@@ -60,12 +64,20 @@ public class Partie {
             Origine origineTour=this.lancerDes();
             this.setInfluenceTour(origineTour);
             System.out.println(origineTour);
-            while (j < this.joueur.size()) {
+            if(tour==1)
+                APOCALYPSE=true;
+            fintour=false;
+            while (j < this.joueur.size() && !fintour)
+            {
                 this.joueur.get(j).ajoutPoints(origineTour);
                 InterfaceCommand.jouer(this.joueur.get(j), this);
+                if(!fintour && APOCALYPSE==false)
+                    APOCALYPSE=true;
                 System.out.println(this.joueur.get(j));
                 j++;
             }
+
+            tour++;
         }
 
     }
@@ -126,7 +138,10 @@ public class Partie {
     public void setInfluenceTour(Origine influenceTour) {
         this.influenceTour = influenceTour;
     }
-
+    public void setFintour(boolean fintour)
+    {
+        this.fintour=fintour;
+    }
     public void remplirPioche()
     {
         //Ajout Croyant
