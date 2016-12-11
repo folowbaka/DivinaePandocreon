@@ -13,6 +13,7 @@ public class Joueur {
     private String nom;
     private HashMap<String,Integer>pointsAction;
     private Boolean peutSacrifier;
+    private Boolean aUtiliseCompetenceDivine;
     private Divinite divinite;
     private ArrayList<Carte> main;
     public  static int TAILLEMAIN=7;
@@ -43,7 +44,8 @@ public class Joueur {
     public void allowSacrifice(){
         this.peutSacrifier=true;
     }
-
+    public Boolean getaUtiliseCompetenceDivine() { return aUtiliseCompetenceDivine; }
+    public void setaUtiliseCompetenceDivine(Boolean aUtiliseCompetenceDivine) { this.aUtiliseCompetenceDivine = aUtiliseCompetenceDivine;}
     public void pioche(Partie partie){
         int taillePioche=partie.getPioche().size()-1;
         this.main.add(partie.getPioche().remove(taillePioche));

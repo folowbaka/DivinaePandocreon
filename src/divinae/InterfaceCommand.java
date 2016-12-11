@@ -2,6 +2,7 @@ package divinae;
 
 import divinae.carte.abstractcarte.Carte;
 import divinae.carte.abstractcarte.GuideSpirituel;
+import divinae.enumeration.Origine;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -145,8 +146,7 @@ public class InterfaceCommand {
             System.out.println("Carte "+(i+1)+" : "+j.getMain().get(i).getNom());
         }
     }
-    public static Joueur choixJoueur(Partie p)
-    {
+    public static Joueur choixJoueur(Partie p){
         Scanner sc=new Scanner(System.in);
         int choixJoueur;
         do {
@@ -158,6 +158,31 @@ public class InterfaceCommand {
                 System.out.println("Choix invalide");
         }while (!p.getJoueur().isEmpty() && choixJoueur>0);
         return p.getJoueur().get(choixJoueur);
+
+    }
+    public static String choixOriginePoints(Partie p){
+        Scanner sc=new Scanner(System.in);
+        int choixOrigine;
+        System.out.println("Quel origine choisissez-vous pour l'ajout de point d'actions?");
+        System.out.println("1 : Jour");
+        System.out.println("2 : Nuit");
+        System.out.println("3 : Néant");
+        choixOrigine=sc.nextInt();
+        String out="JOUR";
+        switch(choixOrigine){
+            case 1:
+                out="JOUR";
+            break;
+            case 2:
+                out="NUIT";
+            break;
+            case 3:
+                out="NEANT";
+            break;
+
+        }
+        return out;
+
 
     }
     public static void afficheJoueurs(Partie p){

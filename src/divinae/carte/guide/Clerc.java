@@ -5,6 +5,7 @@ import divinae.Partie;
 import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
+import divinae.InterfaceCommand;
 
 public class Clerc extends GuideSpirituel {
     public Clerc(Origine origine, Dogme[] dogme,int nbMaxCroyant) {
@@ -21,6 +22,8 @@ public class Clerc extends GuideSpirituel {
 
     @Override
     public void capacite(Joueur j, Partie p) {
+        
+        String choixOrigine = InterfaceCommand.choixOriginePoints(p);
 
     }
 }
