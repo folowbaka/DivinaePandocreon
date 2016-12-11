@@ -188,10 +188,12 @@ public class InterfaceCommand {
             System.out.println("Joueur "+(i+1)+" : "+p.getJoueur().get(i).getNom());
         }
     }
-    public static void afficheCartesSacrifiable(Joueur j, Partie p){
-        for(int i=0;i< j.getDivinite().getGuideDivinite().size();i++)
+    public static void afficheCartesSacrifiable(Joueur joueur, Partie p){
+        for(int i=0;i< joueur.getDivinite().getGuideDivinite().size();i++)
         {
-            System.out.println("Carte "+(i+1)+" : "+j.getDivinite().getGuideDivinite().get(i).getNom());
+            for (int j=0;j< joueur.getDivinite().getGuideDivinite().get(i).getCroyantRattache().length;j++){
+                System.out.println("Carte "+(i+1)+(j+1)" : "+joueur.getDivinite().getGuideDivinite().get(i).getCroyantRattache()[j].getNom());
+            }
         }
     }
 
