@@ -16,6 +16,15 @@ public abstract class GuideSpirituel extends CarteDogme {
         this.croyantRattache=new Croyant[nbMaxCroyant];
 
     }
+
+    public Croyant[] getCroyantRattache() {
+        return croyantRattache;
+    }
+
+    public void setCroyantRattache(Croyant[] croyantRattache) {
+        this.croyantRattache = croyantRattache;
+    }
+
     public void rattacher(Partie p)
     {
         ArrayList<Croyant> centre=p.getCentreTable();
