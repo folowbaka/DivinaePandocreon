@@ -181,13 +181,23 @@ public class InterfaceCommand {
             switch (choixSacrifice)
             {
                 case 1:
-                    System.out.println("Entrez le guide à sacrifier");
-                    choixSacrificeGuide=sc.nextInt();
+                    if(j.getPeutSacrifierGuide())
+                    {
+                        System.out.println("Entrez le guide à sacrifier");
+                        choixSacrificeGuide = sc.nextInt()-1;
+                        j.sacrifierGuide(choixSacrificeGuide,p);
+                    }
                     break;
                 case 2:
-                    System.out.println("Entrez le croyant à sacrifier");
-                    choixSacrificeGuide=sc.nextInt()-1;
-                    choixSacrificeCroyant=sc.nextInt()-1;
+                    if(j.getPeutSacrifierCroyant())
+                    {
+                        System.out.println("Entrez le croyant à sacrifier");
+                        choixSacrificeGuide = sc.nextInt() - 1;
+                        choixSacrificeCroyant = sc.nextInt() - 1;
+                        j.sacrifierCroyant(choixSacrificeGuide,choixSacrificeCroyant,p);
+                    }
+                    break;
+
 
             }
 

@@ -208,11 +208,17 @@ public class Joueur {
     }
     public void sacrifierGuide(int guide,Partie p)
     {
-
+        this.getDivinite().getGuideDivinite().get(guide).capacite(this,p);
+        this.getDivinite().getGuideDivinite().get(guide).libCroyant(this,p);
+        p.getDefausse().add(this.getDivinite().getGuideDivinite().get(guide));
     }
     public void sacrifierCroyant(int guide,int croyant,Partie p)
     {
-
+        this.getDivinite().getGuideDivinite().get(guide).getCroyantRattache()[croyant].capacite(this,p);
+        p.getDefausse().add(this.getDivinite().getGuideDivinite().get(guide).getCroyantRattache()[croyant]);
+        this.getDivinite().getGuideDivinite().get(guide).getCroyantRattache()[croyant]=null;
+        if(this.getDivinite().getGuideDivinite().get(guide).croyantVide())
+            p.getDefausse().add(this.getDivinite().getGuideDivinite().remove(guide));
     }
     public void defausseCarte(int carte,Partie p)
     {
@@ -229,15 +235,14 @@ public class Joueur {
             return priere;
 
     }
-    public void libCroyant(Partie p)
+    public void libGuideCroyant(Partie p)
     {
-        for(int i=0;i<this.divinite.getGuideDivinite().size();)
+        int i=0;
+        while(i<this.divinite.getGuideDivinite().size())
         {
-            for(int j=0;j<this.divinite.getGuideDivinite().get(i).getCroyantRattache().length;j++)
-            {
-                p.getCentreTable().add(this.divinite.getGuideDivinite().get(i).getCroyantRattache()[j]);
-            }
-            this.divinite.getGuideDivinite().get(i).setCroyantRattache(null);
+
+            this.getDivinite().getGuideDivinite().get(i).libCroyant(this,p);
+            p.getDefausse().add(this.divinite.getGuideDivinite().remove(i));
         }
     }
     public String getNom()

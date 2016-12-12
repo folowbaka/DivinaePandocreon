@@ -49,7 +49,7 @@ public class Apocalypse extends Carte {
             else
             {
                 System.out.println("Joueur : "+p.getJoueur().get(joueurPerdant).getNom()+" est éliminé");
-                p.getJoueur().get(joueurPerdant).libCroyant(p);
+                p.getJoueur().get(joueurPerdant).libGuideCroyant(p);
                 p.getJoueur().remove(joueurPerdant);
                 p.setFintour(true);
             }
