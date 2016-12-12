@@ -189,6 +189,14 @@ public class Joueur {
 
 
     }
+    public void sacrifierGuide(int guide,Partie p)
+    {
+
+    }
+    public void sacrifierCroyant(int guide,int croyant,Partie p)
+    {
+
+    }
     public void defausseCarte(int carte,Partie p)
     {
         if(!this.getMain().isEmpty())

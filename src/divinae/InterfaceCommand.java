@@ -1,8 +1,12 @@
 package divinae;
 
+import divinae.carte.abstractcarte.Carte;
 import divinae.carte.abstractcarte.GuideSpirituel;
+import divinae.enumeration.Origine;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.Iterator;
 import java.util.Scanner;
 
 /*
@@ -117,6 +121,30 @@ public class InterfaceCommand {
                 System.out.println("Choix invalide");
         }while (!j.getMain().isEmpty() && choixCarte>0);
     }
+    public static void choixAction(Joueur j,Partie p)
+    {
+        Scanner sc=new Scanner(System.in);
+        int choixAct;
+        do {
+            System.out.println("1------------Jouer une carte Action?");
+            System.out.println("2------------Sacrifier une carte?");
+            System.out.println("0------------Quitter");
+            choixAct=sc.nextInt();
+            if(choixAct==1 || choixAct==2)
+            {
+                switch (choixAct) {
+                    case 1:
+                        InterfaceCommand.choixJouerCarte(j, p);
+                        break;
+                    case 2:
+                        InterfaceCommand.sacrifierCarte(j, p);
+                        break;
+
+                }
+            }
+        }while (choixAct!=0);
+
+    }
     public static void choixJouerCarte(Joueur j,Partie p)
     {
         Scanner sc=new Scanner(System.in);
@@ -133,6 +161,36 @@ public class InterfaceCommand {
             else if(choixCarte!=0)
                 System.out.println("Choix invalide");
         }while (!j.getMain().isEmpty() && choixCarte>0);
+    }
+    public static void sacrifierCarte(Joueur j,Partie p)
+    {
+        Scanner sc=new Scanner(System.in);
+        if(j.getDivinite().getGuideDivinite().size()==0)
+            return;
+        int choixSacrificeGuide;
+        int choixSacrificeCroyant;
+        int choixSacrifice;
+        do {
+            InterfaceCommand.afficheCartesSacrifiable(j);
+            System.out.println("Quel carte voulez sacrifier?");
+            System.out.println("1------------Guide");
+            System.out.println("2------------Croyant");
+            System.out.println("0------------Quitter");
+            choixSacrifice=sc.nextInt();
+            switch (choixSacrifice)
+            {
+                case 1:
+                    System.out.println("Entrez le guide à sacrifier");
+                    choixSacrificeGuide=sc.nextInt();
+                    break;
+                case 2:
+                    System.out.println("Entrez le croyant à sacrifier");
+                    choixSacrificeGuide=sc.nextInt()-1;
+                    choixSacrificeCroyant=sc.nextInt()-1;
+
+            }
+
+        }while (choixSacrifice>0);
     }
     public static void afficheCarteJoueur(Joueur j)
     {
@@ -185,11 +243,12 @@ public class InterfaceCommand {
             System.out.println("Joueur "+(i+1)+" : "+p.getJoueur().get(i).getNom());
         }
     }
-    public static void afficheCartesSacrifiable(Joueur joueur, Partie p){
-        for(int i=0;i< joueur.getDivinite().getGuideDivinite().size();i++)
+    public static void afficheCartesSacrifiable(Joueur joueur){
+        for(int i=0;i<joueur.getDivinite().getGuideDivinite().size();i++)
         {
+            System.out.println("Guide : "+(i+1)+" "+joueur.getDivinite().getGuideDivinite().get(i).getNom());
             for (int j=0;j< joueur.getDivinite().getGuideDivinite().get(i).getCroyantRattache().length;j++){
-                System.out.println("Carte "+(i+1)+(j+1)+" : "+joueur.getDivinite().getGuideDivinite().get(i).getCroyantRattache()[j].getNom());
+                System.out.println("Croyant "+(j+1)+" : "+joueur.getDivinite().getGuideDivinite().get(i).getCroyantRattache()[j].getNom());
             }
         }
     }
