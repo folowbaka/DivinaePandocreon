@@ -1,8 +1,10 @@
 package divinae.carte.croyant;
 
+import divinae.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
+import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
@@ -23,6 +25,10 @@ public class Lycanthrope extends Croyant {
 
     @Override
     public void capacite(Joueur j, Partie p) {
-
+        Joueur choixJoueur = InterfaceCommand.choixJoueur(p);
+        Integer choixGuide = InterfaceCommand.choixGuide(choixJoueur,p);
+        choixJoueur.getDivinite().getGuideDivinite().get(choixGuide).libCroyant(choixJoueur,p);
+        p.getDefausse().add(choixJoueur.getDivinite().getGuideDivinite().get(choixGuide));
+        choixJoueur.getDivinite().getGuideDivinite().remove(choixGuide);
     }
 }

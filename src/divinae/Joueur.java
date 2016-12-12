@@ -192,7 +192,7 @@ public class Joueur {
     public void defausseCarte(int carte,Partie p)
     {
         if(!this.getMain().isEmpty())
-        p.getDefausse().add(this.getMain().remove(carte));
+            p.getDefausse().add(this.getMain().remove(carte));
     }
     public  int compterPriere()
     {
@@ -208,7 +208,7 @@ public class Joueur {
     {
         for(int i=0;i<this.divinite.getGuideDivinite().size();)
         {
-            for(int j=0;i<this.divinite.getGuideDivinite().get(i).getCroyantRattache().length;j++)
+            for(int j=0;j<this.divinite.getGuideDivinite().get(i).getCroyantRattache().length;j++)
             {
                 p.getCentreTable().add(this.divinite.getGuideDivinite().get(i).getCroyantRattache()[j]);
             }

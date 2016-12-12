@@ -1,12 +1,8 @@
 package divinae;
 
-import divinae.carte.abstractcarte.Carte;
 import divinae.carte.abstractcarte.GuideSpirituel;
-import divinae.enumeration.Origine;
 
-import java.util.ArrayList;
 import java.util.InputMismatchException;
-import java.util.Iterator;
 import java.util.Scanner;
 
 /*
@@ -151,12 +147,11 @@ public class InterfaceCommand {
         do {
             InterfaceCommand.afficheJoueurs(p);
             System.out.println("Sur quel joueur voulez-vous appliquer l'effet de la carte?");
-            System.out.println("0------------Quitter");
             choixJoueur=sc.nextInt();
             if(choixJoueur>p.getJoueur().size() || choixJoueur<0)
                 System.out.println("Choix invalide");
-        }while (!p.getJoueur().isEmpty() && choixJoueur>0);
-        return p.getJoueur().get(choixJoueur);
+        }while (choixJoueur>p.getJoueur().size() || choixJoueur<0);
+        return p.getJoueur().get(choixJoueur-1);
 
     }
     public static String choixOriginePoints(Partie p){
@@ -198,6 +193,23 @@ public class InterfaceCommand {
             }
         }
     }
-
+    public static void afficheGuides(Joueur joueur){
+        for(int i=0;i< joueur.getDivinite().getGuideDivinite().size();i++){
+            System.out.println("Carte "+(i+1)+" : "+joueur.getDivinite().getGuideDivinite().get(i));
+        }
+    }
+    public static int choixGuide(Joueur joueur, Partie p){
+        Scanner sc=new Scanner(System.in);
+        int choixGuide;
+        do{
+            InterfaceCommand.afficheGuides(joueur);
+            System.out.println("Choisissez un guide à défausser.");
+            choixGuide=sc.nextInt();
+            if (choixGuide>joueur.getDivinite().getGuideDivinite().size() || choixGuide<0){
+                System.out.println("Choix invalide");
+            }
+        }while (choixGuide>joueur.getDivinite().getGuideDivinite().size() || choixGuide<0);
+        return choixGuide-1;
+    }
 
 }

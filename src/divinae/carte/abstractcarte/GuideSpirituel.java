@@ -57,6 +57,14 @@ public abstract class GuideSpirituel extends CarteDogme {
         }
 
     }
+    public void libCroyant(Joueur joueur,Partie p)
+    {
+        for(int j=0;j<this.getCroyantRattache().length;j++)
+        {
+            p.getCentreTable().add(getCroyantRattache()[j]);
+        }
+        setCroyantRattache(null);
+    }
     public int priereGuide()
     {
         int priere=0;
