@@ -17,6 +17,8 @@ public class TrouNoir extends DeusEx {
 
     @Override
     public void capacite(Joueur j, Partie p) {
-
+        for (int i = 0; i<p.getJoueur().size();i++){
+            p.getJoueur().get(i).setPeutRecevoirPoint(false);
+        }
     }
 }

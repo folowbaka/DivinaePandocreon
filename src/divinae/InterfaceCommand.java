@@ -273,7 +273,7 @@ public class InterfaceCommand {
         int choixGuide;
         do{
             InterfaceCommand.afficheGuides(joueur);
-            System.out.println("Choisissez un guide à défausser.");
+            System.out.println("Choisissez un guide.");
             choixGuide=sc.nextInt();
             if (choixGuide>joueur.getDivinite().getGuideDivinite().size() || choixGuide<0){
                 System.out.println("Choix invalide");

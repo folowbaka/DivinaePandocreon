@@ -1,5 +1,6 @@
 package divinae.carte.croyant;
 
+import divinae.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
@@ -20,10 +21,10 @@ public class GuerrierSaint extends Croyant {
 
     @Override
     public void capacite(Joueur j, Partie p) {
-
+        Joueur choixJoueur = InterfaceCommand.choixJoueur(p);
+        int choixGuide = InterfaceCommand.choixGuide(choixJoueur, p);
+        choixJoueur.getDivinite().getGuideDivinite().get(choixGuide).libCroyant(choixJoueur,p);
+        choixJoueur.getMain().add(choixJoueur.getDivinite().getGuideDivinite().remove(choixGuide));
     }
 
-    public void capacite() {
-
-    }
 }
