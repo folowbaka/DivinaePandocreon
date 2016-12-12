@@ -47,7 +47,7 @@ public class Aliene extends Croyant {
                     }
                 }
                 if (boolcontient) {
-                    choixJoueur.denySacrifice();
+                    choixJoueur.denySacrificeCroyant();
                 } else {
                     System.out.println("La divinité choisie est de mauvais type.");
                 }
@@ -59,7 +59,7 @@ public class Aliene extends Croyant {
                     }
                 }
                 if (boolcontient) {
-                    choixJoueur.denySacrifice();
+                    choixJoueur.denySacrificeGuide();
                 } else {
                     System.out.println("La divinité choisie est de mauvais type.");
                 }

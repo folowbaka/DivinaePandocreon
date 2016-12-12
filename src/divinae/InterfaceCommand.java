@@ -104,7 +104,8 @@ public class InterfaceCommand {
 
         }//on reinitialise les valeurs peutmachin
         j.setPeutRecevoirPoint(true);
-        j.allowSacrifice();
+        j.allowSacrificeCroyant();
+        j.allowSacrificeGuide();
 
     }
     public static void choixDefausseCarte(Joueur j,Partie p) {

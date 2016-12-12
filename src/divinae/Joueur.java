@@ -12,7 +12,8 @@ public class Joueur {
 
     private String nom;
     private HashMap<String,Integer>pointsAction;
-    private Boolean peutSacrifier;
+    private Boolean peutSacrifierCroyant;
+    private Boolean peutSacrifierGuide;
     private Boolean peutRecevoirPoint;
     private Boolean aUtiliseCompetenceDivine;
     private Divinite divinite;
@@ -22,7 +23,8 @@ public class Joueur {
     public Joueur(String nom)
     {
         this.nom=nom;
-        this.peutSacrifier=true;
+        this.peutSacrifierCroyant=true;
+        this.peutSacrifierGuide=true;
         this.peutRecevoirPoint=true;
         this.aUtiliseCompetenceDivine=false;
         this.pointsAction=new HashMap<String,Integer>();
@@ -41,12 +43,27 @@ public class Joueur {
     public void ajoutPoints(int ajout, String origine){
         this.pointsAction.put(origine, this.pointsAction.get(origine)+ajout);
     }
-    public void denySacrifice(){
-        this.peutSacrifier=false;
+    public void denySacrificeCroyant(){
+        this.peutSacrifierCroyant=false;
     }
-    public void allowSacrifice(){
-        this.peutSacrifier=true;
+    public void allowSacrificeCroyant(){
+        this.peutSacrifierCroyant=true;
     }
+    public Boolean getPeutSacrifierCroyant() {
+        return peutSacrifierCroyant;
+    }
+
+    public void denySacrificeGuide(){
+        this.peutSacrifierGuide=false;
+    }
+    public void allowSacrificeGuide(){
+        this.peutSacrifierGuide=true;
+    }
+
+    public Boolean getPeutSacrifierGuide() {
+        return peutSacrifierGuide;
+    }
+
     public Boolean getaUtiliseCompetenceDivine() { return aUtiliseCompetenceDivine; }
     public void setaUtiliseCompetenceDivine(Boolean aUtiliseCompetenceDivine) { this.aUtiliseCompetenceDivine = aUtiliseCompetenceDivine;}
     public Boolean getPeutRecevoirPoint() { return peutRecevoirPoint; }
@@ -236,7 +253,8 @@ public class Joueur {
         return "Joueur{" +
                 "nom='" + nom + '\'' +
                 ", pointsAction=" + pointsAction +
-                ", peutSacrifier=" + peutSacrifier +
+                ", peutSacrifierCroyant=" + peutSacrifierCroyant +
+                ", peutSacrifierGuide=" + peutSacrifierGuide +
                 ", divinite=" + divinite +
                 '}';
     }
