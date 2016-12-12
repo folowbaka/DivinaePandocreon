@@ -17,6 +17,6 @@ public class Gwenghelen extends Divinite {
 
     @Override
     public void capacite(Joueur j, Partie p) {
-
+        j.ajoutPoints(this.getGuideDivinite().size(),"NEANT");
     }
 }

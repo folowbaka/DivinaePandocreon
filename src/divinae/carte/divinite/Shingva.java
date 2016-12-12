@@ -1,10 +1,13 @@
 package divinae.carte.divinite;
 
+import divinae.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.Divinite;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
+
+import java.util.Scanner;
 
 public class Shingva extends Divinite {
 
@@ -17,6 +20,25 @@ public class Shingva extends Divinite {
 
     @Override
     public void capacite(Joueur j, Partie p) {
+        Joueur choixJoueur = InterfaceCommand.choixJoueur(p);
+        Scanner sc=new Scanner(System.in);
+        int choixSacrificeGuide;
+        InterfaceCommand.afficheCartesSacrifiable(choixJoueur);
+        boolean boolDogme=true;
+        do{
 
+            System.out.println("Entrez le guide de dogme Symboles ou Nature à sacrifier");
+            choixSacrificeGuide=sc.nextInt()-1;
+            for (int t=0; t<choixJoueur.getDivinite().getGuideDivinite().get(choixSacrificeGuide).getDogme().length;t++){
+                if (choixJoueur.getDivinite().getGuideDivinite().get(choixSacrificeGuide).getDogme()[t]==Dogme.NATURE || choixJoueur.getDivinite().getGuideDivinite().get(choixSacrificeGuide).getDogme()[t]==Dogme.SYMBOLE){
+                    boolDogme = false;
+                }
+            }
+            if (boolDogme){
+                System.out.println("Le guide choisi n'est pas du bon dogme.");
+            }
+        }while(boolDogme);
+
+        choixJoueur.getDivinite().getGuideDivinite().get(choixSacrificeGuide).capacite(choixJoueur,p);
     }
 }

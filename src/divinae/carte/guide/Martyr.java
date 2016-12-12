@@ -2,6 +2,7 @@ package divinae.carte.guide;
 
 import divinae.Joueur;
 import divinae.Partie;
+import divinae.carte.Apocalypse;
 import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
@@ -16,6 +17,7 @@ public class Martyr extends GuideSpirituel {
 
     @Override
     public void capacite(Joueur j, Partie p) {
-
+        Apocalypse apocalypse = new Apocalypse(null);
+        apocalypse.capacite(j,p);
     }
 }

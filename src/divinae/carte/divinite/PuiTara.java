@@ -2,6 +2,7 @@ package divinae.carte.divinite;
 
 import divinae.Joueur;
 import divinae.Partie;
+import divinae.carte.abstractcarte.Croyant;
 import divinae.carte.abstractcarte.Divinite;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
@@ -17,6 +18,10 @@ public class PuiTara extends Divinite {
 
     @Override
     public void capacite(Joueur j, Partie p) {
-
+        for (int i =0; i<p.getCentreTable().size();i++){
+            if (p.getCentreTable().get(i) instanceof Croyant && p.getCentreTable().get(i).getOrigine()==Origine.JOUR){
+                p.getDefausse().add(p.getCentreTable().remove(i));
+            }
+        }
     }
 }
