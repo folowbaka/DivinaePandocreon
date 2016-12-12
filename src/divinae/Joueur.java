@@ -191,6 +191,15 @@ public class Joueur {
             p.getDefausse().add(this.divinite.getGuideDivinite().remove(i));
         }
     }
+    public boolean pointPourJouer(Carte carte)
+    {
+        int point=this.getPointsAction().get(carte.getOrigine().toString());
+        if(point<=0 && carte.getOrigine()!=Origine.NEANT && carte.getOrigine()!=null)
+        {
+            return false;
+        }
+        else return true;
+    }
     public String getNom()
     {
         return this.nom;

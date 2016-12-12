@@ -10,8 +10,10 @@ import divinae.carte.divinite.*;
 import divinae.carte.guide.*;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
+import divinae.strategie.*;
 
 import java.util.*;
+import java.util.Random;
 
 import static java.util.Collections.shuffle;
 
@@ -29,7 +31,7 @@ public class Partie {
     private boolean fintour;
     private Origine influenceTour;
 
-    public static Partie getInstance(String[] nomJoueur)
+    public static Partie getInstance(String[][] nomJoueur)
     {
        if(ourInstance==null)
        {
@@ -37,13 +39,36 @@ public class Partie {
        }
         return ourInstance;
     }
-    private Partie(String[] nomJoueur)
+    private Partie(String[][] nomJoueur)
     {
         System.out.println("Partie créée");
         this.joueur=new ArrayList<Joueur>();
-        for(int i=0;i<nomJoueur.length;i++)
+        if(nomJoueur[1][0]==null)
         {
-            this.joueur.add(new Joueur(nomJoueur[i]));
+            System.out.println("fuck");
+            System.out.println();
+            for (int i = 0; i < nomJoueur[0].length; i++) {
+                this.joueur.add(new Joueur(nomJoueur[0][i]));
+            }
+        }
+        else
+        {
+            int i=0;
+            Random rd=new Random();
+            while(i<nomJoueur[0].length && nomJoueur[0][i]!=null)
+            {
+                this.joueur.add(new Joueur(nomJoueur[0][i]));
+                i++;
+            }
+            i=0;
+            while(i<nomJoueur[0].length && nomJoueur[0][i]!=null)
+            {
+                if(rd.nextInt()==0)
+                    this.joueur.add(new JoueurVirtuel(nomJoueur[1][i],new Prudent()));
+                else
+                    this.joueur.add(new JoueurVirtuel(nomJoueur[1][i],new RNG()));
+                i++;
+            }
         }
         this.pioche= new ArrayList<Carte>();
         this.defausse= new ArrayList<Carte>();
@@ -70,6 +95,11 @@ public class Partie {
             while (j < this.joueur.size() && !fintour)
             {
                 this.joueur.get(j).ajoutPoints(origineTour);
+                if(this.joueur.get(j) instanceof JoueurVirtuel)
+                {
+                    ((JoueurVirtuel) this.joueur.get(j)).getStrategie().jouer(this.joueur.get(j),this);
+                }
+                else
                 InterfaceCommand.jouer(this.joueur.get(j), this,j);
                 if(!fintour && APOCALYPSE==false)
                     APOCALYPSE=true;

@@ -21,7 +21,7 @@ public class InterfaceCommand {
 
 
     }
-    public static String[] choisirJoueur() {
+    public static String[][] choisirJoueur() {
         Scanner choixUtilisateur = new Scanner(System.in);
         int nbJoueur=-1;
         do {
@@ -35,7 +35,7 @@ public class InterfaceCommand {
                 choixUtilisateur.next();
             }
         } while (nbJoueur<2 || nbJoueur > 6);
-        String[] nomJoueur=new String[nbJoueur];
+        String[][] nomJoueur=new String[2][nbJoueur];
         String choix="";
         do
         {
@@ -48,9 +48,24 @@ public class InterfaceCommand {
             for(int i=0;i<nbJoueur;i++)
             {
                 System.out.println("Veuillez rentrer le nom du Joueur "+(i+1));
-                nomJoueur[i]=choixUtilisateur.next();
+                nomJoueur[0][i]=choixUtilisateur.next();
             }
 
+        }
+        else
+        {
+            System.out.println("Combien de joueurs virtuel voulez vous? ");
+            int nbVirtuel;
+            nbVirtuel=choixUtilisateur.nextInt();
+            for(int i=0;i<nbJoueur-nbVirtuel;i++)
+            {
+                System.out.println("Veuillez rentrer le nom du Joueur "+(i+1));
+                nomJoueur[0][i]=choixUtilisateur.next();
+            }
+            for(int i=0;i<nbJoueur-(nbJoueur-nbVirtuel);i++)
+            {
+                nomJoueur[1][i]="JV "+(i+1);
+            }
         }
         return nomJoueur;
     }
@@ -127,7 +142,7 @@ public class InterfaceCommand {
             j.getDivinite().capacite(j, p);
             j.setaUtiliseCompetenceDivine(true);
         }
-        if(point<=0 && carte.getOrigine()!=Origine.NEANT && carte.getOrigine()!=null)
+        if(!j.pointPourJouer(carte))
         {
             System.out.println("Vous n'avez pas assez de points pour jouer");
             return ;
