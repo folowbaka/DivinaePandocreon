@@ -127,62 +127,8 @@ public class Joueur {
             System.out.println("Vous ne pouvez pas recevoir de points");
         }
     }
-    public void jouer(int c,Partie p)
+    public void jouer(int c,Partie p,Carte carte)
     {
-        Carte carte=this.getMain().get(c);
-        int point=this.pointsAction.get(carte.getOrigine().toString());
-        if(c==7)
-        {
-            this.divinite.capacite(this, p);
-            this.aUtiliseCompetenceDivine=true;
-        }
-        if(point<=0 && carte.getOrigine()!=Origine.NEANT && carte.getOrigine()!=null)
-        {
-                System.out.println("Vous n'avez pas assez de points pour jouer");
-                return ;
-        }
-        if(point>0)
-        {
-            this.pointsAction.put(carte.getOrigine().toString(),point-1);
-        }
-        else if(point<=0 && carte.getOrigine()==Origine.NEANT)
-        {
-            Scanner sc=new Scanner(System.in);
-            int choixPoint;
-            if(this.pointsAction.get("NUIT")>1 && this.pointsAction.get("JOUR")>1)
-            {
-                System.out.println("1---------Dépenser 2 points Nuit?");
-                System.out.println("2---------Dépenser 2 points Jour?");
-                System.out.println("0---------Annuler");
-                choixPoint=sc.nextInt();
-                if(choixPoint==0)
-                    return;
-                if(choixPoint==1)
-                    this.pointsAction.put("NUIT",this.pointsAction.get("NUIT")-2);
-                if(choixPoint==2)
-                    this.pointsAction.put("JOUR",this.pointsAction.get("JOUR")-2);
-            }
-            else if(this.pointsAction.get("NUIT")>1)
-            {
-                System.out.println("1---------Dépenser 2 points Nuit?");
-                System.out.println("0---------Annuler");
-                choixPoint=sc.nextInt();
-                if(choixPoint==0)
-                    return;
-                if(choixPoint==1)
-                    this.pointsAction.put("NUIT",this.pointsAction.get("NUIT")-2);
-            }
-            else
-            {
-                System.out.println("1---------Dépenser 2 points Jour?");
-                System.out.println("0---------Annuler");
-                choixPoint=sc.nextInt();
-                if(choixPoint==0)
-                    return;
-                if(choixPoint==1)
-                    this.pointsAction.put("JOUR",this.pointsAction.get("JOUR")-2);
-            }
-        }
         if(carte instanceof Croyant)
         {
             p.getCentreTable().add((Croyant) this.getMain().remove(c));
@@ -252,6 +198,10 @@ public class Joueur {
     public ArrayList<Carte> getMain()
     {
         return this.main;
+    }
+    public HashMap<String,Integer> getPointsAction()
+    {
+        return this.pointsAction;
     }
     @Override
     public String toString() {

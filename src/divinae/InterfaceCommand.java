@@ -1,5 +1,6 @@
 package divinae;
 
+import divinae.carte.Apocalypse;
 import divinae.carte.abstractcarte.Carte;
 import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Origine;
@@ -38,11 +39,11 @@ public class InterfaceCommand {
         String choix="";
         do
         {
-            System.out.println("Voulez vous jouez avec des joueur virtuels?");
+            System.out.println("Voulez vous jouez avec des joueur virtuels[o/n]?");
             choix = choixUtilisateur.next();
             System.out.println(choix);
-        }while(!choix.equals("oui") && !choix.equals("non"));
-        if(choix.equals("non"))
+        }while(!choix.equals("o") && !choix.equals("n"));
+        if(choix.equals("n"))
         {
             for(int i=0;i<nbJoueur;i++)
             {
@@ -53,7 +54,7 @@ public class InterfaceCommand {
         }
         return nomJoueur;
     }
-    public static void jouer(Joueur j,Partie p)
+    public static void jouer(Joueur j,Partie p,int joueurJoue)
     {
         System.out.println("C'est à vous de jouer joueur : "+j.getNom());
         System.out.println(j);
@@ -65,7 +66,9 @@ public class InterfaceCommand {
         {       InterfaceCommand.afficheCarteJoueur(j);
                 System.out.println("---------------1-Défausser Carte");
                 System.out.println("---------------2-Compléter main");
-                System.out.println("---------------3-Jouer Carte");
+                System.out.println("---------------3-Jouer ou Sacrifier Carte");
+                if(p.checkInterrompre(joueurJoue))
+                    System.out.println("---------------9-Interrompre");
                 System.out.println("---------------0-Terminer Tour");
                 do
                 {
@@ -80,7 +83,9 @@ public class InterfaceCommand {
                             else
                                 System.out.println("Votre main est déjà vide ou vous avez déjà défaussé des cartes pendant ce tour");
                             System.out.println("---------------2-Compléter main");
-                            System.out.println("---------------3-Jouer Carte");
+                            System.out.println("---------------3-Jouer ou Sacrifier Carte");
+                            if(p.checkInterrompre(joueurJoue))
+                                System.out.println("---------------9-Interrompre");
                             break;
                         case 2:
                                 if(j.getMain().size()!=Joueur.TAILLEMAIN)
@@ -90,11 +95,16 @@ public class InterfaceCommand {
                                 }
                                 else
                                     System.out.println("Votre main est déja pleine");
-                                System.out.println("---------------3-Jouer Carte");
+                                System.out.println("---------------3-Jouer ou Sacrifier Carte");
+                            if(p.checkInterrompre(joueurJoue))
+                                System.out.println("---------------9-Interrompre");
                             break;
                         case 3:
-                            InterfaceCommand.choixJouerCarte(j,p);
+                            InterfaceCommand.choixAction(j,p,joueurJoue);
                             tour=false;
+                            break;
+                        case 9:
+                            InterfaceCommand.interrompre(j,p,joueurJoue);
                             break;
                         case 0:
                             tour = false;
@@ -107,6 +117,75 @@ public class InterfaceCommand {
         j.allowSacrificeCroyant();
         j.allowSacrificeGuide();
 
+    }
+    public static void pointJouer(Joueur j,int c,Partie p,int joueurJoue)
+    {
+        Carte carte=j.getMain().get(c);
+        int point=j.getPointsAction().get(carte.getOrigine().toString());
+        if(c==7)
+        {
+            j.getDivinite().capacite(j, p);
+            j.setaUtiliseCompetenceDivine(true);
+        }
+        if(point<=0 && carte.getOrigine()!=Origine.NEANT && carte.getOrigine()!=null)
+        {
+            System.out.println("Vous n'avez pas assez de points pour jouer");
+            return ;
+        }
+        Scanner sc=new Scanner(System.in);
+        if(point>0)
+        {
+            j.getPointsAction().put(carte.getOrigine().toString(),point-1);
+        }
+        else if(point<=0 && carte.getOrigine()==Origine.NEANT)
+        {
+            int choixPoint;
+            if(j.getPointsAction().get("NUIT")>1 && j.getPointsAction().get("JOUR")>1)
+            {
+                System.out.println("1---------Dépenser 2 points Nuit?");
+                System.out.println("2---------Dépenser 2 points Jour?");
+                System.out.println("0---------Annuler");
+                choixPoint=sc.nextInt();
+                if(choixPoint==0)
+                    return;
+                if(choixPoint==1)
+                    j.getPointsAction().put("NUIT",j.getPointsAction().get("NUIT")-2);
+                if(choixPoint==2)
+                    j.getPointsAction().put("JOUR",j.getPointsAction().get("JOUR")-2);
+            }
+            else if(j.getPointsAction().get("NUIT")>1)
+            {
+                System.out.println("1---------Dépenser 2 points Nuit?");
+                System.out.println("0---------Annuler");
+                choixPoint=sc.nextInt();
+                if(choixPoint==0)
+                    return;
+                if(choixPoint==1)
+                    j.getPointsAction().put("NUIT",j.getPointsAction().get("NUIT")-2);
+            }
+            else
+            {
+                System.out.println("1---------Dépenser 2 points Jour?");
+                System.out.println("0---------Annuler");
+                choixPoint=sc.nextInt();
+                if(choixPoint==0)
+                    return;
+                if(choixPoint==1)
+                    j.getPointsAction().put("JOUR",j.getPointsAction().get("JOUR")-2);
+            }
+        }
+        if(p.checkInterrompre(joueurJoue))
+        {
+            int inte;
+            System.out.println("9---------Interrompre");
+            inte=sc.nextInt();
+            switch (inte)
+            {
+                case 9:
+                    InterfaceCommand.interrompre(j,p,joueurJoue);
+            }
+        }
+        j.jouer(c,p,carte);
     }
     public static void choixDefausseCarte(Joueur j,Partie p) {
         Scanner sc=new Scanner(System.in);
@@ -122,7 +201,7 @@ public class InterfaceCommand {
                 System.out.println("Choix invalide");
         }while (!j.getMain().isEmpty() && choixCarte>0);
     }
-    public static void choixAction(Joueur j,Partie p)
+    public static void choixAction(Joueur j,Partie p,int joueurJoue)
     {
         Scanner sc=new Scanner(System.in);
         int choixAct;
@@ -135,7 +214,7 @@ public class InterfaceCommand {
             {
                 switch (choixAct) {
                     case 1:
-                        InterfaceCommand.choixJouerCarte(j, p);
+                        InterfaceCommand.choixJouerCarte(j, p,joueurJoue);
                         break;
                     case 2:
                         InterfaceCommand.sacrifierCarte(j, p);
@@ -146,7 +225,7 @@ public class InterfaceCommand {
         }while (choixAct!=0);
 
     }
-    public static void choixJouerCarte(Joueur j,Partie p)
+    public static void choixJouerCarte(Joueur j,Partie p,int joueurJoue)
     {
         Scanner sc=new Scanner(System.in);
         int choixCarte;
@@ -158,7 +237,7 @@ public class InterfaceCommand {
             System.out.println("0------------Quitter");
             choixCarte=sc.nextInt();
             if(choixCarte<=j.getMain().size()+1 && choixCarte>0)
-                j.jouer(choixCarte-1,p);
+                InterfaceCommand.pointJouer(j,choixCarte-1,p,joueurJoue);
             else if(choixCarte!=0)
                 System.out.println("Choix invalide");
         }while (!j.getMain().isEmpty() && choixCarte>0);
@@ -167,7 +246,10 @@ public class InterfaceCommand {
     {
         Scanner sc=new Scanner(System.in);
         if(j.getDivinite().getGuideDivinite().size()==0)
+        {
+            System.out.println("Aucune carte à sacrifier");
             return;
+        }
         int choixSacrificeGuide;
         int choixSacrificeCroyant;
         int choixSacrifice;
@@ -280,6 +362,45 @@ public class InterfaceCommand {
             }
         }while (choixGuide>joueur.getDivinite().getGuideDivinite().size() || choixGuide<0);
         return choixGuide-1;
+    }
+    public static void  interrompre(Joueur j,Partie p,int joueurJoue)
+    {
+        Scanner sc=new Scanner(System.in);
+        int joueur;
+        System.out.println("Quel joueur souhaite interrompre?");
+        joueur=sc.nextInt()-1;
+        if(joueur!=joueurJoue)
+        InterfaceCommand.afficheCarteSansOrigin(p.getJoueur().get(joueur));
+
+    }
+    public static void choixSansOrigin(Joueur j,Partie p)
+    {
+        Scanner sc=new Scanner(System.in);
+        int choixCarteSO;
+        do {
+            InterfaceCommand.afficheCarteSansOrigin(j);
+            System.out.println("Quel carte voulez vous utiliser?");
+            System.out.println("0------------Quitter");
+            choixCarteSO=sc.nextInt();
+            if(j.getMain().get(choixCarteSO-1).getOrigine()==null)
+            {
+                j.jouer(choixCarteSO-1,p,j.getMain().get(choixCarteSO-1));
+            }
+        }while (choixCarteSO>0 && j.getMain().get(choixCarteSO).getOrigine()!=null);
+    }
+    public static void afficheCarteSansOrigin(Joueur j)
+    {
+        for(int i=0;i<j.getMain().size();i++)
+        {
+            if(j.getMain().get(i) instanceof Apocalypse && Partie.APOCALYPSE)
+            {
+                System.out.println("Carte : "+(i+1)+" "+j.getMain().get(i).getNom());
+            }
+            else if(j.getMain().get(i).getOrigine()==null)
+            {
+                System.out.println("Carte : "+(i+1)+" "+j.getMain().get(i).getNom());
+            }
+        }
     }
 
 }

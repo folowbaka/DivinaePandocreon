@@ -70,7 +70,7 @@ public class Partie {
             while (j < this.joueur.size() && !fintour)
             {
                 this.joueur.get(j).ajoutPoints(origineTour);
-                InterfaceCommand.jouer(this.joueur.get(j), this);
+                InterfaceCommand.jouer(this.joueur.get(j), this,j);
                 if(!fintour && APOCALYPSE==false)
                     APOCALYPSE=true;
                 if(fintour && !APOCALYPSE)
@@ -131,6 +131,26 @@ public class Partie {
                 this.joueur.get(i).pioche(this);
             }
         }
+    }
+    public boolean checkInterrompre(int joueurJoue)
+    {
+        int i=0;
+        boolean interrompre=false;
+        while(i<this.joueur.size() &&!interrompre)
+        {
+            int j=0;
+            if(i!=joueurJoue)
+            while(j<this.joueur.get(i).getMain().size() && !interrompre)
+            {
+                if(this.joueur.get(i).getMain().get(j) instanceof Apocalypse && APOCALYPSE)
+                    interrompre=true;
+                else if(this.joueur.get(i).getMain().get(j).getOrigine()==null && !(this.joueur.get(i).getMain().get(j) instanceof Apocalypse))
+                    interrompre=true;
+                j++;
+            }
+            i++;
+        }
+        return interrompre;
     }
     public ArrayList<Carte> getPioche()
     {
