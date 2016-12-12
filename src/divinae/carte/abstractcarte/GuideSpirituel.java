@@ -61,9 +61,21 @@ public abstract class GuideSpirituel extends CarteDogme {
     {
         for(int j=0;j<this.getCroyantRattache().length;j++)
         {
-            p.getCentreTable().add(getCroyantRattache()[j]);
+            if(this.croyantRattache[j]!=null)
+            {
+                p.getCentreTable().add(getCroyantRattache()[j]);
+                this.croyantRattache[j]=null;
+            }
         }
-        setCroyantRattache(null);
+    }
+    public boolean croyantVide()
+    {
+        int i=0;
+        while(i<this.croyantRattache.length && this.croyantRattache[i]!=null)
+        {
+            i++;
+        }
+        return i==this.croyantRattache.length;
     }
     public int priereGuide()
     {
