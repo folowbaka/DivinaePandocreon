@@ -45,7 +45,7 @@ public class Partie {
         this.joueur=new ArrayList<Joueur>();
         if(nomJoueur[1][0]==null)
         {
-            System.out.println("fuck");
+
             System.out.println();
             for (int i = 0; i < nomJoueur[0].length; i++) {
                 this.joueur.add(new Joueur(nomJoueur[0][i]));
