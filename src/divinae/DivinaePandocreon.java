@@ -1,47 +1,31 @@
 package divinae;
 
-import divinae.carte.divinite.Brewalen;
-import divinae.enumeration.Dogme;
+import javafx.application.Application;
+import javafx.stage.Stage;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.*;
 
-/**
- * Created by david on 21/11/2016.
+/*
+ * Created by Folow on 27/12/2016.
  */
-public class DivinaePandocreon {
-
-    public static void main(String[] args) {
-
-        boolean creerpartie = false;
-        Scanner choixUtilisateur = new Scanner(System.in);
-        int choix=-1;
+public class DivinaePandocreon{
+    public static void main (String [] args){
+        Scanner sc = new Scanner(System.in);
+        int choixInterface;
         do {
-            System.out.println("----------DIVINAE PANDOCREON----------\n----------1-Créer Partie\n----------0-Exit");
-            try
-            {
-                choix = choixUtilisateur.nextInt();
-            }catch(InputMismatchException e)
-            {
-                System.out.println("Erreur de saisie,Veuillez réessayer");
-                choixUtilisateur.next();
-
-            }
-        } while (choix > 1 || choix < 0);
-
-        switch(choix)
+            System.out.println("Voulez vous jouez avec une interface commande ou graphique?");
+            System.out.println("1-----------------Commande");
+            System.out.println("2-----------------Graphique");
+            choixInterface=sc.nextInt();
+        }while(choixInterface!=1 && choixInterface!=2);
+        switch (choixInterface)
         {
             case 1:
-
-                Partie partie = Partie.getInstance(InterfaceCommand.choisirJoueur());
+                new DivinaePandocreonCommande();
                 break;
-            default:
-                System.out.println("A la prochaine");
-                return;
-
+            case 2:
+                Application.launch(DivinaePandocreonGraphique.class,args);
+                break;
         }
-        return;
-
     }
 }
