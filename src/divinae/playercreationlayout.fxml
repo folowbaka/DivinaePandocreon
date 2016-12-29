@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="434.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="divinae.PlayerCreationController">
+   <children>
+      <Label text="Choissiez le nombre de joueur" />
+      <ChoiceBox fx:id="chbNbPlayer" prefWidth="150.0" />
+      <Label text="Voulez vous jouer avec des joueurs virtuels?" />
+      <HBox alignment="CENTER" prefHeight="31.0" prefWidth="434.0">
+         <children>
+            <RadioButton fx:id="virtuelOui" mnemonicParsing="false" onMouseClicked="#handleCheck" prefHeight="21.0" prefWidth="63.0" text="Oui">
+               <toggleGroup>
+                  <ToggleGroup fx:id="jVirtuel" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="virtuelNon" mnemonicParsing="false" onMouseClicked="#handleCheck" text="Non" toggleGroup="$jVirtuel" />
+         </children>
+      </HBox>
+      <ChoiceBox fx:id="chbNbPlayerV" disable="true" prefWidth="150.0" />
+      <Button mnemonicParsing="false" onMouseClicked="#handleValiderJoueur" text="Valider" />
+   </children>
+</VBox>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="divinae.BeginLayoutController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="363.0" text="DIVINAE PANDOCREON" textAlignment="CENTER" />
+      <Button fx:id="bJouer" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMousePressed="#handlePlay" prefHeight="31.0" prefWidth="345.0" text="Start" />
+      <Button fx:id="bQuitter" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#handleExit" prefHeight="31.0" prefWidth="490.0" text="Quitter" />
+   </children>
+</VBox>
