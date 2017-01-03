@@ -11,19 +11,11 @@ import java.io.IOException;
 /*
  * Created by Folow on 27/12/2016.
  */
-public class BeginLayoutController {
+public class BeginLayoutController extends ControllerDivinae{
     @FXML
     private Button bJouer;
     @FXML
     private Button bQuitter;
-
-    private DivinaePandocreonGraphique dpg;
-
-
-    public void setDPG(DivinaePandocreonGraphique dpg)
-    {
-        this.dpg = dpg;
-    }
 
     @FXML
     private void handleExit()
@@ -38,12 +30,12 @@ public class BeginLayoutController {
         try {
             pCL=loader.load();
             PlayerCreationController pCC=loader.getController();
-            pCC.setDpg(this.dpg);
+            pCC.setDpg(this.getDpg());
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-        this.dpg.getRootLayout().setCenter(pCL);
+        this.getDpg().getRootLayout().setCenter(pCL);
     }
 
 

@@ -2,6 +2,7 @@ package divinae.carte.abstractcarte;
 
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
+import javafx.scene.image.Image;
 
 import java.util.ArrayList;
 
@@ -9,8 +10,8 @@ public abstract class Divinite extends CarteDogme {
     private String descriptionDivinite;
     private ArrayList<GuideSpirituel> guideDivinite;
 
-    public Divinite(Origine origine, Dogme[] dogme) {
-        super(origine,dogme);
+    public Divinite(Origine origine, Dogme[] dogme,Image imgCarte) {
+        super(origine,dogme,imgCarte);
     }
 
     public void setDescriptionDivinite(String descriptionDivinite) {

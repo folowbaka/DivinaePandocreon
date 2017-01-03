@@ -6,11 +6,12 @@ import divinae.carte.abstractcarte.Croyant;
 import divinae.carte.abstractcarte.Divinite;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
+import javafx.scene.image.Image;
 
 public class PuiTara extends Divinite {
 
-    public PuiTara() {
-        super(Origine.NUIT, new Dogme[]{Dogme.NATURE,Dogme.MYSTIQUE,Dogme.SYMBOLE});
+    public PuiTara(Image imgCarte) {
+        super(Origine.NUIT, new Dogme[]{Dogme.NATURE,Dogme.MYSTIQUE,Dogme.SYMBOLE},imgCarte);
         this.setDescriptionDivinite("Pui-Tara est la Divinité sur laquelle l'influence de la Nuit s'est faite la plus forte.");
         this.setDescription("Peut détruire toutes les cartes de Croyants au centre de la table d'Origine Jour.");
         this.setNom("Pui-Tara");

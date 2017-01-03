@@ -1,14 +1,15 @@
 package divinae.carte.abstractcarte;
 
 import divinae.enumeration.*;
+import javafx.scene.image.Image;
 
 import java.util.Arrays;
 
 public abstract class CarteDogme  extends Carte{
     private Dogme[] dogme;
-    public CarteDogme(Origine origine,Dogme[] dogme)
+    public CarteDogme(Origine origine,Dogme[] dogme, Image imgCarte)
     {
-        super(origine);
+        super(origine,imgCarte);
         this.dogme=dogme;
     }
 

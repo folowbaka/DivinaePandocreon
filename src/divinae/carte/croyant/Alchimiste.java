@@ -6,12 +6,13 @@ import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
+import javafx.scene.image.Image;
 
 public class Alchimiste extends Croyant {
     private int numero;
 
-    public Alchimiste(Dogme[] dogme, int numero) {
-        super(Origine.NUIT, dogme);
+    public Alchimiste(Dogme[] dogme, int numero, Image imgCarte) {
+        super(Origine.NUIT, dogme,imgCarte);
         switch(numero) {
             case 1 :
                 this.setDescription("Sacrifice :\nEmpêche une Divinité\n" +

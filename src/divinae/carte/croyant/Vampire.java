@@ -6,12 +6,13 @@ import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
+import javafx.scene.image.Image;
 
 import java.util.Scanner;
 
 public class Vampire extends Croyant {
-    public Vampire( Dogme[] dogme) {
-        super(Origine.NUIT,dogme);
+    public Vampire( Dogme[] dogme, Image imgCarte) {
+        super(Origine.NUIT,dogme,imgCarte);
         this.setDescription("Sacrifice :\nImpose le sacrifice d'un\n" +
                 "Croyant d'un autre joueur.\n" +
                 "Celui-ci choisit le sacrifié. La\n" +

@@ -32,6 +32,7 @@ public class DivinaePandocreonCommande {
             case 1:
 
                 Partie partie = Partie.getInstance(InterfaceCommand.choisirJoueur());
+                partie.commencerPartie();
                 break;
             default:
                 System.out.println("A la prochaine");

@@ -5,10 +5,11 @@ import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
+import javafx.scene.image.Image;
 
 public class Illusionniste extends Croyant {
-    public Illusionniste(Dogme[] dogme) {
-        super(Origine.NUIT,dogme);
+    public Illusionniste(Dogme[] dogme, Image imgCarte) {
+        super(Origine.NUIT,dogme,imgCarte);
         this.setDescription("Sacrifice :\nVous bénéficiez de la capacité\n" +
                 "spéciale de sacrifice d'une\n" +
                 "carte de Croyants\n" +

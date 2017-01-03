@@ -6,12 +6,13 @@ import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
+import javafx.scene.image.Image;
 
 import java.util.Scanner;
 
 public class Integriste extends Croyant {
-    public Integriste(Dogme[] dogme) {
-        super(Origine.JOUR,dogme);
+    public Integriste(Dogme[] dogme, Image imgCarte) {
+        super(Origine.JOUR,dogme,imgCarte);
         this.setDescription("Sacrifice :\nImpose le sacrifice d'un Guide\n" +
                 "Spirituel d'un autre joueur,\n" +
                 "qui choisit la carte. La\n" +

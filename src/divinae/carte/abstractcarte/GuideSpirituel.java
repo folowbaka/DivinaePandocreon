@@ -5,14 +5,15 @@ import divinae.Joueur;
 import divinae.Joueur;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
+import javafx.scene.image.Image;
 
 import java.util.ArrayList;
 
 public abstract class GuideSpirituel extends CarteDogme {
     private Croyant[] croyantRattache;
-    public GuideSpirituel(Origine origine,Dogme[] dogme,int nbMaxCroyant)
+    public GuideSpirituel(Origine origine,Dogme[] dogme,int nbMaxCroyant,Image imgCarte)
     {
-        super(origine,dogme);
+        super(origine,dogme,imgCarte);
         this.croyantRattache=new Croyant[nbMaxCroyant];
 
     }

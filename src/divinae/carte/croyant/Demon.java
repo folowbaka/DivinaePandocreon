@@ -5,11 +5,12 @@ import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
+import javafx.scene.image.Image;
 
 public class Demon extends Croyant {
-    public Demon(Dogme[] dogme) {
+    public Demon(Dogme[] dogme, Image imgCarte) {
 
-        super(Origine.NUIT,dogme);
+        super(Origine.NUIT,dogme,imgCarte);
         this.setDescription("Sacrifice :\nDonne un point d'Action\n" +
                 "d'Origine Nuit.\n");
         this.setNom("Demon");

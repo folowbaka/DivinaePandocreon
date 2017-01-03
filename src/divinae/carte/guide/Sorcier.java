@@ -5,10 +5,11 @@ import divinae.Partie;
 import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
+import javafx.scene.image.Image;
 
 public class Sorcier extends GuideSpirituel{
-    public Sorcier(Origine origine, Dogme[] dogme,int nbMaxCroyant) {
-        super(origine,dogme,nbMaxCroyant);
+    public Sorcier(Origine origine, Dogme[] dogme,int nbMaxCroyant,Image imgCarte) {
+        super(origine,dogme,nbMaxCroyant,imgCarte);
         this.setDescription("Sacrifice :\nEchangez l'un de vos Guides\n" +
                 "Spirituels avec un d'une autre\n" +
                 "Divinité. Vous choisissez les\n" +

@@ -7,11 +7,12 @@ import divinae.carte.abstractcarte.Croyant;
 import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
+import javafx.scene.image.Image;
 
 public class Lycanthrope extends Croyant {
 
-    public Lycanthrope( Dogme[] dogme) {
-        super(Origine.NUIT, dogme);
+    public Lycanthrope( Dogme[] dogme, Image imgCarte) {
+        super(Origine.NUIT, dogme,imgCarte);
         this.setDescription("Sacrifice :\nRetirez tous les Croyants\n" +
                 "attachés à l'un des Guides\n" +
                 "Spirituels d'une autre\n" +

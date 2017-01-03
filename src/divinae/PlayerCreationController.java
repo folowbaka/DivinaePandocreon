@@ -16,9 +16,7 @@ import java.util.ArrayList;
 /**
  * Created by Folow on 28/12/2016.
  */
-public class PlayerCreationController {
-
-    private DivinaePandocreonGraphique dpg;
+public class PlayerCreationController extends ControllerDivinae{
 
     @FXML
     private ToggleGroup jVirtuel;
@@ -58,7 +56,11 @@ public class PlayerCreationController {
     {
         FXMLLoader loader=new FXMLLoader(getClass().getResource("playeraskname.fxml"));
         try {
-            this.dpg.getRootLayout().setCenter((VBox)loader.load());
+            this.getDpg().getRootLayout().setCenter((VBox)loader.load());
+            ((PlayerAskNameController)loader.getController()).setNbJoueur((Integer)chbNbPlayer.getValue());
+            ((PlayerAskNameController)loader.getController()).setDpg(this.getDpg());
+            if(!chbNbPlayerV.isDisabled())
+            ((PlayerAskNameController)loader.getController()).setNbJoueurVirtuel((Integer)chbNbPlayerV.getValue());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -72,9 +74,6 @@ public class PlayerCreationController {
             ai.add(i);
         }
         chbNbPlayerV.getItems().setAll(ai);
-    }
-    public void setDpg(DivinaePandocreonGraphique dpg)
-    {
-        this.dpg=dpg;
+        chbNbPlayerV.getSelectionModel().selectFirst();
     }
 }

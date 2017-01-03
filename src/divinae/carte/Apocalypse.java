@@ -4,11 +4,12 @@ import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.Carte;
 import divinae.enumeration.Origine;
+import javafx.scene.image.Image;
 
 public class Apocalypse extends Carte {
 
-    public Apocalypse(Origine origine) {
-        super(origine);
+    public Apocalypse(Origine origine,Image imgCarte) {
+        super(origine,imgCarte);
         this.setNom("Apocalypse");
     }
 

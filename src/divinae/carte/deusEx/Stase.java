@@ -4,12 +4,13 @@ import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.DeusEx;
 import divinae.enumeration.Origine;
+import javafx.scene.image.Image;
 
 public class Stase extends DeusEx {
 
-    public Stase(Origine origine)
+    public Stase(Origine origine,Image imgCarte)
     {
-        super(origine);
+        super(origine,imgCarte);
         this.setDescription("Protège un Guide Spirituel et\n" +
                 "ses Croyants jusqu'à ce que\n" +
                 "cette carte soit annulée ou\n" +

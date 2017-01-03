@@ -5,11 +5,12 @@ import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
+import javafx.scene.image.Image;
 
 public class Revenant extends Croyant {
 
-    public Revenant(Dogme[] dogme) {
-        super(Origine.NEANT,dogme);
+    public Revenant(Dogme[] dogme,Image imgCarte) {
+        super(Origine.NEANT,dogme,imgCarte);
         this.setDescription("Sacrifice :\nLancez le dé de Cosmogonie.\n" +
                 "Le tour se fini normalement,\n" +
                 "mais sous cette nouvelle\n" +

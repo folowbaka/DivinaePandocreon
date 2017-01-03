@@ -4,11 +4,12 @@ import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.DeusEx;
 import divinae.enumeration.Origine;
+import javafx.scene.image.Image;
 
 public class TrouNoir extends DeusEx {
 
-    public TrouNoir(Origine origine) {
-        super(origine);
+    public TrouNoir(Origine origine,Image imgCarte) {
+        super(origine,imgCarte);
         this.setDescription("Aucun autre joueur ne gagne\n" +
                 "de points d'Action durant ce\n" +
                 "tour.");

@@ -4,12 +4,13 @@ import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.DeusEx;
 import divinae.enumeration.Origine;
+import javafx.scene.image.Image;
 
 public class OrdreCeleste extends DeusEx {
 
-    public OrdreCeleste(Origine origine)
+    public OrdreCeleste(Origine origine,Image imgCarte)
     {
-        super(origine);
+        super(origine,imgCarte);
         this.setDescription("Vous récupérez un des\n" +
                 "Guides Spirituels posés\n" +
                 "devant une autre Divinité et\n" +

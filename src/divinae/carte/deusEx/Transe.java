@@ -4,11 +4,12 @@ import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.DeusEx;
 import divinae.enumeration.Origine;
+import javafx.scene.image.Image;
 
 public class Transe extends DeusEx {
 
-    public Transe(Origine origine) {
-        super(origine);
+    public Transe(Origine origine,Image imgCarte) {
+        super(origine,imgCarte);
         this.setDescription("Permet de récupérer les effets\n" +
                 "bénéfiques d'une carte\n" +
                 "d'Action posée par une autre\n" +

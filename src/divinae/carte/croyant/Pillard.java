@@ -5,10 +5,11 @@ import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
+import javafx.scene.image.Image;
 
 public class Pillard extends Croyant {
-    public Pillard(Dogme[] dogme) {
-        super(Origine.NUIT,dogme);
+    public Pillard(Dogme[] dogme, Image imgCarte) {
+        super(Origine.NUIT,dogme,imgCarte);
         this.setDescription("Sacrifice :\nRécupérez les points d'Action\n" +
                 "d'une Divinité n'ayant pas\n" +
                 "encore joué durant ce tour.\n" +

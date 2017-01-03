@@ -16,6 +16,7 @@ public class DivinaePandocreonGraphique extends Application {
     private Stage primaryStage;
     private BorderPane rootLayout;
     private VBox beginLayout;
+    private Partie p;
         @Override
     public void start(Stage primaryStage) {
             this.primaryStage = primaryStage;
@@ -37,7 +38,7 @@ public class DivinaePandocreonGraphique extends Application {
             beginLayout=loader.load();
             rootLayout.setCenter(beginLayout);
             BeginLayoutController blc=loader.getController();
-            blc.setDPG(this);
+            blc.setDpg(this);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -50,5 +51,8 @@ public class DivinaePandocreonGraphique extends Application {
     public Stage getPrimaryStage() {
         return primaryStage;
     }
-
+    public void setPartie(Partie p)
+    {
+        this.p=p;
+    }
 }

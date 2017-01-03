@@ -4,13 +4,14 @@ import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.DeusEx;
 import divinae.enumeration.Origine;
+import javafx.scene.image.Image;
 
 public class Fourberie extends DeusEx {
 
-    public Fourberie(Origine origine)
+    public Fourberie(Origine origine,Image imgCarte)
     {
 
-        super(origine);
+        super(origine,imgCarte);
         this.setDescription("Sacrifiez 2 cartes Croyants\n" +
                 "d'une autre Divinité. Les\n" +
                 "capacités spéciales ne sont pas\n" +

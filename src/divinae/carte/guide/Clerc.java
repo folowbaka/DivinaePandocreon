@@ -6,11 +6,13 @@ import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 import divinae.InterfaceCommand;
+import javafx.scene.image.Image;
+
 import java.util.*;
 
 public class Clerc extends GuideSpirituel {
-    public Clerc(Origine origine, Dogme[] dogme,int nbMaxCroyant) {
-        super(origine,dogme,nbMaxCroyant);
+    public Clerc(Origine origine, Dogme[] dogme,int nbMaxCroyant,Image imgCarte) {
+        super(origine,dogme,nbMaxCroyant,imgCarte);
         this.setDescription("Sacrifice :\n" +
                 "Fait gagner un nombre de\n" +
                 "points d'Action égal au\n" +

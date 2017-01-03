@@ -6,10 +6,11 @@ import divinae.carte.abstractcarte.Croyant;
 import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
+import javafx.scene.image.Image;
 
 public class Paladin extends GuideSpirituel{
-    public Paladin(Origine origine, Dogme[] dogme,int nbMaxCroyant) {
-        super(origine,dogme,nbMaxCroyant);
+    public Paladin(Origine origine, Dogme[] dogme,int nbMaxCroyant,Image imgCarte) {
+        super(origine,dogme,nbMaxCroyant,imgCarte);
         this.setDescription("Sacrifice :\nTous les Croyants, d'Origine\n" +
                 "Nuit ou Néant et ayant le\n" +
                 "Dogme Nature, actuellement\n" +

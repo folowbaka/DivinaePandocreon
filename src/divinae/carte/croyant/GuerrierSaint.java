@@ -6,11 +6,12 @@ import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
+import javafx.scene.image.Image;
 
 public class GuerrierSaint extends Croyant {
 
-    public GuerrierSaint(Dogme[] dogme) {
-        super(Origine.JOUR,dogme);
+    public GuerrierSaint(Dogme[] dogme, Image imgCarte) {
+        super(Origine.JOUR,dogme,imgCarte);
         this.setDescription("Sacrifice :\nUn Guide Spirituel revient\n" +
                 "dans la main de sa Divinité.\n" +
                 "Ses Croyants reviennent au\n" +
