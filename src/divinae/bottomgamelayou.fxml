@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="BOTTOM_CENTER" maxHeight="1080.0" maxWidth="1920.0" minHeight="-Infinity" minWidth="1280" prefHeight="300.0" prefWidth="1280.0" styleClass="bottom-pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="divinae.BottomGameController">
+   <children>
+      <VBox alignment="BOTTOM_LEFT" prefHeight="400.0" prefWidth="180.0">
+         <children>
+            <ImageView fx:id="iVpioche" fitHeight="180.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true" />
+            <Button alignment="CENTER" mnemonicParsing="false" text="Compléter main" />
+            <Button mnemonicParsing="false" text="Défausser main" />
+         </children>
+         <opaqueInsets>
+            <Insets bottom="10.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="15.0" left="10.0" />
+         </padding>
+         <effect>
+            <BoxBlur height="0.0" width="0.0" />
+         </effect>
+      </VBox>
+      <Separator orientation="VERTICAL" prefHeight="200.0" />
+      <HBox fx:id="board" alignment="BOTTOM_CENTER" maxWidth="1700" prefHeight="400.0" prefWidth="1001.0">
+         <children>
+            <ImageView fitHeight="180.0" fitWidth="130.0" pickOnBounds="true">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="180.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="180.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="180.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="180.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="180.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="180.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets bottom="15.0" />
+         </padding>
+      </HBox>
+      <VBox alignment="BOTTOM_RIGHT" prefHeight="200.0" prefWidth="150.0">
+         <children>
+            <Pane prefHeight="250.0" prefWidth="110.0">
+               <children>
+                  <TableView fx:id="pointTable" layoutX="-6.0" layoutY="53.0" prefHeight="80.0" prefWidth="122.0">
+                    <columns>
+                      <TableColumn fx:id="pointJourColumn" prefWidth="40.0" text="JO" />
+                      <TableColumn fx:id="pointNuitColumn" prefWidth="40.0" text="NU" />
+                        <TableColumn fx:id="pointNeantColumn" prefWidth="41.0" text="NE" />
+                    </columns>
+                  </TableView>
+                  <Label fx:id="nomjoueur" alignment="CENTER" contentDisplay="CENTER" layoutX="-8.0" layoutY="23.0" prefHeight="21.0" prefWidth="126.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="6.0" />
+               </VBox.margin>
+            </Pane>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" text="Terminer tour" />
+         </children>
+         <padding>
+            <Insets bottom="15.0" right="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</HBox>

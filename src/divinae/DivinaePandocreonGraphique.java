@@ -3,6 +3,8 @@ package divinae;/**
  */
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -10,13 +12,18 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 public class DivinaePandocreonGraphique extends Application {
 
     private Stage primaryStage;
     private BorderPane rootLayout;
     private VBox beginLayout;
+    private VBox topLayout;
+    private TopController topController;
     private Partie p;
+    private ObservableList<HashMap<String,Integer>> pointsData = FXCollections.observableArrayList();
+    public static int JOUEURCOURANT=0;
         @Override
     public void start(Stage primaryStage) {
             this.primaryStage = primaryStage;
@@ -30,6 +37,7 @@ public class DivinaePandocreonGraphique extends Application {
         primaryStage.setTitle("Divinae Pandocreon");
         primaryStage.show();
         initBeginLayout();
+        initTopLayout();
 
     }
     public void initBeginLayout(){
@@ -43,6 +51,18 @@ public class DivinaePandocreonGraphique extends Application {
             e.printStackTrace();
         }
     }
+    public void initTopLayout()
+    {
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("toplayout.fxml"));
+        try {
+            topLayout=loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        rootLayout.setTop(topLayout);
+        topController=loader.getController();
+        topController.setDpg(this);
+    }
 
     public BorderPane getRootLayout() {
         return rootLayout;
@@ -54,5 +74,25 @@ public class DivinaePandocreonGraphique extends Application {
     public void setPartie(Partie p)
     {
         this.p=p;
+    }
+
+    public Partie getP() {
+        return p;
+    }
+
+    public TopController getTopController() {
+        return topController;
+    }
+
+    public void setTopController(TopController topController) {
+        this.topController = topController;
+    }
+
+    public ObservableList<HashMap<String, Integer>> getPointsData() {
+        return pointsData;
+    }
+
+    public void setPointsData(ObservableList<HashMap<String, Integer>> pointsData) {
+        this.pointsData = pointsData;
     }
 }

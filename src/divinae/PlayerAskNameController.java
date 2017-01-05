@@ -1,6 +1,5 @@
 package divinae;
 
-import com.sun.javafx.font.freetype.HBGlyphLayout;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -8,7 +7,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 
-import java.awt.*;
 import java.io.IOException;
 
 /*
@@ -56,13 +54,16 @@ public class PlayerAskNameController extends ControllerDivinae
                     this.nomJoueur[1][i]="JV "+(i+1);
                 }
                 this.getDpg().getRootLayout().setCenter(null);
-                FXMLLoader loader=new FXMLLoader(getClass().getResource("bottomgamelayout.fxml"));
+                FXMLLoader loader=new FXMLLoader(getClass().getResource("bottomgamelayou.fxml"));
                 Partie p=Partie.getInstance(nomJoueur);
+                p.setInfluenceTour(p.lancerDes());
+                p.getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT).ajoutPoints(p.getInfluenceTour());
                 this.getDpg().setPartie(p);
                 try {
                     HBox bottom=((HBox)loader.load());
                     BottomGameController bottomc=loader.getController();
-
+                    bottomc.setDpg(this.getDpg());
+                    bottomc.initBoard();
                     this.getDpg().getRootLayout().setBottom(bottom);
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -82,5 +83,6 @@ public class PlayerAskNameController extends ControllerDivinae
     public void setNbJoueurVirtuel(int nbJoueurVirtuel) {
         this.nbJoueurVirtuel = nbJoueurVirtuel;
     }
+
 
 }

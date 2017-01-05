@@ -86,15 +86,13 @@ public class Partie {
         while(PARTIENONFINIE)
         {
             int j=0;
-            Origine origineTour=this.lancerDes();
-            this.setInfluenceTour(origineTour);
-            System.out.println(origineTour);
+            this.setInfluenceTour(this.lancerDes());
             if(tour==1)
                 APOCALYPSE=true;
             fintour=false;
             while (j < this.joueur.size() && !fintour)
             {
-                this.joueur.get(j).ajoutPoints(origineTour);
+                this.joueur.get(j).ajoutPoints(this.influenceTour);
                 if(this.joueur.get(j) instanceof JoueurVirtuel)
                 {
                     ((JoueurVirtuel) this.joueur.get(j)).getStrategie().jouer(this.joueur.get(j),this);
