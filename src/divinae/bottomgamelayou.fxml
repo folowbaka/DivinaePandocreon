@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.media.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.*?>
@@ -13,8 +14,8 @@
       <VBox alignment="BOTTOM_LEFT" prefHeight="400.0" prefWidth="180.0">
          <children>
             <ImageView fx:id="iVpioche" fitHeight="180.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true" />
-            <Button alignment="CENTER" mnemonicParsing="false" text="Compléter main" />
-            <Button mnemonicParsing="false" text="Défausser main" />
+            <Button fx:id="bpiocher" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#handleCompleter" text="Compléter main" />
+            <Button fx:id="bdefausser" mnemonicParsing="false" onMouseReleased="#handleDefausser" text="Défausser main" />
          </children>
          <opaqueInsets>
             <Insets bottom="10.0" />
@@ -94,11 +95,11 @@
          <children>
             <Pane prefHeight="250.0" prefWidth="110.0">
                <children>
-                  <TableView fx:id="pointTable" layoutX="-6.0" layoutY="53.0" prefHeight="80.0" prefWidth="122.0">
+                  <TableView fx:id="pointTable" layoutX="-6.0" layoutY="53.0" maxHeight="80.0" maxWidth="122.0" minHeight="80.0" minWidth="122.0" prefHeight="80.0" prefWidth="122.0">
                     <columns>
-                      <TableColumn fx:id="pointJourColumn" prefWidth="40.0" text="JO" />
-                      <TableColumn fx:id="pointNuitColumn" prefWidth="40.0" text="NU" />
-                        <TableColumn fx:id="pointNeantColumn" prefWidth="41.0" text="NE" />
+                      <TableColumn fx:id="pointJourColumn" editable="false" prefWidth="40.0" text="JO" />
+                      <TableColumn fx:id="pointNuitColumn" editable="false" prefWidth="40.0" text="NU" />
+                        <TableColumn fx:id="pointNeantColumn" editable="false" maxWidth="41.0" prefWidth="41.0" text="NE" />
                     </columns>
                   </TableView>
                   <Label fx:id="nomjoueur" alignment="CENTER" contentDisplay="CENTER" layoutX="-8.0" layoutY="23.0" prefHeight="21.0" prefWidth="126.0" />
@@ -110,7 +111,7 @@
                   <Insets left="6.0" />
                </VBox.margin>
             </Pane>
-            <Button contentDisplay="CENTER" mnemonicParsing="false" text="Terminer tour" />
+            <Button contentDisplay="CENTER" mnemonicParsing="false" onMousePressed="#handleTerminerTour" text="Terminer tour" />
          </children>
          <padding>
             <Insets bottom="15.0" right="10.0" />

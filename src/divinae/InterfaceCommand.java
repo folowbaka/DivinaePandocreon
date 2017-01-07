@@ -128,10 +128,10 @@ public class InterfaceCommand {
                 }while(choix>0 && choix<3);
 
         }//on reinitialise les valeurs peutmachin
+
         j.setPeutRecevoirPoint(true);
         j.allowSacrificeCroyant();
         j.allowSacrificeGuide();
-
     }
     public static void pointJouer(Joueur j,int c,Partie p,int joueurJoue)
     {
@@ -178,7 +178,7 @@ public class InterfaceCommand {
                 if(choixPoint==1)
                     j.getPointsAction().put("NUIT",j.getPointsAction().get("NUIT")-2);
             }
-            else
+            else if(j.getPointsAction().get("JOUR")>1)
             {
                 System.out.println("1---------Dépenser 2 points Jour?");
                 System.out.println("0---------Annuler");
