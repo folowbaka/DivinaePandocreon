@@ -129,8 +129,20 @@ public class BottomGameController extends ControllerDivinae{
     @FXML
     private void handleCompleter()
     {
-        bpiocher.setDisable(true);
-        bdefausser.setDisable(true);
+        if(((ImageView)board.getChildren().get(6)).getImage()!=null)
+        {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setHeaderText("Votre main est pleine");
+            alert.showAndWait();
+        }
+        else
+        {
+            Joueur j = this.getDpg().getP().getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT);
+            j.completerMain((this.getDpg().getP()));
+            this.refreshBoard();
+            bpiocher.setDisable(true);
+            bdefausser.setDisable(true);
+        }
 
     }
     public void handleCarte(int num)
@@ -155,7 +167,9 @@ public class BottomGameController extends ControllerDivinae{
     }
     public void pointJouer(Joueur j,int c,Partie p,int joueurJoue)
     {
+        System.out.println("Joueur "+DivinaePandocreonGraphique.JOUEURCOURANT);
         Carte carte=j.getMain().get(c);
+        System.out.println(carte);
         if(carte.getOrigine()!=null)
         {
             int point = j.getPointsAction().get(carte.getOrigine().toString());
@@ -240,11 +254,16 @@ public class BottomGameController extends ControllerDivinae{
     }
     public void initBoard()
     {
+        int i;
         Joueur joueurcourant=this.getDpg().getP().getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT);
         System.out.println(joueurcourant);
-        for(int i=0;i<joueurcourant.getMain().size();i++)
+        for(i=0;i<joueurcourant.getMain().size();i++)
         {
             ((ImageView)board.getChildren().get(i)).setImage(joueurcourant.getMain().get(i).getImgCarte());
+        }
+        for(i=i;i<board.getChildren().size();i++)
+        {
+            ((ImageView)board.getChildren().get(i)).setImage(null);
         }
         nomjoueur.setText(joueurcourant.getNom());
         this.getDpg().getTopController().getImgDivinite().setImage(joueurcourant.getDivinite().getImgCarte());
@@ -261,6 +280,7 @@ public class BottomGameController extends ControllerDivinae{
         {
             ((ImageView)board.getChildren().get(i)).setImage(joueurcourant.getMain().get(i).getImgCarte());
         }
+        System.out.println("carte "+i);
         for(i=i;i<board.getChildren().size();i++)
         {
             ((ImageView)board.getChildren().get(i)).setImage(null);
