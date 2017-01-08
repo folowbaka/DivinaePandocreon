@@ -5,7 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="1920.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="divinae.TopController">
+<VBox alignment="TOP_CENTER" maxHeight="200.0" maxWidth="1920.0" minHeight="200.0" minWidth="-Infinity" prefHeight="200.0" prefWidth="1280.0" style="-fx-border-style: solid;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="divinae.TopController">
    <children>
       <MenuBar maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="685.0">
         <menus>
@@ -26,6 +26,6 @@
           </Menu>
         </menus>
       </MenuBar>
-      <ImageView fx:id="imgDivinite" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgDivinite" fitHeight="150.0" fitWidth="200.0" onMousePressed="#handleDivinite" pickOnBounds="true" preserveRatio="true" />
    </children>
 </VBox>

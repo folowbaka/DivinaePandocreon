@@ -25,7 +25,7 @@ import java.util.Observable;
 import java.util.Optional;
 import java.util.Scanner;
 
-/**
+/*
  * Created by Folow on 02/01/2017.
  */
 public class BottomGameController extends ControllerDivinae{
@@ -173,11 +173,6 @@ public class BottomGameController extends ControllerDivinae{
         if(carte.getOrigine()!=null)
         {
             int point = j.getPointsAction().get(carte.getOrigine().toString());
-            if (c == 7)
-            {
-                j.getDivinite().capacite(j, p);
-                j.setaUtiliseCompetenceDivine(true);
-            }
             if (!j.pointPourJouer(carte))
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);

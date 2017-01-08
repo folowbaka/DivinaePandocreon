@@ -4,8 +4,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 
@@ -53,7 +55,6 @@ public class PlayerAskNameController extends ControllerDivinae
                 {
                     this.nomJoueur[1][i]="JV "+(i+1);
                 }
-                this.getDpg().getRootLayout().setCenter(null);
                 FXMLLoader loader=new FXMLLoader(getClass().getResource("bottomgamelayou.fxml"));
                 Partie p=Partie.getInstance(nomJoueur);
                 p.setInfluenceTour(p.lancerDes());
@@ -68,7 +69,14 @@ public class PlayerAskNameController extends ControllerDivinae
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
+                 loader=new FXMLLoader(getClass().getResource("centergamelayout.fxml"));
+                VBox centerTable= null;
+                try {
+                    centerTable = loader.load();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                this.getDpg().getRootLayout().setCenter(centerTable);
             }
         }
         else

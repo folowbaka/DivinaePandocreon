@@ -137,11 +137,6 @@ public class InterfaceCommand {
     {
         Carte carte=j.getMain().get(c);
         int point=j.getPointsAction().get(carte.getOrigine().toString());
-        if(c==7)
-        {
-            j.getDivinite().capacite(j, p);
-            j.setaUtiliseCompetenceDivine(true);
-        }
         if(!j.pointPourJouer(carte))
         {
             System.out.println("Vous n'avez pas assez de points pour jouer");

@@ -9,7 +9,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<HBox alignment="BOTTOM_CENTER" maxHeight="1080.0" maxWidth="1920.0" minHeight="-Infinity" minWidth="1280" prefHeight="300.0" prefWidth="1280.0" styleClass="bottom-pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="divinae.BottomGameController">
+<HBox alignment="BOTTOM_CENTER" maxHeight="300.0" maxWidth="1920.0" minHeight="-Infinity" minWidth="1280" prefHeight="300.0" prefWidth="1280.0" styleClass="bottom-pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="divinae.BottomGameController">
    <children>
       <VBox alignment="BOTTOM_LEFT" prefHeight="400.0" prefWidth="180.0">
          <children>
