@@ -1,6 +1,7 @@
 package divinae.carte.croyant;
 
 import divinae.Joueur;
+import java.util.*;
 import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
@@ -22,6 +23,27 @@ public class Pillard extends Croyant {
 
     @Override
     public void capacite(Joueur j, Partie p) {
-        
+        int index = p.getJoueur().indexOf(j);
+        for (int i =index+1; i<p.getJoueur().size(); i++){
+            System.out.println("Joueur "+(i+1)+" : "+p.getJoueur().get(i).getNom());
+        }
+        Scanner sc=new Scanner(System.in);
+        int choixJoueur;
+        do {
+            System.out.println("A quel joueur voulez-vous voler des points?");
+            choixJoueur=sc.nextInt();
+            if(choixJoueur>p.getJoueur().size() || choixJoueur<0)
+                System.out.println("Choix invalide");
+        }while (choixJoueur>p.getJoueur().size() || choixJoueur<0);
+        Joueur choixJoueurVol =  p.getJoueur().get(choixJoueur-1);
+
+
+        j.ajoutPoints(choixJoueurVol.getPointsAction().get("JOUR"), "JOUR");
+        j.ajoutPoints(choixJoueurVol.getPointsAction().get("NUIT"), "NUIT");
+        j.ajoutPoints(choixJoueurVol.getPointsAction().get("NEANT"), "NEANT");
+        choixJoueurVol.ajoutPoints(- choixJoueurVol.getPointsAction().get("JOUR"), "JOUR");
+        choixJoueurVol.ajoutPoints(- choixJoueurVol.getPointsAction().get("NUIT"), "NUIT");
+        choixJoueurVol.ajoutPoints(- choixJoueurVol.getPointsAction().get("NEANT"), "NEANT");
+
     }
 }
