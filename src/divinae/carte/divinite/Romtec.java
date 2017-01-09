@@ -12,7 +12,7 @@ public class Romtec extends Divinite {
     public Romtec(Image imgCarte) {
         super(Origine.CREPUSCULE,new Dogme[]{Dogme.NATURE,Dogme.HUMAIN,Dogme.CHAOS},imgCarte);
         this.setDescriptionDivinite("Romtec est une Divinité individualiste, pour qui chaque être vivant doit garder son libre arbitre.\n");
-        this.setDescription("Peut empêcher un jour de créer un Guide Spirituel. La carte est défaussée.");
+        this.setDescription("Peut empêcher un joueur de créer un Guide Spirituel. La carte est défaussée.");
         this.setNom("Romtec");
     }
 

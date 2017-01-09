@@ -1,5 +1,6 @@
 package divinae.carte.guide;
 
+import divinae.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.GuideSpirituel;
@@ -20,6 +21,21 @@ public class Devin extends GuideSpirituel{
 
     @Override
     public void capacite(Joueur j, Partie p) {
+        boolean boolDogme=true;
+        Joueur choixJoueur;
+        do{
+            choixJoueur = InterfaceCommand.choixJoueur(p);
+            for (int t=0;t<choixJoueur.getDivinite().getDogme().length;t++){
+                if (choixJoueur.getDivinite().getDogme()[t]==Dogme.NATURE ||choixJoueur.getDivinite().getDogme()[t]==Dogme.MYSTIQUE){
+                    boolDogme=false;
+                }
+            }
 
+            if(boolDogme){
+                System.out.println("La divinité est de mauvais dogme.");
+            }
+        }while(boolDogme);
+        int choixGuide = InterfaceCommand.choixGuide(choixJoueur,p);
+        choixJoueur.sacrifierGuide(choixGuide,p);
     }
 }

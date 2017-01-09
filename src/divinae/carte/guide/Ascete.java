@@ -43,7 +43,7 @@ public class Ascete extends GuideSpirituel{
                     System.out.println("Le croyant est de mauvais dogme.");
                 }
 
-            }while(boolDogme)
+            }while(boolDogme);
 
             choixJoueur.sacrifierCroyant(choixSacrificeGuide,choixSacrificeCroyant,p);
         }
