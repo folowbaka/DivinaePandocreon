@@ -1,5 +1,6 @@
 package divinae.carte.deusEx;
 
+import divinae.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.DeusEx;
@@ -19,7 +20,10 @@ public class Diversion extends DeusEx {
 
     @Override
     public void capacite(Joueur j, Partie p) {
-
+        Joueur choixJoueur = InterfaceCommand.choixJoueur(p);
+        j.volerCarte(choixJoueur);
+        j.volerCarte(choixJoueur);
+        j.volerCarte(choixJoueur);
     }
 
 

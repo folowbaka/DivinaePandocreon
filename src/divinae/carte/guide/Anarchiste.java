@@ -1,11 +1,14 @@
 package divinae.carte.guide;
 
+import divinae.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 import javafx.scene.image.Image;
+
+import java.util.Scanner;
 
 public class Anarchiste extends GuideSpirituel {
     public Anarchiste(Origine origine, Dogme[] dogme,int nbMaxCroyant,Image imgCarte) {
@@ -20,6 +23,30 @@ public class Anarchiste extends GuideSpirituel {
 
     @Override
     public void capacite(Joueur j, Partie p) {
+        Joueur choixJoueur = InterfaceCommand.choixJoueur(p);
+        Scanner sc=new Scanner(System.in);
+        int choixSacrificeGuide;
+        InterfaceCommand.afficheCartesSacrifiable(choixJoueur);
+        boolean boolDogme=true;
+        do{
 
+            System.out.println("Entrez le guide à sacrifier.");
+            choixSacrificeGuide=sc.nextInt()-1;
+            for (int t=0; t<choixJoueur.getDivinite().getDogme().length;t++){
+                if (choixJoueur.getDivinite().getDogme()[t]!=Dogme.CHAOS){
+                    boolDogme = false;
+                }
+            }
+            for (int t=0; t<choixJoueur.getDivinite().getGuideDivinite().get(choixSacrificeGuide).getDogme().length;t++){
+                if (choixJoueur.getDivinite().getGuideDivinite().get(choixSacrificeGuide).getDogme()[t]!=Dogme.CHAOS){
+                    boolDogme = false;
+                }
+            }
+            if (boolDogme){
+                System.out.println("Le guide ou divinité choisie n'est pas du bon dogme.");
+            }
+        }while(boolDogme);
+
+        choixJoueur.sacrifierGuide(choixSacrificeGuide,p);
     }
 }

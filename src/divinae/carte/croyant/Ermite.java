@@ -32,7 +32,6 @@ public class Ermite extends Croyant {
         System.out.println("Entrez le croyant à sacrifier");
         choixSacrificeGuide=sc.nextInt()-1;
         choixSacrificeCroyant=sc.nextInt()-1;
-        choixJoueur.getDivinite().getGuideDivinite().get(choixSacrificeGuide).getCroyantRattache()[choixSacrificeCroyant].capacite(choixJoueur,p);
-
+        choixJoueur.sacrifierCroyant(choixSacrificeGuide,choixSacrificeCroyant,p);
     }
 }

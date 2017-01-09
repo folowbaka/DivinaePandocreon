@@ -1,5 +1,6 @@
 package divinae.carte.deusEx;
 
+import divinae.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.DeusEx;
@@ -22,6 +23,8 @@ public class OrdreCeleste extends DeusEx {
 
     @Override
     public void capacite(Joueur j, Partie p) {
-
+        Joueur choixJoueur = InterfaceCommand.choixJoueur(p);
+        int choixGuide = InterfaceCommand.choixGuide(choixJoueur, p);
+        choixJoueur.getDivinite().getGuideDivinite().add(choixJoueur.getDivinite().getGuideDivinite().remove(choixGuide));
     }
 }

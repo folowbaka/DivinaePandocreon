@@ -75,7 +75,12 @@ public class Joueur {
     }
     public void volerCarte(Joueur j){
         int tailleMain=j.getMain().size()-1;
-        this.main.add(j.getMain().remove(tailleMain));
+        if (tailleMain >0){
+            this.main.add(j.getMain().remove(tailleMain));
+        }
+        else{
+            System.out.println("Main vide.");
+        }
     }
     public void completerMain(Partie p)
     {

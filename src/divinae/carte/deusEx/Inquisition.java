@@ -1,5 +1,6 @@
 package divinae.carte.deusEx;
 
+import divinae.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.DeusEx;
@@ -24,6 +25,24 @@ public class Inquisition extends DeusEx {
 
     @Override
     public void capacite(Joueur j, Partie p) {
+        Joueur choixJoueur = InterfaceCommand.choixJoueur(p);
+        int choixGuide = InterfaceCommand.choixGuide(choixJoueur,p);
+        int choixGuide2 = InterfaceCommand.choixGuide(j,p);
+        Origine origineTour=p.lancerDes();
+        System.out.println(origineTour);
 
+        switch(origineTour){
+            case JOUR:
+                choixJoueur.sacrifierGuide(choixGuide,p);
+                break;
+            case NUIT:
+                j.sacrifierGuide(choixGuide2,p);
+                break;
+            case NEANT:
+                choixJoueur.getDivinite().getGuideDivinite().get(choixGuide2).capacite(j,p);
+                j.getDivinite().getGuideDivinite().get(choixGuide2).capacite(j,p);
+        }
+
+        p.setInfluenceTour(origineTour);
     }
 }

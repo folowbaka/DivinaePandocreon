@@ -1,10 +1,13 @@
 package divinae.carte.deusEx;
 
+import divinae.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.DeusEx;
 import divinae.enumeration.Origine;
 import javafx.scene.image.Image;
+
+import java.util.Scanner;
 
 public class Fourberie extends DeusEx {
 
@@ -21,7 +24,19 @@ public class Fourberie extends DeusEx {
 
     @Override
     public void capacite(Joueur j, Partie p) {
-
-
+        for(int i=0;i<2;i++) {
+            Joueur choixJoueur = InterfaceCommand.choixJoueur(p);
+            Scanner sc = new Scanner(System.in);
+            int choixSacrificeGuide;
+            int choixSacrificeCroyant;
+            InterfaceCommand.afficheCartesSacrifiable(choixJoueur);
+            System.out.println("Entrez le croyant à sacrifier");
+            choixSacrificeGuide = sc.nextInt() - 1;
+            choixSacrificeCroyant = sc.nextInt() - 1;
+            p.getDefausse().add(choixJoueur.getDivinite().getGuideDivinite().get(choixSacrificeGuide).getCroyantRattache()[choixSacrificeCroyant]);
+            choixJoueur.getDivinite().getGuideDivinite().get(choixSacrificeGuide).getCroyantRattache()[choixSacrificeCroyant] = null;
+            if (choixJoueur.getDivinite().getGuideDivinite().get(choixSacrificeGuide).croyantVide())
+                p.getDefausse().add(choixJoueur.getDivinite().getGuideDivinite().remove(choixSacrificeCroyant));
+        }
     }
 }

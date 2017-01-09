@@ -40,6 +40,6 @@ public class Shingva extends Divinite {
             }
         }while(boolDogme);
 
-        choixJoueur.getDivinite().getGuideDivinite().get(choixSacrificeGuide).capacite(choixJoueur,p);
+        choixJoueur.sacrifierGuide(choixSacrificeGuide,p);
     }
 }

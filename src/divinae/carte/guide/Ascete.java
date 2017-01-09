@@ -1,11 +1,14 @@
 package divinae.carte.guide;
 
+import divinae.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 import javafx.scene.image.Image;
+
+import java.util.Scanner;
 
 public class Ascete extends GuideSpirituel{
     public Ascete(Origine origine,Dogme[] dogme,int nbMaxCroyant,Image imgCarte) {
@@ -20,6 +23,29 @@ public class Ascete extends GuideSpirituel{
 
     @Override
     public void capacite(Joueur j, Partie p) {
+        for(int i=0;i<2;i++) {
+            Joueur choixJoueur = InterfaceCommand.choixJoueur(p);
+            Scanner sc = new Scanner(System.in);
+            int choixSacrificeGuide;
+            int choixSacrificeCroyant;
+            InterfaceCommand.afficheCartesSacrifiable(choixJoueur);
+            System.out.println("Entrez le croyant à sacrifier");
+            choixSacrificeGuide = sc.nextInt() - 1;
+            Boolean boolDogme=true;
+            do{
+                choixSacrificeCroyant = sc.nextInt() - 1;
+                for (int t=0; t<choixJoueur.getDivinite().getGuideDivinite().get(choixSacrificeGuide).getCroyantRattache()[choixSacrificeCroyant].getDogme().length;t++){
+                    if (choixJoueur.getDivinite().getGuideDivinite().get(choixSacrificeGuide).getCroyantRattache()[choixSacrificeCroyant].getDogme()[t]==Dogme.HUMAIN || choixJoueur.getDivinite().getGuideDivinite().get(choixSacrificeGuide).getCroyantRattache()[choixSacrificeCroyant].getDogme()[t]==Dogme.SYMBOLE){
+                        boolDogme = false;
+                    }
+                }
+                if(boolDogme){
+                    System.out.println("Le croyant est de mauvais dogme.");
+                }
 
+            }while(boolDogme)
+
+            choixJoueur.sacrifierCroyant(choixSacrificeGuide,choixSacrificeCroyant,p);
+        }
     }
 }
