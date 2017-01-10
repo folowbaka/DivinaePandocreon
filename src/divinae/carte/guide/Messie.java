@@ -24,7 +24,9 @@ public class Messie  extends GuideSpirituel{
         System.out.println("Choisissez une origine.\n1 - Jour\n2 - Nuit\n3 - Néant");
         Scanner sc = new Scanner(System.in);
         int choix;
-        choix = sc.nextInt();
+        do{
+            choix = sc.nextInt();
+        }while(choix>3 ||choix<1);
         switch (choix){
             case 1:
                 p.setInfluenceTour(Origine.JOUR);
