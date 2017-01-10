@@ -203,7 +203,7 @@ public class Joueur {
         {
             return false;
         }
-        else if(carte.getOrigine()==Origine.NEANT && this.getPointsAction().get("JOUR")<2 && this.getPointsAction().get("NUIT")<2 )
+        else if(carte.getOrigine()==Origine.NEANT && this.getPointsAction().get("JOUR")<2 && this.getPointsAction().get("NUIT")<2 && this.getPointsAction().get("NEANT")<1)
             return false;
 
         else return true;

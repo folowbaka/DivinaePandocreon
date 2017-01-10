@@ -9,18 +9,17 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.TilePane?>
 
-
-<VBox alignment="CENTER" maxHeight="450.0" maxWidth="1000.0" minHeight="450.0" minWidth="800.0" prefHeight="450.0" prefWidth="800.0" spacing="25.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" maxHeight="450.0" maxWidth="1000.0" minHeight="450.0" minWidth="800.0" prefHeight="450.0" prefWidth="800.0" spacing="25.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="divinae.CenterGameController">
    <children>
-      <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="600.0">
+      <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="210.0" prefWidth="600.0">
          <content>
-            <TilePane alignment="CENTER" hgap="5.0" prefHeight="200.0" prefWidth="600.0" vgap="5.0" />
+            <TilePane fx:id="centertable" alignment="CENTER" hgap="5.0" prefHeight="210.0" prefWidth="600.0" vgap="5.0" />
          </content>
       </ScrollPane>
       <ScrollPane prefHeight="200.0" prefWidth="200.0">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" rotate="180.0" />
-        </content>
+         <content>
+            <TilePane fx:id="guideBoard" hgap="10.0" prefHeight="210.0" prefWidth="800.0" vgap="10.0" />
+         </content>
       </ScrollPane>
    </children>
 </VBox>

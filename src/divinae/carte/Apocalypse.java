@@ -1,9 +1,11 @@
 package divinae.carte;
 
+import divinae.DivinaePandocreon;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.Carte;
 import divinae.enumeration.Origine;
+import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 
 public class Apocalypse extends Carte {
@@ -18,10 +20,10 @@ public class Apocalypse extends Carte {
     {
         int joueurGagnant=0;
         int joueurPerdant=0;
-        boolean egalite=false;
         int scoreMax=p.getJoueur().get(0).compterPriere();
         int scoreMin=p.getJoueur().get(0).compterPriere();
         int tabScore[]=new int[p.getJoueur().size()];
+        String affichageResultat="";
         for(int i=0;i<p.getJoueur().size();i++)
         {
             tabScore[i]=p.getJoueur().get(i).compterPriere();
@@ -46,10 +48,10 @@ public class Apocalypse extends Carte {
                     occurence++;
             }
             if(occurence>=2)
-                System.out.println("Egalité");
+                affichageResultat="égalité";
             else
             {
-                System.out.println("Joueur : "+p.getJoueur().get(joueurPerdant).getNom()+" est éliminé");
+                affichageResultat="Joueur : "+p.getJoueur().get(joueurPerdant).getNom()+" est éliminé";
                 p.getJoueur().get(joueurPerdant).libGuideCroyant(p);
                 p.getJoueur().remove(joueurPerdant);
                 p.setFintour(true);
@@ -64,13 +66,29 @@ public class Apocalypse extends Carte {
                     occurence++;
             }
             if(occurence>=2)
-                System.out.println("Egalité");
+                affichageResultat="Egalité";
             else
             {
-                System.out.println("Joueur : "+p.getJoueur().get(joueurGagnant).getNom()+" a gagné");
+                affichageResultat="Joueur : "+p.getJoueur().get(joueurGagnant).getNom()+" a gagné";
                 p.setFintour(true);
                 Partie.PARTIENONFINIE=false;
             }
+        }
+        System.out.println("wesh mon frere");
+        System.out.println("APOCALYPSE MERDE wtf"+DivinaePandocreon.getVIEW());
+        switch (DivinaePandocreon.getVIEW())
+        {
+            case 1:
+                System.out.println(affichageResultat);
+                System.out.println("APOCALYPSE MERDE");
+                break;
+            case 2:
+                System.out.println("APOCALYPSE MERDE VUE");
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                System.out.println("TEST "+affichageResultat);
+                alert.setHeaderText(affichageResultat);
+                alert.showAndWait();
+                break;
         }
     }
 }

@@ -60,23 +60,17 @@ public class PlayerAskNameController extends ControllerDivinae
                 p.setInfluenceTour(p.lancerDes());
                 p.getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT).ajoutPoints(p.getInfluenceTour());
                 this.getDpg().setPartie(p);
+                this.getDpg().initCenterLayout();
                 try {
                     HBox bottom=((HBox)loader.load());
                     BottomGameController bottomc=loader.getController();
                     bottomc.setDpg(this.getDpg());
                     bottomc.initBoard();
+                    bottomc.refreshOrigine();
                     this.getDpg().getRootLayout().setBottom(bottom);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                 loader=new FXMLLoader(getClass().getResource("centergamelayout.fxml"));
-                VBox centerTable= null;
-                try {
-                    centerTable = loader.load();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                this.getDpg().getRootLayout().setCenter(centerTable);
             }
         }
         else

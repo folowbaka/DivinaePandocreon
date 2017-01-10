@@ -1,34 +1,34 @@
 package divinae;
 
-import com.sun.deploy.panel.ExceptionListDialog;
+import divinae.carte.Apocalypse;
 import divinae.carte.abstractcarte.Carte;
+import divinae.carte.abstractcarte.Croyant;
+import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Origine;
 import javafx.beans.property.ReadOnlyObjectWrapper;
-import javafx.beans.value.ObservableListValue;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.Group;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 import javafx.util.Callback;
-import jdk.nashorn.internal.scripts.JO;
 
 import java.util.HashMap;
-import java.util.Observable;
 import java.util.Optional;
-import java.util.Scanner;
 
 /*
  * Created by Folow on 02/01/2017.
  */
 public class BottomGameController extends ControllerDivinae{
+
+    private int tour;
+
+    private boolean apocalypseJoue=false;
 
     private boolean defausser=false;
     @FXML
@@ -50,13 +50,14 @@ public class BottomGameController extends ControllerDivinae{
     @FXML
     private HBox board;
     @FXML
-    private ImageView imgDivinite;
-    @FXML
     private Label nomjoueur;
+    @FXML
+    private ImageView imgOrigine;
     @FXML
     private void initialize()
     {
-        Image ipioche=new Image("ressource/image/doscarte.jpg");
+        Image ipioche=new Image("ressource/image/carte/doscarte.jpg");
+        tour=0;
         iVpioche.setImage(ipioche);
 
         pointJourColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<HashMap<String,Integer>,Integer>, ObservableValue<Integer>>() {
@@ -87,7 +88,21 @@ public class BottomGameController extends ControllerDivinae{
                     System.out.println(bdefausser.isFocused());
                     handleCarte(idCarte);
                 }
-            });;
+            });
+            mainJoueur.get(i).setOnMouseEntered(new EventHandler<MouseEvent>() {
+                private int idCarte=mainJoueur.size()-1;
+
+                public void handle(MouseEvent event) {
+                    resizeCarteUp(idCarte);
+                }
+            });
+            mainJoueur.get(i).setOnMouseExited(new EventHandler<MouseEvent>() {
+                private int idCarte=mainJoueur.size()-1;
+
+                public void handle(MouseEvent event) {
+                    resizeCarteDown(idCarte);
+                }
+            });
         }
 
     }
@@ -102,6 +117,19 @@ public class BottomGameController extends ControllerDivinae{
         if(DivinaePandocreonGraphique.JOUEURCOURANT+1==this.getDpg().getP().getJoueur().size())
         {
             DivinaePandocreonGraphique.JOUEURCOURANT=0;
+            this.getDpg().getP().setInfluenceTour(this.getDpg().getP().lancerDes());
+            for(int i=0;i<this.getDpg().getP().getJoueur().size();i++)
+            {
+                this.getDpg().getP().getJoueur().get(i).ajoutPoints(this.getDpg().getP().getInfluenceTour());
+            }
+            this.refreshOrigine();
+            tour++;
+            if(tour==1)
+                Partie.APOCALYPSE=true;
+            else if(!Partie.APOCALYPSE && !apocalypseJoue)
+                Partie.APOCALYPSE=true;
+
+            apocalypseJoue=false;
         }
         else
         {
@@ -139,7 +167,7 @@ public class BottomGameController extends ControllerDivinae{
         {
             Joueur j = this.getDpg().getP().getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT);
             j.completerMain((this.getDpg().getP()));
-            this.refreshBoard();
+            this.refreshBoard(j);
             bpiocher.setDisable(true);
             bdefausser.setDisable(true);
         }
@@ -149,21 +177,19 @@ public class BottomGameController extends ControllerDivinae{
     {
         System.out.println(num);
         bpiocher.setDisable(true);
+        Partie p = this.getDpg().getP();
+        Joueur j = p.getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT);
         if(defausser)
         {
-            Partie p = this.getDpg().getP();
-            Joueur j = p.getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT);
             j.defausseCarte(num,p);
         }
         else
         {
             bdefausser.setDisable(true);
-            Partie p = this.getDpg().getP();
-            Joueur j = p.getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT);
-
             pointJouer(j, num, p, DivinaePandocreonGraphique.JOUEURCOURANT);
+
         }
-        refreshBoard();
+        refreshBoard(j);
     }
     public void pointJouer(Joueur j,int c,Partie p,int joueurJoue)
     {
@@ -173,6 +199,13 @@ public class BottomGameController extends ControllerDivinae{
         if(carte.getOrigine()!=null)
         {
             int point = j.getPointsAction().get(carte.getOrigine().toString());
+            if(carte instanceof Apocalypse && !Partie.APOCALYPSE)
+            {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setHeaderText("Vous ne pouvez pas jouer de carte Apocalypse ce tour");
+                alert.showAndWait();
+                return;
+            }
             if (!j.pointPourJouer(carte))
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -207,7 +240,7 @@ public class BottomGameController extends ControllerDivinae{
                 } else if (j.getPointsAction().get("NUIT") > 1) {
                     alert.setHeaderText("Vous pouvez choisir d'utiliser vos points nuit");
                     alert.setContentText("Voulez vous les utiliser?");
-                    ButtonType buttonTypeNuit = new ButtonType("Non");
+                    ButtonType buttonTypeNuit = new ButtonType("Oui");
                     ButtonType buttonTypeCancel = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
                     alert.getButtonTypes().setAll(buttonTypeNuit, buttonTypeCancel);
                     Optional<ButtonType> result = alert.showAndWait();
@@ -245,32 +278,45 @@ public class BottomGameController extends ControllerDivinae{
                     InterfaceCommand.interrompre(j,p,joueurJoue);
             }
         }*/
+        if(carte instanceof Croyant)
+        {
+            this.getDpg().getCentercontroller().addCroyant((Croyant)carte);
+        }
+        else if(carte instanceof GuideSpirituel)
+        {
+            this.getDpg().getCentercontroller().addGuide((GuideSpirituel) carte);
+            this.getDpg().getCentercontroller().refreshCenterTable();
+        }
         j.jouer(c,p,carte);
+        if(!Partie.APOCALYPSE)
+            apocalypseJoue=true;
+        if(!Partie.PARTIENONFINIE)
+        {
+            this.getDpg().getRootLayout().setBottom(null);
+            this.getDpg().getRootLayout().setTop(null);
+            Partie.setOurInstance(null);
+            this.getDpg().initBeginLayout();
+        }
     }
     public void initBoard()
     {
         int i;
         Joueur joueurcourant=this.getDpg().getP().getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT);
         System.out.println(joueurcourant);
-        for(i=0;i<joueurcourant.getMain().size();i++)
-        {
-            ((ImageView)board.getChildren().get(i)).setImage(joueurcourant.getMain().get(i).getImgCarte());
-        }
-        for(i=i;i<board.getChildren().size();i++)
-        {
-            ((ImageView)board.getChildren().get(i)).setImage(null);
-        }
+        refreshBoard(joueurcourant);
         nomjoueur.setText(joueurcourant.getNom());
+        this.getDpg().initTopLayout();
+
         this.getDpg().getTopController().getImgDivinite().setImage(joueurcourant.getDivinite().getImgCarte());
-        this.getDpg().getPointsData().add(joueurcourant.getPointsAction());
+        this.getDpg().getCentercontroller().refreshGuideBoard(joueurcourant);
+        this.getDpg().getPointsData().setAll(joueurcourant.getPointsAction());
         pointTable.setItems(this.getDpg().getPointsData());
-        System.out.println(this.getDpg().getP().getInfluenceTour());
+        pointTable.refresh();
 
     }
-    public void refreshBoard()
+    public void refreshBoard(Joueur joueurcourant)
     {
         int i;
-        Joueur joueurcourant=this.getDpg().getP().getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT);
         for(i=0;i<joueurcourant.getMain().size();i++)
         {
             ((ImageView)board.getChildren().get(i)).setImage(joueurcourant.getMain().get(i).getImgCarte());
@@ -283,4 +329,29 @@ public class BottomGameController extends ControllerDivinae{
         pointTable.refresh();
 
     }
-}
+    public void refreshOrigine()
+    {
+        switch(this.getDpg().getP().getInfluenceTour())
+        {
+            case JOUR:
+                this.imgOrigine.setImage(new Image("ressource/image/origine/jour.png"));
+                break;
+            case NUIT:
+                this.imgOrigine.setImage(new Image("ressource/image/origine/nuit.png"));
+                break;
+            case NEANT:
+                this.imgOrigine.setImage(new Image("ressource/image/origine/neant.png"));
+                break;
+
+        }
+    }
+    public void resizeCarteUp(int num)
+    {
+        ((ImageView)board.getChildren().get(num)).setFitWidth(200);
+        ((ImageView)board.getChildren().get(num)).setFitHeight(300);
+    }
+    public void resizeCarteDown(int num)
+    {
+        ((ImageView)board.getChildren().get(num)).setFitWidth(130);
+        ((ImageView)board.getChildren().get(num)).setFitHeight(180);
+    }}

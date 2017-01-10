@@ -5,6 +5,7 @@ package divinae;/**
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -21,6 +22,7 @@ public class DivinaePandocreonGraphique extends Application {
     private VBox beginLayout;
     private VBox topLayout;
     private TopController topController;
+    private CenterGameController centercontroller;
     private Partie p;
     private ObservableList<HashMap<String,Integer>> pointsData = FXCollections.observableArrayList();
     public static int JOUEURCOURANT=0;
@@ -37,7 +39,6 @@ public class DivinaePandocreonGraphique extends Application {
         primaryStage.setTitle("Divinae Pandocreon");
         primaryStage.show();
         initBeginLayout();
-        initTopLayout();
 
     }
     public void initBeginLayout(){
@@ -62,6 +63,19 @@ public class DivinaePandocreonGraphique extends Application {
         rootLayout.setTop(topLayout);
         topController=loader.getController();
         topController.setDpg(this);
+    }
+    public void initCenterLayout()
+    {
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("centergamelayout.fxml"));
+        VBox centerTable= null;
+        try {
+            centerTable = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        this.centercontroller=loader.getController();
+        this.centercontroller.setDpg(this);
+        this.rootLayout.setCenter(centerTable);
     }
 
     public BorderPane getRootLayout() {
@@ -90,6 +104,14 @@ public class DivinaePandocreonGraphique extends Application {
 
     public ObservableList<HashMap<String, Integer>> getPointsData() {
         return pointsData;
+    }
+
+    public CenterGameController getCentercontroller() {
+        return centercontroller;
+    }
+
+    public void setCentercontroller(CenterGameController centercontroller) {
+        this.centercontroller = centercontroller;
     }
 
     public void setPointsData(ObservableList<HashMap<String, Integer>> pointsData) {
