@@ -41,12 +41,13 @@ public abstract class GuideSpirituel extends CarteDogme {
             while(j<this.getDogme().length && nbCroyant<croyantMax && !dogmeTrouve)
             {
                 int k=0;
-                while(k<centre.get(i).getDogme().length && nbCroyant<croyantMax && !dogmeTrouve)
+                while(i<centre.size() && k<centre.get(i).getDogme().length && nbCroyant<croyantMax && !dogmeTrouve)
                 {
                     if(this.getDogme()[j]==centre.get(i).getDogme()[k]&& nbCroyant<croyantMax && centre.get(i).getRattachable())
                     {
                         this.croyantRattache[nbCroyant]=centre.remove(i);
-                        i--;
+                        if(i>1)
+                            i=i--;
                         nbCroyant++;
                         dogmeTrouve=true;
                     }

@@ -130,6 +130,7 @@ public class BottomGameController extends ControllerDivinae{
                 Partie.APOCALYPSE=true;
 
             apocalypseJoue=false;
+            this.getDpg().getP().centreRattachable();
         }
         else
         {
@@ -282,12 +283,13 @@ public class BottomGameController extends ControllerDivinae{
         {
             this.getDpg().getCentercontroller().addCroyant((Croyant)carte);
         }
-        else if(carte instanceof GuideSpirituel)
+        j.jouer(c,p,carte);
+        if(carte instanceof GuideSpirituel)
         {
             this.getDpg().getCentercontroller().addGuide((GuideSpirituel) carte);
             this.getDpg().getCentercontroller().refreshCenterTable();
+
         }
-        j.jouer(c,p,carte);
         if(!Partie.APOCALYPSE)
             apocalypseJoue=true;
         if(!Partie.PARTIENONFINIE)

@@ -123,6 +123,7 @@ public class Partie {
             }
 
             tour++;
+            this.centreRattachable();
         }
 
     }
@@ -183,6 +184,13 @@ public class Partie {
             i++;
         }
         return interrompre;
+    }
+    public void centreRattachable()
+    {
+        for(int i=0;i<this.centreTable.size();i++)
+        {
+            this.centreTable.get(i).setRattachable(true);
+        }
     }
     public ArrayList<Carte> getPioche()
     {

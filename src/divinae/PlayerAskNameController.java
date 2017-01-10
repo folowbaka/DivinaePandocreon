@@ -58,7 +58,8 @@ public class PlayerAskNameController extends ControllerDivinae
                 FXMLLoader loader=new FXMLLoader(getClass().getResource("bottomgamelayou.fxml"));
                 Partie p=Partie.getInstance(nomJoueur);
                 p.setInfluenceTour(p.lancerDes());
-                p.getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT).ajoutPoints(p.getInfluenceTour());
+                for(int i=0;i<p.getJoueur().size();i++)
+                    p.getJoueur().get(i).ajoutPoints(p.getInfluenceTour());
                 this.getDpg().setPartie(p);
                 this.getDpg().initCenterLayout();
                 try {

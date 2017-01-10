@@ -76,6 +76,7 @@ public class DivinaePandocreonGraphique extends Application {
         this.centercontroller=loader.getController();
         this.centercontroller.setDpg(this);
         this.rootLayout.setCenter(centerTable);
+        this.centercontroller.initPopup();
     }
 
     public BorderPane getRootLayout() {
