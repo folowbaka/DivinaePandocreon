@@ -1,5 +1,6 @@
 package divinae.carte.guide;
 
+import divinae.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.GuideSpirituel;
@@ -22,6 +23,34 @@ public class Exorciste extends GuideSpirituel{
 
     @Override
     public void capacite(Joueur j, Partie p) {
+        boolean boolDogme=true;
+        Joueur choixJoueur;
+        do{
+            choixJoueur = InterfaceCommand.choixJoueur(p);
+            if (choixJoueur.getDivinite().getOrigine()==Origine.NUIT){
+                boolDogme=false;
+
+            }
+            for (int t=0;t<choixJoueur.getDivinite().getDogme().length;t++){
+                if (choixJoueur.getDivinite().getDogme()[t]==Dogme.MYSTIQUE ||choixJoueur.getDivinite().getDogme()[t]==Dogme.CHAOS){
+                    boolDogme=false;
+                }
+            }
+
+            if(boolDogme){
+                System.out.println("La divinité est de mauvais dogme ou de mauvaise origine.");
+            }
+        }while(boolDogme);
+        int choixGuide = InterfaceCommand.choixGuide(choixJoueur,p);
+        for(int i=0;i<choixJoueur.getDivinite().getGuideDivinite().get(choixGuide).getCroyantRattache().length;i++)
+        {
+            if(choixJoueur.getDivinite().getGuideDivinite().get(choixGuide).getCroyantRattache()[i]!=null)
+            {
+                p.getDefausse().add(choixJoueur.getDivinite().getGuideDivinite().get(choixGuide).getCroyantRattache()[i]);
+                choixJoueur.getDivinite().getGuideDivinite().get(choixGuide).getCroyantRattache()[i]=null;
+            }
+        }
+        choixJoueur.getMain().add(choixJoueur.getDivinite().getGuideDivinite().remove(choixGuide));
 
     }
 }

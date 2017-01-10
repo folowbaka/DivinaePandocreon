@@ -30,6 +30,6 @@ public class Integriste extends Croyant {
         InterfaceCommand.afficheCartesSacrifiable(choixJoueur);
         System.out.println("Entrez le guide à sacrifier");
         choixSacrificeGuide=sc.nextInt()-1;
-        choixJoueur.getDivinite().getGuideDivinite().get(choixSacrificeGuide).capacite(choixJoueur,p);
+        choixJoueur.sacrifierGuide(choixSacrificeGuide,p);
     }
 }

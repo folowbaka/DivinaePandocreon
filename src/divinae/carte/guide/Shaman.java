@@ -1,5 +1,6 @@
 package divinae.carte.guide;
 
+import divinae.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.GuideSpirituel;
@@ -21,6 +22,28 @@ public class Shaman extends GuideSpirituel {
 
     @Override
     public void capacite(Joueur j, Partie p) {
+        Joueur choixJoueur;
+        boolean boolDogme=true;
+        do{
+            choixJoueur = InterfaceCommand.choixJoueur(p);
+            for (int t=0;t<choixJoueur.getDivinite().getDogme().length;t++){
+                if (choixJoueur.getDivinite().getDogme()[t]==Dogme.HUMAIN){
+                    boolDogme=false;
+                }
+            }
 
+            if(boolDogme){
+                System.out.println("La divinité est de mauvais dogme ou de mauvaise origine.");
+            }
+        }while(boolDogme);
+        for(int i=0;i<choixJoueur.getDivinite().getGuideDivinite().size();i++)
+        {
+
+            for (int j2=0;j2< choixJoueur.getDivinite().getGuideDivinite().get(i).getCroyantRattache().length;j2++){
+                if (choixJoueur.getDivinite().getGuideDivinite().get(i).getCroyantRattache()[j2].getOrigine()==Origine.NEANT){
+                    choixJoueur.sacrifierCroyant(i,j2,p);
+                }
+            }
+        }
     }
 }

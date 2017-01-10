@@ -1,5 +1,6 @@
 package divinae.carte.guide;
 
+import divinae.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.GuideSpirituel;
@@ -22,6 +23,13 @@ public class Sorcier extends GuideSpirituel{
 
     @Override
     public void capacite(Joueur j, Partie p) {
+        Joueur choixJoueur = InterfaceCommand.choixJoueur(p);
+        int choixGuide = InterfaceCommand.choixGuide(choixJoueur,p);
+        int choixGuide2 = InterfaceCommand.choixGuide(j,p);
+        choixJoueur.getDivinite().getGuideDivinite().add(j.getDivinite().getGuideDivinite().get(choixGuide2));
+        j.getDivinite().getGuideDivinite().add(choixJoueur.getDivinite().getGuideDivinite().get(choixGuide));
 
+        choixJoueur.getDivinite().getGuideDivinite().remove(choixGuide);
+        j.getDivinite().getGuideDivinite().remove(choixGuide2);
     }
 }

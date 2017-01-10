@@ -7,6 +7,8 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 import javafx.scene.image.Image;
 
+import java.util.Scanner;
+
 public class Messie  extends GuideSpirituel{
     public Messie(Origine origine, Dogme[] dogme,int nbMaxCroyant,Image imgCarte) {
         super(origine, dogme,nbMaxCroyant,imgCarte);
@@ -19,6 +21,20 @@ public class Messie  extends GuideSpirituel{
 
     @Override
     public void capacite(Joueur j, Partie p) {
-
+        System.out.println("Choisissez une origine.\n1 - Jour\n2 - Nuit\n3 - Néant");
+        Scanner sc = new Scanner(System.in);
+        int choix;
+        choix = sc.nextInt();
+        switch (choix){
+            case 1:
+                p.setInfluenceTour(Origine.JOUR);
+                break;
+            case 2:
+                p.setInfluenceTour(Origine.NUIT);
+                break;
+            case 3:
+                p.setInfluenceTour(Origine.NEANT);
+                break;
+        }
     }
 }
