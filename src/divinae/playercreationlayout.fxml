@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="434.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="divinae.PlayerCreationController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="434.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="divinae.PlayerCreationController">
    <children>
       <Label text="Choissiez le nombre de joueur" />
       <ChoiceBox fx:id="chbNbPlayer" prefWidth="150.0" />
@@ -20,6 +23,6 @@
          </children>
       </HBox>
       <ChoiceBox fx:id="chbNbPlayerV" disable="true" prefWidth="150.0" />
-      <Button mnemonicParsing="false" onMouseClicked="#handleValiderJoueur" text="Valider" />
+      <Button fx:id="bvaliderCreation" disable="true" mnemonicParsing="false" onMouseClicked="#handleValiderJoueur" text="Valider" />
    </children>
 </VBox>

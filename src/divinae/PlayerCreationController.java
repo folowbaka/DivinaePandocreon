@@ -5,6 +5,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
@@ -23,11 +24,11 @@ public class PlayerCreationController extends ControllerDivinae{
     @FXML
     private ChoiceBox chbNbPlayer;
     @FXML
-    private RadioButton virtuelNon;
-    @FXML
     private RadioButton virtuelOui;
     @FXML
     private ChoiceBox chbNbPlayerV;
+    @FXML
+    private Button bvaliderCreation;
     @FXML
     private void initialize()
     {
@@ -50,6 +51,8 @@ public class PlayerCreationController extends ControllerDivinae{
         }
         else
             chbNbPlayerV.setDisable(true);
+
+        bvaliderCreation.setDisable(false);
     }
     @FXML
     private void handleValiderJoueur()

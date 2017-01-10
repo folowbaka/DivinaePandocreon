@@ -57,12 +57,12 @@ public class CenterGameController extends ControllerDivinae {
         guideBoard.getChildren().add(createImgCarte(guideSpirituel.getImgCarte()));
         guideBoard.getChildren().get(guideBoard.getChildren().size()-1).setOnMouseEntered(new EventHandler<MouseEvent>() {
             private int idGuide=guideBoard.getChildren().size()-1;
+            private TilePane guideCroyant= (TilePane) ((ScrollPane)popup.getContent().get(0)).getContent();
             private boolean show=false;
             public void handle(MouseEvent event) {
                 if(!show)
                 {
-                    Joueur joueurcourant=getDpg().getP().getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT);
-
+                    final Joueur joueurcourant=getDpg().getP().getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT);
                     for(int i=0;i<joueurcourant.getDivinite().getGuideDivinite().get(idGuide).getCroyantRattache().length;i++)
                     {
                         Croyant croyant=joueurcourant.getDivinite().getGuideDivinite().get(idGuide).getCroyantRattache()[i];
@@ -70,23 +70,44 @@ public class CenterGameController extends ControllerDivinae {
                         {
                             ImageView iVCroyant = new ImageView();
                             iVCroyant.setImage(croyant.getImgCarte());
-                            croyantGuide.getChildren().add(iVCroyant);
+                            iVCroyant.setFitWidth(130);
+                            iVCroyant.setFitHeight(180);
+                            guideCroyant.getChildren().add(iVCroyant);
+
+                            guideCroyant.getChildren().get(i).setOnMouseClicked(new EventHandler<MouseEvent>() {
+                                private int idCroyant=guideCroyant.getChildren().size()-1;
+
+                                public void handle(MouseEvent event) {
+                                        joueurcourant.sacrifierCroyant(idGuide,idCroyant,getDpg().getP());
+                                        refreshCenterTable();
+                                        refreshGuideBoard(joueurcourant);
+                                }
+                            });
                         }
                     }
-                    //if(croyantGuide.getChildren().size()>0)
-                    //{
+                    if(guideCroyant.getChildren().size()>0)
+                    {
                         popup.show(getDpg().getPrimaryStage());
                         this.show=true;
-                    //}
+                    }
                 popup.getContent().get(0).setOnMouseExited(new EventHandler<MouseEvent>() {
-                    private int idGuide=guideBoard.getChildren().size()-1;
+                            private int idGuide=guideBoard.getChildren().size()-1;
 
-                    public void handle(MouseEvent event) {
-                        popup.hide();
+                            public void handle(MouseEvent event) {
+                                popup.hide();
                         show=false;
                     }
                 });
             }}
+        });
+        guideBoard.getChildren().get(guideBoard.getChildren().size()-1).setOnMouseClicked(new EventHandler<MouseEvent>() {
+            private int idGuide=guideBoard.getChildren().size()-1;
+            public void handle(MouseEvent event)
+            {
+                getDpg().getP().getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT).sacrifierGuide(idGuide,getDpg().getP());
+                refreshCenterTable();
+                refreshGuideBoard(getDpg().getP().getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT));
+            }
         });
     }
     public ImageView createImgCarte(Image image)

@@ -1,12 +1,17 @@
 package divinae.carte.croyant;
 
+import divinae.DivinaePandocreon;
 import divinae.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
+
+import java.util.Optional;
 
 public class Alchimiste extends Croyant {
     private int numero;
@@ -40,7 +45,24 @@ public class Alchimiste extends Croyant {
     @Override
     public void capacite(Joueur j, Partie p) {
         Boolean boolcontient = false;
-        Joueur choixJoueur = InterfaceCommand.choixJoueur(p);
+        Joueur choixJoueur;
+        if(DivinaePandocreon.getVIEW()==2)
+        {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setHeaderText("Choississez quel divinité voulez vous affecter");
+            for(int i=0;i<p.getJoueur().size();i++)
+            {
+                ButtonType buttonTypeJoueur = new ButtonType("Joueur "+(i+1));
+                alert.getButtonTypes().add(buttonTypeJoueur);
+
+            }
+            Optional<ButtonType> result = alert.showAndWait();
+            choixJoueur=p.getJoueur().get(alert.getButtonTypes().indexOf(result.get()));
+        }
+        else
+        {
+            choixJoueur = InterfaceCommand.choixJoueur(p);
+        }
         switch (numero) {
 
             case 1:
