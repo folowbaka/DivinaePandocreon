@@ -114,15 +114,16 @@ public class BottomGameController extends ControllerDivinae{
         j.setPeutRecevoirPoint(true);
         j.allowSacrificeCroyant();
         j.allowSacrificeGuide();
-        while(this.getDpg().getP().getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT+1) instanceof JoueurVirtuel)
-        {
-            DivinaePandocreonGraphique.JOUEURCOURANT++;
-            JoueurVirtuel jv= (JoueurVirtuel) this.getDpg().getP().getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT);
-            jv.getStrategie().jouer(jv,this.getDpg().getP());
-            this.initBoard();
-            jv.setPeutRecevoirPoint(true);
-            jv.allowSacrificeCroyant();
-            jv.allowSacrificeGuide();
+        if(DivinaePandocreonGraphique.JOUEURCOURANT+1<this.getDpg().getP().getJoueur().size()) {
+            while (this.getDpg().getP().getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT + 1) instanceof JoueurVirtuel) {
+                DivinaePandocreonGraphique.JOUEURCOURANT++;
+                JoueurVirtuel jv = (JoueurVirtuel) this.getDpg().getP().getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT);
+                jv.getStrategie().jouer(jv, this.getDpg().getP());
+                this.initBoard();
+                jv.setPeutRecevoirPoint(true);
+                jv.allowSacrificeCroyant();
+                jv.allowSacrificeGuide();
+            }
         }
         if(DivinaePandocreonGraphique.JOUEURCOURANT+1==this.getDpg().getP().getJoueur().size())
         {
