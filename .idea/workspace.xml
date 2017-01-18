@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b109f6b2-024a-402f-8c2a-ff2e4afd4066" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Alchimiste.class" afterPath="$PROJECT_DIR$/out/production/DivinaePandocreon/divinae/carte/croyant/Alchimiste.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/CenterGameController.java" afterPath="$PROJECT_DIR$/src/divinae/CenterGameController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/divinae/BottomGameController.java" afterPath="$PROJECT_DIR$/src/divinae/BottomGameController.java" />
     </list>
     <ignored path="DivinaePandocreon.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,8 +59,8 @@
       <file leaf-file-name="Partie.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/divinae/Partie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="125" column="37" lean-forward="false" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
+            <state relative-caret-position="818">
+              <caret line="131" column="43" lean-forward="true" selection-start-line="131" selection-start-column="43" selection-end-line="131" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -220,7 +217,6 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-12" />
-    <option name="y" value="-12" />
     <option name="width" value="2750" />
     <option name="height" value="1778" />
   </component>
@@ -239,7 +235,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -287,7 +283,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -699,7 +695,8 @@
       <workItem from="1484061498914" duration="1608000" />
       <workItem from="1484226203012" duration="423000" />
       <workItem from="1484235469250" duration="28000" />
-      <workItem from="1484782813417" duration="2000" />
+      <workItem from="1484782813417" duration="21000" />
+      <workItem from="1484783102804" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="Modification de capaciter">
       <created>1481291304650</created>
@@ -736,15 +733,22 @@
       <option name="project" value="LOCAL" />
       <updated>1484021608860</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="zzzzzzzzzzz">
+      <created>1484782833343</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1484782833343</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39031000" />
+    <option name="totallyTimeSpent" value="39057000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-12" y="-12" width="2750" height="1778" extended-state="0" />
-    <editor active="false" />
+    <frame x="-12" y="0" width="2750" height="1778" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -754,7 +758,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32829237" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969853" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22046955" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22046955" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1170,8 +1174,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/divinae/Partie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="125" column="37" lean-forward="false" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
+        <state relative-caret-position="818">
+          <caret line="131" column="43" lean-forward="true" selection-start-line="131" selection-start-column="43" selection-end-line="131" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
