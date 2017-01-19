@@ -7,6 +7,10 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 import javafx.scene.image.Image;
 
+/**
+ * Represente une carte Divinite Brewalen.
+ * Sa capacite est defini dans la methode capacite.
+ */
 public class Brewalen extends Divinite {
     public Brewalen(String cheminCarte) {
         super(Origine.JOUR,new Dogme[]{Dogme.NATURE,Dogme.HUMAIN,Dogme.MYSTIQUE},cheminCarte);
@@ -14,7 +18,14 @@ public class Brewalen extends Divinite {
         this.setDescription("Peut empêcher l'utilisation d'une carte Apocalypse. La carte est défaussée.");
         this.setNom("Brewalen");
     }
-
+    /**
+     *Capacite de la carte Divinite concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
 

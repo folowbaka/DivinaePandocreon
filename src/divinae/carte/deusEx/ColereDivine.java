@@ -5,7 +5,10 @@ import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.DeusEx;
 import divinae.enumeration.Origine;
-
+/**
+ * Represente une carte deusEx Colere Divine.
+ * Sa capacite est defini dans la methode capacite.
+ */
 public class ColereDivine extends DeusEx {
 
     public ColereDivine(Origine origine,String cheminCarte)
@@ -19,7 +22,14 @@ public class ColereDivine extends DeusEx {
                 "au centre de la table.");
         this.setNom("Colère Divine");
     }
-
+    /**
+     *Capacite de la carte deusEx concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur joueur, Partie partie) {
         Joueur choixJoueur;

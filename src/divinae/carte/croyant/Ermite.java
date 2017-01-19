@@ -8,7 +8,10 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 import java.util.Scanner;
-
+/**
+ * Represente une carte croyant Ermite.
+ * Son sacrifice est defini dans la methode capacite.
+ */
 public class Ermite extends Croyant {
     public Ermite( Dogme[] dogme, String  cheminCarte) {
         super(Origine.JOUR, dogme,cheminCarte);
@@ -20,7 +23,14 @@ public class Ermite extends Croyant {
         this.setNom("Ermite");
         this.setNbCroyant(1);
     }
-
+    /**
+     *Capacite de la carte croyant concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
         Joueur choixJoueur = InterfaceCommand.choixJoueur(p);

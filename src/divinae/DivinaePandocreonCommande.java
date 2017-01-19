@@ -6,11 +6,13 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * Created by david on 21/11/2016.
+ * L'application en affiche commande.
  */
 public class DivinaePandocreonCommande {
 
-
+    /**
+     * Ensemble de partie en commande.
+     */
     public  DivinaePandocreonCommande() {
         boolean creerpartie = false;
         Scanner choixUtilisateur = new Scanner(System.in);

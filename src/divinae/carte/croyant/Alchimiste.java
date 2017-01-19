@@ -12,6 +12,11 @@ import javafx.scene.control.ButtonType;
 
 import java.util.Optional;
 
+
+/**
+ * Represente une carte croyant Alchimiste.
+ * Son sacrifice est defini dans la methode capacite.
+ */
 public class Alchimiste extends Croyant {
     private int numero;
 
@@ -41,6 +46,14 @@ public class Alchimiste extends Croyant {
         this.setNbCroyant(2);
     }
 
+    /**
+     *Capacite de la carte croyant concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
         Boolean boolcontient = false;

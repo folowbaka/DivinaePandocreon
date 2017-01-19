@@ -6,7 +6,10 @@ import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
-
+/**
+ * Represente une carte croyant GuerrierSaint.
+ * Son sacrifice est defini dans la methode capacite.
+ */
 public class GuerrierSaint extends Croyant {
 
     public GuerrierSaint(Dogme[] dogme, String cheminCarte) {
@@ -18,7 +21,14 @@ public class GuerrierSaint extends Croyant {
         this.setNom("Guerrier Saint");
         this.setNbCroyant(4);
     }
-
+    /**
+     *Capacite de la carte croyant concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur joueur, Partie partie) {
         Joueur choixJoueur = InterfaceCommand.choixJoueur(partie);

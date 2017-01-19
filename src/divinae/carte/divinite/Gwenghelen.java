@@ -6,7 +6,10 @@ import divinae.carte.abstractcarte.Divinite;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 import javafx.scene.image.Image;
-
+/**
+ * Represente une carte Divinite Gwenghelen.
+ * Sa capacite est defini dans la methode capacite.
+ */
 public class Gwenghelen extends Divinite {
 
     public Gwenghelen(String cheminCarte) {
@@ -15,7 +18,14 @@ public class Gwenghelen extends Divinite {
         this.setDescription("Récupère autant de points d'Action supplémentaires d'Origine Néant que le nombre de Guides Spirituels que la Divinité possède.\n");
         this.setNom("Gwenghelen");
     }
-
+    /**
+     *Capacite de la carte Divinite concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
         j.ajoutPoints(this.getGuideDivinite().size(),"NEANT");

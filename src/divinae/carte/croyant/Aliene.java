@@ -6,7 +6,10 @@ import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
-
+/**
+ * Represente une carte croyant Aliene.
+ * Son sacrifice est defini dans la methode capacite.
+ */
 public class Aliene extends Croyant {
     private int numero;
     public Aliene(Dogme[] dogme, int numero, String cheminCarte) {
@@ -35,6 +38,14 @@ public class Aliene extends Croyant {
         this.setNbCroyant(2);
     }
 
+    /**
+     *Capacite de la carte croyant concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
         Boolean boolcontient = false;

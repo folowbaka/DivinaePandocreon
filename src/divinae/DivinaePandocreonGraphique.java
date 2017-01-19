@@ -1,6 +1,4 @@
-package divinae;/**
- * Created by Folow on 27/12/2016.
- */
+package divinae;
 
 import Controller.BeginLayoutController;
 import Controller.CenterGameController;
@@ -16,7 +14,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.HashMap;
-
+/**
+ * L'application en affichage graphique.
+ */
 public class DivinaePandocreonGraphique extends Application {
 
     private Stage primaryStage;
@@ -28,6 +28,11 @@ public class DivinaePandocreonGraphique extends Application {
     private Partie p;
     private ObservableList<HashMap<String,Integer>> pointsData = FXCollections.observableArrayList();
     public static int JOUEURCOURANT=0;
+
+    /**
+     * Lance la fenetre.
+     * @param primaryStage
+     */
         @Override
     public void start(Stage primaryStage) {
             this.primaryStage = primaryStage;
@@ -43,6 +48,10 @@ public class DivinaePandocreonGraphique extends Application {
         initBeginLayout();
 
     }
+
+    /**
+     * Initialise 
+     */
     public void initBeginLayout(){
         try {
             FXMLLoader loader=new FXMLLoader(getClass().getResource("../Vue/beginlayout.fxml"));

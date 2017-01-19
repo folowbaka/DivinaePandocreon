@@ -6,7 +6,10 @@ import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 import Vue.InterfaceCommand;
-
+/**
+ * Represente une carte croyant Travailleur.
+ * Son sacrifice est defini dans la methode capacite.
+ */
 public class Travailleur extends Croyant {
     private int numero;
 
@@ -36,7 +39,14 @@ public class Travailleur extends Croyant {
         this.setNom("Travailleur");
         this.setNbCroyant(2);
     }
-
+    /**
+     *Capacite de la carte croyant concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     public void capacite(Joueur j,Partie p) {
         Boolean boolcontient = false;
         Joueur choixJoueur = InterfaceCommand.choixJoueur(p);

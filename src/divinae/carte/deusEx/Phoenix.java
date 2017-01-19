@@ -7,7 +7,10 @@ import divinae.carte.abstractcarte.DeusEx;
 import divinae.enumeration.Origine;
 
 import java.util.Scanner;
-
+/**
+ * Represente une carte deusEx Phoenix.
+ * Sa capacite est defini dans la methode capacite.
+ */
 public class Phoenix extends DeusEx {
 
     public Phoenix(Origine origine,String cheminCarte) {
@@ -19,7 +22,14 @@ public class Phoenix extends DeusEx {
                 "carte.\n");
         this.setNom("Phoenix");
     }
-
+    /**
+     *Capacite de la carte deusEx concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
         Scanner sc=new Scanner(System.in);

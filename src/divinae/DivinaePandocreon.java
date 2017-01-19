@@ -7,11 +7,16 @@ import javafx.stage.Stage;
 import java.util.Scanner;
 
 /*
- * Created by Folow on 27/12/2016.
+ * Contient le main de l'application.
  */
 public class DivinaePandocreon{
     private static int VIEW;
 
+    /**
+     * Choix de début entre l'interface commande ou graphique.
+     * @see DivinaePandocreonCommande
+     * @see DivinaePandocreonGraphique
+     */
     public static void main (String [] args){
         Scanner sc = new Scanner(System.in);
         int choixInterface;

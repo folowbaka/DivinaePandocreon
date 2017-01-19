@@ -6,7 +6,10 @@ import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 import Vue.InterfaceCommand;
-
+/**
+ * Represente une carte Guide Spirituel Anarchiste.
+ * Sa capacite est defini dans la methode capacite.
+ */
 public class Clerc extends GuideSpirituel {
     public Clerc(Origine origine, Dogme[] dogme,int nbMaxCroyant,String cheminCarte) {
         super(origine,dogme,nbMaxCroyant,cheminCarte);
@@ -19,7 +22,14 @@ public class Clerc extends GuideSpirituel {
                 "du joueur.\n");
         this.setNom("Clerc");
     }
-
+    /**
+     *Capacite de la carte GuideSpirituel concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
         int compteur = 0;

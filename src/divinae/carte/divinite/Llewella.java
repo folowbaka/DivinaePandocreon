@@ -9,7 +9,10 @@ import divinae.enumeration.Origine;
 import javafx.scene.image.Image;
 
 import java.util.Scanner;
-
+/**
+ * Represente une carte Divinite Llewella.
+ * Sa capacite est defini dans la methode capacite.
+ */
 public class Llewella extends Divinite {
 
     public Llewella(String cheminCarte) {
@@ -18,7 +21,14 @@ public class Llewella extends Divinite {
         this.setDescription("Peut obliger un joueur à poser une carte Apocalypse s'il en possède une.");
         this.setNom("Llewella");
     }
-
+    /**
+     *Capacite de la carte Divinite concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
         Scanner sc=new Scanner(System.in);

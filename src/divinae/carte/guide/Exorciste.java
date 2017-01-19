@@ -6,7 +6,10 @@ import divinae.Partie;
 import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
-
+/**
+ * Represente une carte Guide Spirituel Anarchiste.
+ * Sa capacite est defini dans la methode capacite.
+ */
 public class Exorciste extends GuideSpirituel{
     public Exorciste(Origine origine, Dogme[] dogme,int nbMaxCroyant,String cheminCarte) {
         super(origine, dogme,nbMaxCroyant,cheminCarte);
@@ -19,7 +22,14 @@ public class Exorciste extends GuideSpirituel{
                 "attachés sont défaussés.");
         this.setNom("Exorciste");
     }
-
+    /**
+     *Capacite de la carte GuideSpirituel concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
         boolean boolDogme=true;

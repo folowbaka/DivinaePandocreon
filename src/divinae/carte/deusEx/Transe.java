@@ -5,7 +5,10 @@ import divinae.Partie;
 import divinae.carte.abstractcarte.DeusEx;
 import divinae.enumeration.Origine;
 import javafx.scene.image.Image;
-
+/**
+ * Represente une carte deusEx Transe.
+ * Sa capacite est defini dans la methode capacite.
+ */
 public class Transe extends DeusEx {
 
     public Transe(Origine origine,String cheminCarte) {
@@ -19,7 +22,14 @@ public class Transe extends DeusEx {
                 "vous.");
         this.setNom("Transe");
     }
-
+    /**
+     *Capacite de la carte deusEx concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
 

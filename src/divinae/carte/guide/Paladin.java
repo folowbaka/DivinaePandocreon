@@ -7,7 +7,10 @@ import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 import javafx.scene.image.Image;
-
+/**
+ * Represente une carte Guide Spirituel Anarchiste.
+ * Sa capacite est defini dans la methode capacite.
+ */
 public class Paladin extends GuideSpirituel{
     public Paladin(Origine origine, Dogme[] dogme,int nbMaxCroyant,String cheminCarte) {
         super(origine,dogme,nbMaxCroyant,cheminCarte);
@@ -19,7 +22,14 @@ public class Paladin extends GuideSpirituel{
                 "pas jouées.");
         this.setNom("Paladin");
     }
-
+    /**
+     *Capacite de la carte GuideSpirituel concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
         for (int i =0; i<p.getCentreTable().size();i++){

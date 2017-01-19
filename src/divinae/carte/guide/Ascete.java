@@ -8,7 +8,10 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 import java.util.Scanner;
-
+/**
+ * Represente une carte Guide Spirituel Anarchiste.
+ * Sa capacite est defini dans la methode capacite.
+ */
 public class Ascete extends GuideSpirituel{
     public Ascete(Origine origine,Dogme[] dogme,int nbMaxCroyant,String cheminCarte) {
         super(origine,dogme,nbMaxCroyant,cheminCarte);
@@ -19,7 +22,14 @@ public class Ascete extends GuideSpirituel{
                 "jouées normalement.\n");
         this.setNom("Ascete");
     }
-
+    /**
+     *Capacite de la carte GuideSpirituel concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
         for(int i=0;i<2;i++) {

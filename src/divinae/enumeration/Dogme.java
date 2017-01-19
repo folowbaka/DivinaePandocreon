@@ -1,8 +1,9 @@
 package divinae.enumeration;
 
 /**
- * Created by Folow on 10/11/2016.
+ * Represente une enumeration des dogmes existants : Nature, Humain, Symbole, Mystique ou Chaos.
  */
+
 public enum Dogme {
     NATURE("NATURE"),
     HUMAIN("HUMAIN"),
@@ -16,6 +17,11 @@ public enum Dogme {
     {
         this.dogme=dogme;
     }
+
+    /**
+     * Affiche le nom du dogme.
+     * @return le nom du dogme en string.
+     */
     @Override
     public String toString()
     {

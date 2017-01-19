@@ -6,7 +6,10 @@ import divinae.Partie;
 import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
-
+/**
+ * Represente une carte Guide Spirituel Anarchiste.
+ * Sa capacite est defini dans la methode capacite.
+ */
 public class Shaman extends GuideSpirituel {
     public Shaman(Origine origine, Dogme[] dogme,int nbMaxCroyant,String cheminCarte) {
         super(origine,dogme,nbMaxCroyant,cheminCarte);
@@ -18,7 +21,14 @@ public class Shaman extends GuideSpirituel {
                 "normalement.\n");
         this.setNom("Shaman");
     }
-
+    /**
+     *Capacite de la carte GuideSpirituel concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
         Joueur choixJoueur;

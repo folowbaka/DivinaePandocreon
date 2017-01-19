@@ -10,7 +10,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /*
- * Created by david on 07/12/2016.
+ * Contient l'ensemble des methodes (static) utilises pour faire tourner le jeu.
  */
 public class InterfaceCommand {
 
@@ -20,6 +20,11 @@ public class InterfaceCommand {
 
 
     }
+
+    /**
+     * En debut de partie, demande le nombre de joueurs reels et virtuels.
+     * @return un tableau de tableau.
+     */
     public static String[][] choisirJoueur() {
         Scanner choixUtilisateur = new Scanner(System.in);
         int nbJoueur=-1;
@@ -67,6 +72,13 @@ public class InterfaceCommand {
         }
         return nomJoueur;
     }
+
+    /**
+     * Methode qui permet a un joueur d'effectuer son tour.
+     * @param j joueur
+     * @param p partie
+     * @param joueurJoue
+     */
     public static void jouer(Joueur j, Partie p, int joueurJoue)
     {
         System.out.println("C'est à vous de jouer joueur : "+j.getNom());
@@ -130,6 +142,15 @@ public class InterfaceCommand {
         j.allowSacrificeCroyant();
         j.allowSacrificeGuide();
     }
+
+    /**
+     * Demande au joueur si il souhaite depenser ses points et verifie si il en a assez.
+     * En parametre le numero de la carte dans la main du joueur.
+     * @param joueur
+     * @param numCarte
+     * @param partie
+     * @param joueurJoue
+     */
     public static void pointJouer(Joueur joueur,int numCarte,Partie partie,int joueurJoue)
     {
         Carte carte=joueur.getMain().get(numCarte);
@@ -194,6 +215,12 @@ public class InterfaceCommand {
         }
         joueur.jouer(numCarte,partie);
     }
+
+    /**
+     * Permet au joueur de choisir quelle carte il souhaite defausser.
+     * @param j joueur
+     * @param p partie
+     */
     public static void choixDefausseCarte(Joueur j,Partie p) {
         Scanner sc=new Scanner(System.in);
         int choixCarte;
@@ -208,6 +235,13 @@ public class InterfaceCommand {
                 System.out.println("Choix invalide");
         }while (!j.getMain().isEmpty() && choixCarte>0);
     }
+
+    /**
+     * Permet au joueur de choisir quelle action il souhaite executer.
+     * @param j joueur
+     * @param p partie
+     * @param joueurJoue
+     */
     public static void choixAction(Joueur j,Partie p,int joueurJoue)
     {
         Scanner sc=new Scanner(System.in);
@@ -232,6 +266,13 @@ public class InterfaceCommand {
         }while (choixAct!=0);
 
     }
+
+    /**
+     * Choix de la carte a jouer.
+     * @param j joueur
+     * @param p partie
+     * @param joueurJoue
+     */
     public static void choixJouerCarte(Joueur j,Partie p,int joueurJoue)
     {
         Scanner sc=new Scanner(System.in);
@@ -292,6 +333,11 @@ public class InterfaceCommand {
 
         }while (choixSacrifice>0);
     }
+
+    /**
+     * Affiche les cartes dans la main d'un joueur en ligne de commande.
+     * @param j joueur
+     */
     public static void afficheCarteJoueur(Joueur j)
     {
         for(int i=0;i<j.getMain().size();i++)
@@ -299,6 +345,12 @@ public class InterfaceCommand {
             System.out.println("Carte "+(i+1)+" : "+j.getMain().get(i).getNom());
         }
     }
+
+    /**
+     * Choix d'un joueur
+     * @param p partie
+     * @return
+     */
     public static Joueur choixJoueur(Partie p){
         Scanner sc=new Scanner(System.in);
         int choixJoueur;
@@ -312,6 +364,12 @@ public class InterfaceCommand {
         return p.getJoueur().get(choixJoueur-1);
 
     }
+
+    /**
+     * Choisir une origine pour l'ajout de points.
+     * @param p partie
+     * @return
+     */
     public static String choixOriginePoints(Partie p){
         Scanner sc=new Scanner(System.in);
         int choixOrigine;
@@ -337,12 +395,22 @@ public class InterfaceCommand {
 
 
     }
+
+    /**
+     * Affiche les joueurs presents dans la partie.
+     * @param p partie
+     */
     public static void afficheJoueurs(Partie p){
         for(int i=0;i<p.getJoueur().size();i++)
         {
             System.out.println("Joueur "+(i+1)+" : "+p.getJoueur().get(i).getNom());
         }
     }
+
+    /**
+     * Affiche les cartes sacrifiable par un joueur.
+     * @param joueur
+     */
     public static void afficheCartesSacrifiable(Joueur joueur){
         for(int i=0;i<joueur.getDivinite().getGuideDivinite().size();i++)
         {
@@ -352,11 +420,23 @@ public class InterfaceCommand {
             }
         }
     }
+
+    /**
+     * Affiche les guides d'un joueur.
+     * @param joueur
+     */
     public static void afficheGuides(Joueur joueur){
         for(int i=0;i< joueur.getDivinite().getGuideDivinite().size();i++){
             System.out.println("Carte "+(i+1)+" : "+joueur.getDivinite().getGuideDivinite().get(i));
         }
     }
+
+    /**
+     * Choix d'un guide parmis ceux qui lui sont associes
+     * @param joueur
+     * @param p partie
+     * @return
+     */
     public static int choixGuide(Joueur joueur, Partie p){
         Scanner sc=new Scanner(System.in);
         int choixGuide;
@@ -370,6 +450,13 @@ public class InterfaceCommand {
         }while (choixGuide>joueur.getDivinite().getGuideDivinite().size() || choixGuide<0);
         return choixGuide-1;
     }
+
+    /**
+     * Choix du joueur a interrompre.
+     * @param j joueur
+     * @param p partie
+     * @param joueurJoue
+     */
     public static void  interrompre(Joueur j,Partie p,int joueurJoue)
     {
         Scanner sc=new Scanner(System.in);
@@ -380,6 +467,12 @@ public class InterfaceCommand {
         InterfaceCommand.afficheCarteSansOrigin(p.getJoueur().get(joueur));
 
     }
+
+    /**
+     * Choix parmis les cartes sans origines.
+     * @param j joueur
+     * @param p partie
+     */
     public static void choixSansOrigin(Joueur j,Partie p)
     {
         Scanner sc=new Scanner(System.in);
@@ -395,6 +488,11 @@ public class InterfaceCommand {
             }
         }while (choixCarteSO>0 && j.getMain().get(choixCarteSO).getOrigine()!=null);
     }
+
+    /**
+     * Affiche les cartes sans origines.
+     * @param j joueur
+     */
     public static void afficheCarteSansOrigin(Joueur j)
     {
         for(int i=0;i<j.getMain().size();i++)

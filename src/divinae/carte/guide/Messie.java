@@ -8,7 +8,10 @@ import divinae.enumeration.Origine;
 import javafx.scene.image.Image;
 
 import java.util.Scanner;
-
+/**
+ * Represente une carte Guide Spirituel Anarchiste.
+ * Sa capacite est defini dans la methode capacite.
+ */
 public class Messie  extends GuideSpirituel{
     public Messie(Origine origine, Dogme[] dogme,int nbMaxCroyant,String cheminCarte) {
         super(origine, dogme,nbMaxCroyant,cheminCarte);
@@ -18,7 +21,14 @@ public class Messie  extends GuideSpirituel{
                 "nouveau tour de jeu.\n");
         this.setNom("Messie");
     }
-
+    /**
+     *Capacite de la carte GuideSpirituel concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
         System.out.println("Choisissez une origine.\n1 - Jour\n2 - Nuit\n3 - Néant");

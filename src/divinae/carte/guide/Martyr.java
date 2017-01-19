@@ -7,7 +7,10 @@ import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 import javafx.scene.image.Image;
-
+/**
+ * Represente une carte Guide Spirituel Anarchiste.
+ * Sa capacite est defini dans la methode capacite.
+ */
 public class Martyr extends GuideSpirituel {
     public Martyr(Origine origine, Dogme[] dogme,int nbMaxCroyant,String cheminCarte) {
         super(origine, dogme,nbMaxCroyant,cheminCarte);
@@ -15,7 +18,14 @@ public class Martyr extends GuideSpirituel {
                 "carte Apocalypse.\n");
         this.setNom("Martyr");
     }
-
+    /**
+     *Capacite de la carte GuideSpirituel concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
         Apocalypse apocalypse = new Apocalypse(null,"ressource/image/apocalypse42.jpg");

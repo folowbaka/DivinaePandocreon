@@ -8,7 +8,10 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 import java.util.Scanner;
-
+/**
+ * Represente une carte Divinite Shingva.
+ * Sa capacite est defini dans la methode capacite.
+ */
 public class Shingva extends Divinite {
 
     public Shingva(String cheminCarte) {
@@ -17,7 +20,14 @@ public class Shingva extends Divinite {
         this.setDescription("Peut imposer le sacrifice d'un Guide Spirituel ayant le Dogme Symboles ou Nature.");
         this.setNom("Shingva");
     }
-
+    /**
+     *Capacite de la carte Divinite concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
         Joueur choixJoueur = InterfaceCommand.choixJoueur(p);

@@ -8,7 +8,10 @@ import divinae.enumeration.Origine;
 import javafx.scene.image.Image;
 
 import java.util.Scanner;
-
+/**
+ * Represente une carte Divinite Gorpa.
+ * Sa capacite est defini dans la methode capacite.
+ */
 public class Gorpa extends Divinite {
     public Gorpa(String cheminCarte) {
         super(Origine.CREPUSCULE,new Dogme[]{Dogme.HUMAIN,Dogme.SYMBOLE,Dogme.CHAOS},cheminCarte);
@@ -17,7 +20,14 @@ public class Gorpa extends Divinite {
         this.setNom("Gorpa");
     }
 
-
+    /**
+     *Capacite de la carte Divinite concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
         int index = p.getJoueur().indexOf(j);

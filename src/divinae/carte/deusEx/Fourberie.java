@@ -7,7 +7,10 @@ import divinae.carte.abstractcarte.DeusEx;
 import divinae.enumeration.Origine;
 
 import java.util.Scanner;
-
+/**
+ * Represente une carte deusEx Fourberie.
+ * Sa capacite est defini dans la methode capacite.
+ */
 public class Fourberie extends DeusEx {
 
     public Fourberie(Origine origine,String cheminCarte)
@@ -20,7 +23,14 @@ public class Fourberie extends DeusEx {
                 "jouées.\n");
         this.setNom("Fourberie");
     }
-
+    /**
+     *Capacite de la carte deusEx concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
         for(int i=0;i<2;i++) {

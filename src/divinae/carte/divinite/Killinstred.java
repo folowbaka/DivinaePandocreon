@@ -8,7 +8,10 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 import java.util.Scanner;
-
+/**
+ * Represente une carte Divinite Killinstred.
+ * Sa capacite est defini dans la methode capacite.
+ */
 public class Killinstred extends Divinite {
 
     public Killinstred(String cheminCarte) {
@@ -17,7 +20,14 @@ public class Killinstred extends Divinite {
         this.setDescription("Peut obliger un joueur à poser une carte Apocalypse s'il en possède une.");
         this.setNom("Killinstred");
     }
-
+    /**
+     *Capacite de la carte Divinite concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
         Scanner sc=new Scanner(System.in);

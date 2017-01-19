@@ -19,7 +19,8 @@ import java.util.Random;
 import static java.util.Collections.shuffle;
 
 /*
- * Created by david on 21/11/2016.
+ * Represente la partie qui contient les joueurs, la pioche, la defausse et le centre de la table.
+ * La partie est unique.
  */
 public class Partie {
     private ArrayList<Joueur> joueur;
@@ -32,6 +33,11 @@ public class Partie {
     private boolean fintour;
     private Origine influenceTour;
 
+    /**
+     * Renvois la partie en cours.
+     * @param nomJoueur
+     * @return partie
+     */
     public static Partie getInstance(String[][] nomJoueur)
     {
        if(ourInstance==null)
@@ -40,6 +46,13 @@ public class Partie {
        }
         return ourInstance;
     }
+
+    /**
+     * Constructeur de la partie. Ajoute les joueurs et construit la pioche.
+     * Prend en entree une liste de liste avec les joueurs. En premier indice 0 les joueurs reels et en 1 les joueurs virtuels.
+     * @param nomJoueur
+     * @return partie
+     */
     private Partie(String[][] nomJoueur)
     {
         System.out.println("Partie créée");
@@ -79,10 +92,18 @@ public class Partie {
         this.distribCarte();
     }
 
+    /**
+     * Modifie la partie en cours.
+     * @param ourInstance
+     */
     public static void setOurInstance(Partie ourInstance) {
         Partie.ourInstance = ourInstance;
     }
 
+    /**
+     * Methode qui debute la partie.
+     * Lance le de, attribut les points et permet a chaque joueur de jouer.
+     */
     public void commencerPartie()
     {
         int tour=0;
@@ -125,6 +146,11 @@ public class Partie {
         }
 
     }
+
+    /**
+     * Lance le de et renvois l'origine obtenue.
+     * @return l'origine du lance de de.
+     */
     public Origine lancerDes()
     {
         int des= (int) (Math.random() * 3);
@@ -142,6 +168,9 @@ public class Partie {
         }
     }
 
+    /**
+     * Distribue les divinites aux joueurs.
+     */
     public void distribDivinite()
     {
         ArrayList<Divinite> divin=new ArrayList<Divinite>();
@@ -153,6 +182,10 @@ public class Partie {
             this.joueur.get(i).setDivinite(divin.remove(rd.nextInt(divin.size())));
         }
     }
+
+    /**
+     * Distribue les cartes aux joueurs.
+     */
     public void distribCarte()
     {
         for(int i=0;i<this.joueur.size();i++)
@@ -163,6 +196,12 @@ public class Partie {
             }
         }
     }
+
+    /**
+     * Verifie si un joueur peut jouer.
+     * @param joueurJoue
+     * @return si le joueur peut jouer.
+     */
     public boolean checkInterrompre(int joueurJoue)
     {
         int i=0;
@@ -183,6 +222,10 @@ public class Partie {
         }
         return interrompre;
     }
+
+    /**
+     * Permet a chaque croyant au centre de la table de devenir rattachable a un guide.
+     */
     public void centreRattachable()
     {
         for(int i=0;i<this.centreTable.size();i++)
@@ -190,28 +233,66 @@ public class Partie {
             this.centreTable.get(i).setRattachable(true);
         }
     }
+
+    /**
+     * Retourne la pioche
+     * @return un arraylist de cartes.
+     */
     public ArrayList<Carte> getPioche()
     {
         return this.pioche;
     }
+
+    /**
+     * Retourne la defausse
+     * @return un arraylist de cartes.
+     */
     public ArrayList<Carte> getDefausse()
     {
         return this.defausse;
     }
+
+    /**
+     * Retourne la liste des joueurs
+     * @return un arraylist de joueurs
+     */
     public ArrayList<Joueur> getJoueur(){
         return this.joueur;
     }
+    /**
+     * Retourne le centre
+     * @return un arraylist de cartes.
+     */
     public ArrayList<Croyant> getCentreTable(){return this.centreTable;}
+
+    /**
+     * Retourne l'influence de ce tour definit par le de.
+     * @return l'origine du tour
+     */
     public Origine getInfluenceTour() {
         return influenceTour;
     }
+
+    /**
+     * Modifie l'origine du tour.
+     * @param influenceTour
+     */
     public void setInfluenceTour(Origine influenceTour) {
         this.influenceTour = influenceTour;
     }
+
+    /**
+     * Modifie si le tour peut se terminer.
+     * @param fintour
+     */
     public void setFintour(boolean fintour)
     {
         this.fintour=fintour;
     }
+
+    /**
+     * Remplis la pioche de l'ensemble des cartes du jeu.
+     */
     public void remplirPioche()
     {
         //Ajout Croyant
@@ -383,7 +464,10 @@ public class Partie {
     }
 
 
-
+    /**
+     * Affiche les joueurs de la partie.
+     * @return
+     */
     @Override
     public String toString() {
         return "Partie{" +

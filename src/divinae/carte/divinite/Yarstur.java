@@ -7,7 +7,10 @@ import divinae.carte.abstractcarte.Divinite;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 import javafx.scene.image.Image;
-
+/**
+ * Represente une carte Divinite Yarstur.
+ * Sa capacite est defini dans la methode capacite.
+ */
 public class Yarstur extends Divinite {
 
     public Yarstur(String cheminCarte) {
@@ -16,7 +19,14 @@ public class Yarstur extends Divinite {
         this.setDescription("Peut détruire toutes les cartes de Croyants au centre de la table d'Origine Néant.");
         this.setNom("Yartsur");
     }
-
+    /**
+     *Capacite de la carte Divinite concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
         for (int i =0; i<p.getCentreTable().size();i++){

@@ -1,7 +1,7 @@
 package divinae;
 
 /*
- * Created by Folow on 24/11/2016.
+ * Represente un joueur virtuel.
  */
 public class JoueurVirtuel extends Joueur{
     private Strategie strategie;

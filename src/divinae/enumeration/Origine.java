@@ -1,7 +1,7 @@
 package divinae.enumeration;
 
 /**
- * Created by Folow on 10/11/2016.
+ * Represente une enumeration des origines existantes : Jour, Aube, Neant, Crupuscule ou Nuit.
  */
 public enum  Origine {
     JOUR("JOUR"),
@@ -16,6 +16,10 @@ public enum  Origine {
     {
         this.origine=origine;
     }
+    /**
+     * Affiche le nom de l'origine.
+     * @return le nom de l'origine en string.
+     */
     @Override
     public String toString() {
         return this.origine;

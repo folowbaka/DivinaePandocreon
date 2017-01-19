@@ -9,8 +9,19 @@ import javafx.scene.image.Image;
 
 import java.util.ArrayList;
 
+/**
+ * Represente un guide spirituel, qui possede en attribut la liste des croyants rattaches.
+ */
 public abstract class GuideSpirituel extends CarteDogme {
     private Croyant[] croyantRattache;
+
+    /**
+     * Constructeur du guide spirituel.
+     * @param origine
+     * @param dogme
+     * @param nbMaxCroyant
+     * @param cheminCarte
+     */
     public GuideSpirituel(Origine origine,Dogme[] dogme,int nbMaxCroyant,String cheminCarte)
     {
         super(origine,dogme,cheminCarte);
@@ -18,14 +29,30 @@ public abstract class GuideSpirituel extends CarteDogme {
 
     }
 
+    /**
+     * Retourne les croyants rattaches.
+     * @return une liste de croyants
+     * @see Croyant
+     */
     public Croyant[] getCroyantRattache() {
         return croyantRattache;
     }
 
+    /**
+     * Modifie les croyants rattaches, en parametre une liste de croyants.
+     * @param croyantRattache
+     */
     public void setCroyantRattache(Croyant[] croyantRattache) {
         this.croyantRattache = croyantRattache;
     }
 
+    /**
+     * Cette methode parcours le centre de la table et associe a notre guide des croyants.
+     * Elle prend en compte la limite de croyants maximum et les dogmes des croyants.
+     * En parametre la partie en cours.
+     * @param partie
+     * @see Partie
+     */
     public void rattacher(Partie partie)
     {
         ArrayList<Croyant> centre=partie.getCentreTable();
@@ -59,6 +86,13 @@ public abstract class GuideSpirituel extends CarteDogme {
         }
 
     }
+
+    /**
+     * Cette methode libere les croyants rattache au guide en question et les remet au centre de la table.
+     * En parametre la partie en cours
+     * @param partie
+     * @see Partie
+     */
     public void libCroyant(Partie partie)
     {
         for(int j=0;j<this.getCroyantRattache().length;j++)
@@ -70,6 +104,11 @@ public abstract class GuideSpirituel extends CarteDogme {
             }
         }
     }
+
+    /**
+     * Cette methode retourne si le guide possede des croyants ou pas.
+     * @return un booleen
+     */
     public boolean aCroyantRattache()
     {
         int i=0;
@@ -79,6 +118,11 @@ public abstract class GuideSpirituel extends CarteDogme {
         }
         return i==this.croyantRattache.length;
     }
+
+    /**
+     * Retourne le nombre total de prieres de chaque croyant rattache a ce guide.
+     * @return le nombre de prieres en entier.
+     */
     public int priereGuide()
     {
         int priere=0;

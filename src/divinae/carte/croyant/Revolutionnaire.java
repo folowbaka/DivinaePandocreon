@@ -8,7 +8,10 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 
 import java.util.Scanner;
-
+/**
+ * Represente une carte croyant Revolutionnaire.
+ * Son sacrifice est defini dans la methode capacite.
+ */
 public class Revolutionnaire extends Croyant {
 
     public Revolutionnaire(Dogme[] dogme, String cheminCarte) {
@@ -22,7 +25,14 @@ public class Revolutionnaire extends Croyant {
         this.setNom("Revolutionnaire");
         this.setNbCroyant(2);
     }
-
+    /**
+     *Capacite de la carte croyant concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
         Scanner sc=new Scanner(System.in);

@@ -5,7 +5,10 @@ import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
-
+/**
+ * Represente une carte croyant Diplomate.
+ * Son sacrifice est defini dans la methode capacite.
+ */
 public class Diplomate extends Croyant {
 
     public Diplomate( Dogme[] dogme, String cheminCarte) {
@@ -16,7 +19,14 @@ public class Diplomate extends Croyant {
         this.setNom("Diplomate");
         this.setNbCroyant(4);
     }
-
+    /**
+     *Capacite de la carte croyant concernee.
+     * <p>
+     * @param  Joueur  le joueur sur lequel l'effet aura lieu
+     * @param  Partie la partie en cours
+     * @see Joueur
+     * @see Partie
+     */
     @Override
     public void capacite(Joueur j, Partie p) {
         Origine origineTour=p.lancerDes();
