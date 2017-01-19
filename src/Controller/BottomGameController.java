@@ -202,12 +202,12 @@ public class BottomGameController extends ControllerDivinae {
         }
         refreshBoard(j);
     }
-    public void pointJouer(Joueur j,int c,Partie p,int joueurJoue)
+    public void pointJouer(Joueur joueur,int numCarte,Partie partie,int joueurJoue)
     {
-        Carte carte=j.getMain().get(c);
+        Carte carte=joueur.getMain().get(numCarte);
         if(carte.getOrigine()!=null)
         {
-            int point = j.getPointsAction().get(carte.getOrigine().toString());
+            int point = joueur.getPointsAction().get(carte.getOrigine().toString());
             if(carte instanceof Apocalypse && !Partie.APOCALYPSE)
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -215,7 +215,7 @@ public class BottomGameController extends ControllerDivinae {
                 alert.showAndWait();
                 return;
             }
-            if (!j.pointPourJouer(carte))
+            if (!joueur.pointPourJouer(carte))
             {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setHeaderText("Vous n'avez pas assez de points pour jouer cette carte");
@@ -224,10 +224,10 @@ public class BottomGameController extends ControllerDivinae {
             }
             if (point > 0)
             {
-                j.getPointsAction().put(carte.getOrigine().toString(), point - 1);
+                joueur.getPointsAction().put(carte.getOrigine().toString(), point - 1);
             } else if (point <= 0 && carte.getOrigine() == Origine.NEANT ) {
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                if (j.getPointsAction().get("NUIT") > 1 && j.getPointsAction().get("JOUR") > 1) {
+                if (joueur.getPointsAction().get("NUIT") > 1 && joueur.getPointsAction().get("JOUR") > 1) {
                     alert.setHeaderText("Vous pouvez choisir d'utiliser vos points jour ou nuit");
                     alert.setContentText("Choisissez les points à utiliser");
 
@@ -239,14 +239,14 @@ public class BottomGameController extends ControllerDivinae {
 
                     Optional<ButtonType> result = alert.showAndWait();
                     if (result.get() == buttonTypeJour) {
-                        j.getPointsAction().put("JOUR", j.getPointsAction().get("JOUR") - 2);
+                        joueur.getPointsAction().put("JOUR", joueur.getPointsAction().get("JOUR") - 2);
                     } else if (result.get() == buttonTypeNuit) {
-                        j.getPointsAction().put("NUIT", j.getPointsAction().get("NUIT") - 2);
+                        joueur.getPointsAction().put("NUIT", joueur.getPointsAction().get("NUIT") - 2);
                     } else {
                         alert.close();
                         return;
                     }
-                } else if (j.getPointsAction().get("NUIT") > 1) {
+                } else if (joueur.getPointsAction().get("NUIT") > 1) {
                     alert.setHeaderText("Vous pouvez choisir d'utiliser vos points nuit");
                     alert.setContentText("Voulez vous les utiliser?");
                     ButtonType buttonTypeNuit = new ButtonType("Oui");
@@ -254,12 +254,12 @@ public class BottomGameController extends ControllerDivinae {
                     alert.getButtonTypes().setAll(buttonTypeNuit, buttonTypeCancel);
                     Optional<ButtonType> result = alert.showAndWait();
                     if (result.get() == buttonTypeNuit) {
-                        j.getPointsAction().put("NUIT", j.getPointsAction().get("NUIT") - 2);
+                        joueur.getPointsAction().put("NUIT", joueur.getPointsAction().get("NUIT") - 2);
                     } else {
                         alert.close();
                         return;
                     }
-                } else if(j.getPointsAction().get("JOUR")>1)
+                } else if(joueur.getPointsAction().get("JOUR")>1)
                 {
                     alert.setHeaderText("Vous pouvez choisir d'utiliser vos points Jour");
                     alert.setContentText("Voulez vous les utiliser?");
@@ -268,7 +268,7 @@ public class BottomGameController extends ControllerDivinae {
                     alert.getButtonTypes().setAll(buttonTypeJour, buttonTypeCancel);
                     Optional<ButtonType> result = alert.showAndWait();
                     if (result.get() == buttonTypeJour) {
-                        j.getPointsAction().put("JOUR", j.getPointsAction().get("JOUR") - 2);
+                        joueur.getPointsAction().put("JOUR", joueur.getPointsAction().get("JOUR") - 2);
                     } else {
                         alert.close();
                         return;
@@ -280,7 +280,7 @@ public class BottomGameController extends ControllerDivinae {
         {
             this.getDpg().getCentercontroller().addCroyant((Croyant)carte);
         }
-        j.jouer(c,p,carte);
+        joueur.jouer(numCarte,partie);
         if(carte instanceof GuideSpirituel)
         {
             this.getDpg().getCentercontroller().addGuide((GuideSpirituel) carte);

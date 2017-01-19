@@ -18,7 +18,7 @@ public abstract class Carte {
         this.origine=origine;
         this.cheminCarte=cheminCarte;
     }
-    public abstract void capacite(Joueur j,Partie p);
+    public abstract void capacite(Joueur joueur,Partie partie);
 
     public Origine getOrigine() {
         return origine;

@@ -26,9 +26,9 @@ public abstract class GuideSpirituel extends CarteDogme {
         this.croyantRattache = croyantRattache;
     }
 
-    public void rattacher(Partie p)
+    public void rattacher(Partie partie)
     {
-        ArrayList<Croyant> centre=p.getCentreTable();
+        ArrayList<Croyant> centre=partie.getCentreTable();
         if(centre.isEmpty())
                 return;
         int i=0;
@@ -43,7 +43,7 @@ public abstract class GuideSpirituel extends CarteDogme {
                 int k=0;
                 while(i<centre.size() && k<centre.get(i).getDogme().length && nbCroyant<croyantMax && !dogmeTrouve)
                 {
-                    if(this.getDogme()[j]==centre.get(i).getDogme()[k]&& nbCroyant<croyantMax && centre.get(i).getRattachable())
+                    if(this.getDogme()[j]==centre.get(i).getDogme()[k]&& nbCroyant<croyantMax && centre.get(i).estRattachable())
                     {
                         this.croyantRattache[nbCroyant]=centre.remove(i);
                         if(i>1)
@@ -59,18 +59,18 @@ public abstract class GuideSpirituel extends CarteDogme {
         }
 
     }
-    public void libCroyant(Joueur joueur,Partie p)
+    public void libCroyant(Partie partie)
     {
         for(int j=0;j<this.getCroyantRattache().length;j++)
         {
             if(this.croyantRattache[j]!=null)
             {
-                p.getCentreTable().add(getCroyantRattache()[j]);
+                partie.getCentreTable().add(getCroyantRattache()[j]);
                 this.croyantRattache[j]=null;
             }
         }
     }
-    public boolean croyantVide()
+    public boolean aCroyantRattache()
     {
         int i=0;
         while(i<this.croyantRattache.length && this.croyantRattache[i]!=null)

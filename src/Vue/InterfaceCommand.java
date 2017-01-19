@@ -130,11 +130,11 @@ public class InterfaceCommand {
         j.allowSacrificeCroyant();
         j.allowSacrificeGuide();
     }
-    public static void pointJouer(Joueur j,int c,Partie p,int joueurJoue)
+    public static void pointJouer(Joueur joueur,int numCarte,Partie partie,int joueurJoue)
     {
-        Carte carte=j.getMain().get(c);
-        int point=j.getPointsAction().get(carte.getOrigine().toString());
-        if(!j.pointPourJouer(carte))
+        Carte carte=joueur.getMain().get(numCarte);
+        int point=joueur.getPointsAction().get(carte.getOrigine().toString());
+        if(!joueur.pointPourJouer(carte))
         {
             System.out.println("Vous n'avez pas assez de points pour jouer");
             return ;
@@ -142,12 +142,12 @@ public class InterfaceCommand {
         Scanner sc=new Scanner(System.in);
         if(point>0)
         {
-            j.getPointsAction().put(carte.getOrigine().toString(),point-1);
+            joueur.getPointsAction().put(carte.getOrigine().toString(),point-1);
         }
         else if(point<=0 && carte.getOrigine()==Origine.NEANT)
         {
             int choixPoint;
-            if(j.getPointsAction().get("NUIT")>1 && j.getPointsAction().get("JOUR")>1)
+            if(joueur.getPointsAction().get("NUIT")>1 && joueur.getPointsAction().get("JOUR")>1)
             {
                 System.out.println("1---------Dépenser 2 points Nuit?");
                 System.out.println("2---------Dépenser 2 points Jour?");
@@ -156,11 +156,11 @@ public class InterfaceCommand {
                 if(choixPoint==0)
                     return;
                 if(choixPoint==1)
-                    j.getPointsAction().put("NUIT",j.getPointsAction().get("NUIT")-2);
+                    joueur.getPointsAction().put("NUIT",joueur.getPointsAction().get("NUIT")-2);
                 if(choixPoint==2)
-                    j.getPointsAction().put("JOUR",j.getPointsAction().get("JOUR")-2);
+                    joueur.getPointsAction().put("JOUR",joueur.getPointsAction().get("JOUR")-2);
             }
-            else if(j.getPointsAction().get("NUIT")>1)
+            else if(joueur.getPointsAction().get("NUIT")>1)
             {
                 System.out.println("1---------Dépenser 2 points Nuit?");
                 System.out.println("0---------Annuler");
@@ -168,9 +168,9 @@ public class InterfaceCommand {
                 if(choixPoint==0)
                     return;
                 if(choixPoint==1)
-                    j.getPointsAction().put("NUIT",j.getPointsAction().get("NUIT")-2);
+                    joueur.getPointsAction().put("NUIT",joueur.getPointsAction().get("NUIT")-2);
             }
-            else if(j.getPointsAction().get("JOUR")>1)
+            else if(joueur.getPointsAction().get("JOUR")>1)
             {
                 System.out.println("1---------Dépenser 2 points Jour?");
                 System.out.println("0---------Annuler");
@@ -178,10 +178,10 @@ public class InterfaceCommand {
                 if(choixPoint==0)
                     return;
                 if(choixPoint==1)
-                    j.getPointsAction().put("JOUR",j.getPointsAction().get("JOUR")-2);
+                    joueur.getPointsAction().put("JOUR",joueur.getPointsAction().get("JOUR")-2);
             }
         }
-        if(p.checkInterrompre(joueurJoue))
+        if(partie.checkInterrompre(joueurJoue))
         {
             int inte;
             System.out.println("9---------Interrompre");
@@ -189,10 +189,10 @@ public class InterfaceCommand {
             switch (inte)
             {
                 case 9:
-                    InterfaceCommand.interrompre(j,p,joueurJoue);
+                    InterfaceCommand.interrompre(joueur,partie,joueurJoue);
             }
         }
-        j.jouer(c,p,carte);
+        joueur.jouer(numCarte,partie);
     }
     public static void choixDefausseCarte(Joueur j,Partie p) {
         Scanner sc=new Scanner(System.in);
@@ -391,7 +391,7 @@ public class InterfaceCommand {
             choixCarteSO=sc.nextInt();
             if(j.getMain().get(choixCarteSO-1).getOrigine()==null)
             {
-                j.jouer(choixCarteSO-1,p,j.getMain().get(choixCarteSO-1));
+                j.jouer(choixCarteSO-1,p);
             }
         }while (choixCarteSO>0 && j.getMain().get(choixCarteSO).getOrigine()!=null);
     }

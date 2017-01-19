@@ -34,7 +34,7 @@ public class Fourberie extends DeusEx {
             choixSacrificeCroyant = sc.nextInt() - 1;
             p.getDefausse().add(choixJoueur.getDivinite().getGuideDivinite().get(choixSacrificeGuide).getCroyantRattache()[choixSacrificeCroyant]);
             choixJoueur.getDivinite().getGuideDivinite().get(choixSacrificeGuide).getCroyantRattache()[choixSacrificeCroyant] = null;
-            if (choixJoueur.getDivinite().getGuideDivinite().get(choixSacrificeGuide).croyantVide())
+            if (choixJoueur.getDivinite().getGuideDivinite().get(choixSacrificeGuide).aCroyantRattache())
                 p.getDefausse().add(choixJoueur.getDivinite().getGuideDivinite().remove(choixSacrificeCroyant));
         }
     }

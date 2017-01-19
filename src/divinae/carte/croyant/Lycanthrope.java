@@ -23,11 +23,11 @@ public class Lycanthrope extends Croyant {
     }
 
     @Override
-    public void capacite(Joueur j, Partie p) {
-        Joueur choixJoueur = InterfaceCommand.choixJoueur(p);
-        Integer choixGuide = InterfaceCommand.choixGuide(choixJoueur,p);
-        choixJoueur.getDivinite().getGuideDivinite().get(choixGuide).libCroyant(choixJoueur,p);
-        p.getDefausse().add(choixJoueur.getDivinite().getGuideDivinite().get(choixGuide));
+    public void capacite(Joueur joueur, Partie partie) {
+        Joueur choixJoueur = InterfaceCommand.choixJoueur(partie);
+        Integer choixGuide = InterfaceCommand.choixGuide(choixJoueur,partie);
+        choixJoueur.getDivinite().getGuideDivinite().get(choixGuide).libCroyant(partie);
+        partie.getDefausse().add(choixJoueur.getDivinite().getGuideDivinite().get(choixGuide));
         choixJoueur.getDivinite().getGuideDivinite().remove(choixGuide);
     }
 }

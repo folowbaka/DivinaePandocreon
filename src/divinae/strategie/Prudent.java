@@ -10,32 +10,32 @@ import divinae.carte.abstractcarte.GuideSpirituel;
  */
 public class Prudent implements divinae.Strategie {
 
-    public void jouer(Joueur j, Partie p)
+    public void jouer(Joueur joueur, Partie partie)
     {
-        System.out.println("Joueur : "+j.getNom()+" joue");
+        System.out.println("Joueur : "+joueur.getNom()+" joue");
         int i=0;
-        if(p.getCentreTable().size()==0)
+        if(partie.getCentreTable().size()==0)
         {
-            while (i < j.getMain().size() && !(j.getMain().get(i) instanceof Croyant)) {
+            while (i < joueur.getMain().size() && !(joueur.getMain().get(i) instanceof Croyant)) {
 
             }
-            if(i<j.getMain().size())
+            if(i<joueur.getMain().size())
             {
-                if(j.pointPourJouer(j.getMain().get(i)))
+                if(joueur.pointPourJouer(joueur.getMain().get(i)))
                 {
-                    j.getPointsAction().put(j.getMain().get(i).getOrigine().toString(), j.getPointsAction().get(j.getMain().get(i).getOrigine().toString()) - 1);
-                    j.jouer(i, p, j.getMain().get(i));
+                    joueur.getPointsAction().put(joueur.getMain().get(i).getOrigine().toString(), joueur.getPointsAction().get(joueur.getMain().get(i).getOrigine().toString()) - 1);
+                    joueur.jouer(i, partie);
                 }
             }
 
         }
         else
         {
-            while (i < j.getMain().size() && !(j.getMain().get(i) instanceof GuideSpirituel)) {
+            while (i < joueur.getMain().size() && !(joueur.getMain().get(i) instanceof GuideSpirituel)) {
 
             }
-            if(i<j.getMain().size())
-                j.jouer(i,p,j.getMain().get(i));
+            if(i<joueur.getMain().size())
+                joueur.jouer(i,partie);
         }
 
     }

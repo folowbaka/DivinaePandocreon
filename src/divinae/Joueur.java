@@ -73,21 +73,21 @@ public class Joueur {
         int taillePioche=partie.getPioche().size()-1;
         this.main.add(partie.getPioche().remove(taillePioche));
     }
-    public void volerCarte(Joueur j){
-        int tailleMain=j.getMain().size()-1;
+    public void volerCarte(Joueur joueurAVole){
+        int tailleMain=joueurAVole.getMain().size()-1;
         if (tailleMain >0){
-            this.main.add(j.getMain().remove(tailleMain));
+            this.main.add(joueurAVole.getMain().remove(tailleMain));
         }
         else{
             System.out.println("Main vide.");
         }
     }
-    public void completerMain(Partie p)
+    public void completerMain(Partie partie)
     {
         int tailleMain=this.main.size();
         for(int i=tailleMain;i<TAILLEMAIN;i++)
         {
-            this.pioche(p);
+            this.pioche(partie);
         }
     }
     public void ajoutPoints(Origine originePoint)
@@ -132,16 +132,17 @@ public class Joueur {
             System.out.println("Vous ne pouvez pas recevoir de points");
         }
     }
-    public void jouer(int c,Partie p,Carte carte)
+    public void jouer(int numCarte,Partie partie)
     {
+        Carte carte =this.getMain().get(numCarte);
         if(carte instanceof Croyant)
         {
-            p.getCentreTable().add((Croyant) this.getMain().remove(c));
+            partie.getCentreTable().add((Croyant) this.getMain().remove(numCarte));
         }
         else if(carte instanceof GuideSpirituel)
         {
-            this.divinite.getGuideDivinite().add((GuideSpirituel) this.getMain().remove(c));
-            ((GuideSpirituel) carte).rattacher(p);
+            this.divinite.getGuideDivinite().add((GuideSpirituel) this.getMain().remove(numCarte));
+            ((GuideSpirituel) carte).rattacher(partie);
 
         }
         else
@@ -151,30 +152,30 @@ public class Joueur {
                 System.out.println("Carte Apocalypse non jouable ce tour");
                 return;
             }
-                this.getMain().get(c).capacite(this,p);
-                this.defausseCarte(c,p);
+                this.getMain().get(numCarte).capacite(this,partie);
+                this.defausseCarte(numCarte,partie);
         }
 
 
     }
-    public void sacrifierGuide(int guide,Partie p)
+    public void sacrifierGuide(int guide,Partie partie)
     {
-        this.getDivinite().getGuideDivinite().get(guide).capacite(this,p);
-        this.getDivinite().getGuideDivinite().get(guide).libCroyant(this,p);
-        p.getDefausse().add(this.getDivinite().getGuideDivinite().get(guide));
+        this.getDivinite().getGuideDivinite().get(guide).capacite(this,partie);
+        this.getDivinite().getGuideDivinite().get(guide).libCroyant(partie);
+        partie.getDefausse().add(this.getDivinite().getGuideDivinite().get(guide));
     }
     public void sacrifierCroyant(int guide,int croyant,Partie p)
     {
         this.getDivinite().getGuideDivinite().get(guide).getCroyantRattache()[croyant].capacite(this,p);
         p.getDefausse().add(this.getDivinite().getGuideDivinite().get(guide).getCroyantRattache()[croyant]);
         this.getDivinite().getGuideDivinite().get(guide).getCroyantRattache()[croyant]=null;
-        if(this.getDivinite().getGuideDivinite().get(guide).croyantVide())
+        if(this.getDivinite().getGuideDivinite().get(guide).aCroyantRattache())
             p.getDefausse().add(this.getDivinite().getGuideDivinite().remove(guide));
     }
-    public void defausseCarte(int carte,Partie p)
+    public void defausseCarte(int numCarte,Partie partie)
     {
         if(!this.getMain().isEmpty())
-            p.getDefausse().add(this.getMain().remove(carte));
+            partie.getDefausse().add(this.getMain().remove(numCarte));
     }
     public  int compterPriere()
     {
@@ -186,14 +187,14 @@ public class Joueur {
             return priere;
 
     }
-    public void libGuideCroyant(Partie p)
+    public void libGuideCroyant(Partie partie)
     {
         int i=0;
         while(i<this.divinite.getGuideDivinite().size())
         {
 
-            this.getDivinite().getGuideDivinite().get(i).libCroyant(this,p);
-            p.getDefausse().add(this.divinite.getGuideDivinite().remove(i));
+            this.getDivinite().getGuideDivinite().get(i).libCroyant(partie);
+            partie.getDefausse().add(this.divinite.getGuideDivinite().remove(i));
         }
     }
     public boolean pointPourJouer(Carte carte)
