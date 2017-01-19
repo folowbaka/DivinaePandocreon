@@ -92,6 +92,7 @@ public class CenterGameController extends ControllerDivinae {
                             private int idGuide=guideBoard.getChildren().size()-1;
 
                             public void handle(MouseEvent event) {
+                                guideCroyant.getChildren().clear();
                                 popup.hide();
                         show=false;
                     }
