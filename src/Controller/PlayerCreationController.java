@@ -1,5 +1,7 @@
-package divinae;
+package Controller;
 
+import Controller.ControllerDivinae;
+import Controller.PlayerAskNameController;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -17,7 +19,7 @@ import java.util.ArrayList;
 /**
  * Created by Folow on 28/12/2016.
  */
-public class PlayerCreationController extends ControllerDivinae{
+public class PlayerCreationController extends ControllerDivinae {
 
     @FXML
     private ToggleGroup jVirtuel;
@@ -57,7 +59,7 @@ public class PlayerCreationController extends ControllerDivinae{
     @FXML
     private void handleValiderJoueur()
     {
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("playeraskname.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("../Vue/playeraskname.fxml"));
         try {
             this.getDpg().getRootLayout().setCenter((VBox)loader.load());
             ((PlayerAskNameController)loader.getController()).setNbJoueur((Integer)chbNbPlayer.getValue());
@@ -70,7 +72,6 @@ public class PlayerCreationController extends ControllerDivinae{
     }
     public void initChbVirtuel(int joueur)
     {
-        System.out.println(joueur);
         ArrayList<Integer> ai=new ArrayList<Integer>();
         for(int i=1;i<joueur;i++)
         {

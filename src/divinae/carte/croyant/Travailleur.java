@@ -3,19 +3,15 @@ package divinae.carte.croyant;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
-import divinae.carte.abstractcarte.Divinite;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
-import divinae.InterfaceCommand;
-import javafx.scene.image.Image;
-
-import java.util.*;
+import Vue.InterfaceCommand;
 
 public class Travailleur extends Croyant {
     private int numero;
 
-    public Travailleur(Dogme[] dogme, int numero, Image imgCarte) {
-        super(Origine.JOUR,dogme,imgCarte);
+    public Travailleur(Dogme[] dogme, int numero, String cheminCarte) {
+        super(Origine.JOUR,dogme,cheminCarte);
         switch(numero){
             case 1 :
                 this.setDescription("Sacrifice :\nEmpêche une Divinité\n" +

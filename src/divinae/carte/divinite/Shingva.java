@@ -1,19 +1,18 @@
 package divinae.carte.divinite;
 
-import divinae.InterfaceCommand;
+import Vue.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.Divinite;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
-import javafx.scene.image.Image;
 
 import java.util.Scanner;
 
 public class Shingva extends Divinite {
 
-    public Shingva(Image imgCarte) {
-        super(Origine.AUBE,new Dogme[]{Dogme.HUMAIN,Dogme.MYSTIQUE,Dogme.CHAOS},imgCarte);
+    public Shingva(String cheminCarte) {
+        super(Origine.AUBE,new Dogme[]{Dogme.HUMAIN,Dogme.MYSTIQUE,Dogme.CHAOS},cheminCarte);
         this.setDescriptionDivinite("Perverse et retorse, Shingva est une Divinité que toutes les autres détestent.\n");
         this.setDescription("Peut imposer le sacrifice d'un Guide Spirituel ayant le Dogme Symboles ou Nature.");
         this.setNom("Shingva");

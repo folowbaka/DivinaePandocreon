@@ -1,16 +1,15 @@
 package divinae.carte.guide;
 
-import divinae.InterfaceCommand;
+import Vue.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
-import javafx.scene.image.Image;
 
 public class Exorciste extends GuideSpirituel{
-    public Exorciste(Origine origine, Dogme[] dogme,int nbMaxCroyant,Image imgCarte) {
-        super(origine, dogme,nbMaxCroyant,imgCarte);
+    public Exorciste(Origine origine, Dogme[] dogme,int nbMaxCroyant,String cheminCarte) {
+        super(origine, dogme,nbMaxCroyant,cheminCarte);
         this.setDescription("Sacrifice :\nUne Divinité d'Origine Nuit\n" +
                 "ou ayant les Dogmes\n" +
                 "Mystique et Chaos reprend\n" +

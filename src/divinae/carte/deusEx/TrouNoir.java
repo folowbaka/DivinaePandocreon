@@ -8,8 +8,8 @@ import javafx.scene.image.Image;
 
 public class TrouNoir extends DeusEx {
 
-    public TrouNoir(Origine origine,Image imgCarte) {
-        super(origine,imgCarte);
+    public TrouNoir(Origine origine,String cheminCarte) {
+        super(origine,cheminCarte);
         this.setDescription("Aucun autre joueur ne gagne\n" +
                 "de points d'Action durant ce\n" +
                 "tour.");

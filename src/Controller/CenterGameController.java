@@ -1,19 +1,17 @@
-package divinae;
+package Controller;
 
+import divinae.DivinaePandocreonGraphique;
+import divinae.Joueur;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.carte.abstractcarte.GuideSpirituel;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TableView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.TilePane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 import javafx.stage.Popup;
 
 import java.io.IOException;
@@ -42,7 +40,7 @@ public class CenterGameController extends ControllerDivinae {
     public void  initPopup()
     {
         ScrollPane popCroyant=null;
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("popupcroyant.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("../Vue/popupcroyant.fxml"));
         try {
             popCroyant=loader.load();
         } catch (IOException e) {
@@ -126,7 +124,6 @@ public class CenterGameController extends ControllerDivinae {
         {
             addGuide(joueurcourant.getDivinite().getGuideDivinite().get(i));
         }
-        System.out.println("carte "+i);
 
     }
     public void refreshCenterTable()

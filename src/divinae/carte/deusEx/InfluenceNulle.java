@@ -8,9 +8,9 @@ import javafx.scene.image.Image;
 
 public class InfluenceNulle extends DeusEx {
 
-    public InfluenceNulle(Origine origine,Image imgCarte)
+    public InfluenceNulle(Origine origine,String cheminCarte)
     {
-        super(origine,imgCarte);
+        super(origine,cheminCarte);
         this.setDescription("Annule la capacité spéciale\n" +
                 "d'une autre carte d'Action.\n");
         this.setNom("Influence Nulle");

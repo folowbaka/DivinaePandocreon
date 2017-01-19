@@ -1,13 +1,14 @@
-package divinae;
+package Controller;
 
+import Controller.BottomGameController;
+import Controller.ControllerDivinae;
+import divinae.Partie;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 
@@ -55,7 +56,7 @@ public class PlayerAskNameController extends ControllerDivinae
                 {
                     this.nomJoueur[1][i]="JV "+(i+1);
                 }
-                FXMLLoader loader=new FXMLLoader(getClass().getResource("bottomgamelayou.fxml"));
+                FXMLLoader loader=new FXMLLoader(getClass().getResource("../Vue/bottomgamelayou.fxml"));
                 Partie p=Partie.getInstance(nomJoueur);
                 p.setInfluenceTour(p.lancerDes());
                 for(int i=0;i<p.getJoueur().size();i++)
@@ -76,7 +77,7 @@ public class PlayerAskNameController extends ControllerDivinae
         }
         else
         {
-            System.out.println("nom de joueur vide");
+
         }
     }
     public void setNbJoueur(int nbJoueur) {

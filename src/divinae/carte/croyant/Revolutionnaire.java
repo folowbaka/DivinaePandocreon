@@ -1,19 +1,18 @@
 package divinae.carte.croyant;
 
-import divinae.InterfaceCommand;
+import Vue.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
-import javafx.scene.image.Image;
 
 import java.util.Scanner;
 
 public class Revolutionnaire extends Croyant {
 
-    public Revolutionnaire(Dogme[] dogme, Image imgCarte) {
-        super(Origine.NEANT,dogme,imgCarte);
+    public Revolutionnaire(Dogme[] dogme, String cheminCarte) {
+        super(Origine.NEANT,dogme,cheminCarte);
         this.setDescription("Sacrifice :\nImposez le sacrifice d'une\n" +
                 "carte de Croyants à autant de\n" +
                 "Divinités que vous le voulez.\n" +

@@ -1,13 +1,12 @@
-package divinae;
+package Vue;
 
+import divinae.Joueur;
+import divinae.Partie;
 import divinae.carte.Apocalypse;
 import divinae.carte.abstractcarte.Carte;
-import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Origine;
 
-import java.util.ArrayList;
 import java.util.InputMismatchException;
-import java.util.Iterator;
 import java.util.Scanner;
 
 /*
@@ -41,7 +40,6 @@ public class InterfaceCommand {
         {
             System.out.println("Voulez vous jouez avec des joueur virtuels[o/n]?");
             choix = choixUtilisateur.next();
-            System.out.println(choix);
         }while(!choix.equals("o") && !choix.equals("n"));
         if(choix.equals("n"))
         {
@@ -69,10 +67,9 @@ public class InterfaceCommand {
         }
         return nomJoueur;
     }
-    public static void jouer(Joueur j,Partie p,int joueurJoue)
+    public static void jouer(Joueur j, Partie p, int joueurJoue)
     {
         System.out.println("C'est à vous de jouer joueur : "+j.getNom());
-        System.out.println(j);
         boolean tour=true;
         Scanner sc=new Scanner(System.in);
         int choix;

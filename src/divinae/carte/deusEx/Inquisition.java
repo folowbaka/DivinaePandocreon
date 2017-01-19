@@ -1,17 +1,16 @@
 package divinae.carte.deusEx;
 
-import divinae.InterfaceCommand;
+import Vue.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.DeusEx;
 import divinae.enumeration.Origine;
-import javafx.scene.image.Image;
 
 public class Inquisition extends DeusEx {
 
-    public Inquisition(Origine origine,Image imgCarte)
+    public Inquisition(Origine origine,String cheminCarte)
     {
-        super(origine,imgCarte);
+        super(origine,cheminCarte);
         this.setDescription("Choisissez un des Guides\n" +
                 "Spirituels d'un autre joueur,\n" +
                 "et l'un des votres. Lancez le\n" +

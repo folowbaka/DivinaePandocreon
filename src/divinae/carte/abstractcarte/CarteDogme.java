@@ -7,9 +7,9 @@ import java.util.Arrays;
 
 public abstract class CarteDogme  extends Carte{
     private Dogme[] dogme;
-    public CarteDogme(Origine origine,Dogme[] dogme, Image imgCarte)
+    public CarteDogme(Origine origine,Dogme[] dogme, String cheminCarte)
     {
-        super(origine,imgCarte);
+        super(origine,cheminCarte);
         this.dogme=dogme;
     }
 

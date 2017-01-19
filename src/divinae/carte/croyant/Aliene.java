@@ -1,17 +1,16 @@
 package divinae.carte.croyant;
 
-import divinae.InterfaceCommand;
+import Vue.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
-import javafx.scene.image.Image;
 
 public class Aliene extends Croyant {
     private int numero;
-    public Aliene(Dogme[] dogme, int numero, Image imgCarte) {
-        super(Origine.NEANT,dogme,imgCarte);
+    public Aliene(Dogme[] dogme, int numero, String cheminCarte) {
+        super(Origine.NEANT,dogme,cheminCarte);
         switch(numero){
             case 1 :
                 this.setDescription("Sacrifice :\nEmpêche une Divinité\n" +

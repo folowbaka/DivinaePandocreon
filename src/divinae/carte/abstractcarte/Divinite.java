@@ -10,8 +10,8 @@ public abstract class Divinite extends CarteDogme {
     private String descriptionDivinite;
     private ArrayList<GuideSpirituel> guideDivinite;
 
-    public Divinite(Origine origine, Dogme[] dogme,Image imgCarte) {
-        super(origine,dogme,imgCarte);
+    public Divinite(Origine origine, Dogme[] dogme,String cheminCarte) {
+        super(origine,dogme,cheminCarte);
     }
 
     public void setDescriptionDivinite(String descriptionDivinite) {

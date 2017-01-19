@@ -1,7 +1,7 @@
 package divinae.carte.croyant;
 
 import divinae.DivinaePandocreon;
-import divinae.InterfaceCommand;
+import Vue.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
@@ -9,15 +9,14 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-import javafx.scene.image.Image;
 
 import java.util.Optional;
 
 public class Alchimiste extends Croyant {
     private int numero;
 
-    public Alchimiste(Dogme[] dogme, int numero, Image imgCarte) {
-        super(Origine.NUIT, dogme,imgCarte);
+    public Alchimiste(Dogme[] dogme, int numero, String cheminCarte) {
+        super(Origine.NUIT, dogme,cheminCarte);
         switch(numero) {
             case 1 :
                 this.setDescription("Sacrifice :\nEmpêche une Divinité\n" +

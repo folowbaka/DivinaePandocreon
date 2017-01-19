@@ -10,8 +10,8 @@ import javafx.scene.image.Image;
 
 public class Apocalypse extends Carte {
 
-    public Apocalypse(Origine origine,Image imgCarte) {
-        super(origine,imgCarte);
+    public Apocalypse(Origine origine,String cheminCarte) {
+        super(origine,cheminCarte);
         this.setNom("Apocalypse");
     }
 
@@ -74,18 +74,13 @@ public class Apocalypse extends Carte {
                 Partie.PARTIENONFINIE=false;
             }
         }
-        System.out.println("wesh mon frere");
-        System.out.println("APOCALYPSE MERDE wtf"+DivinaePandocreon.getVIEW());
         switch (DivinaePandocreon.getVIEW())
         {
             case 1:
                 System.out.println(affichageResultat);
-                System.out.println("APOCALYPSE MERDE");
                 break;
             case 2:
-                System.out.println("APOCALYPSE MERDE VUE");
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                System.out.println("TEST "+affichageResultat);
                 alert.setHeaderText(affichageResultat);
                 alert.showAndWait();
                 break;

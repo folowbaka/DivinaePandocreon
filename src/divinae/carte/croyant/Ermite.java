@@ -1,18 +1,17 @@
 package divinae.carte.croyant;
 
 import divinae.Joueur;
-import divinae.InterfaceCommand;
+import Vue.InterfaceCommand;
 import divinae.Partie;
 import divinae.carte.abstractcarte.Croyant;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
-import javafx.scene.image.Image;
 
 import java.util.Scanner;
 
 public class Ermite extends Croyant {
-    public Ermite( Dogme[] dogme, Image imgCarte) {
-        super(Origine.JOUR, dogme,imgCarte);
+    public Ermite( Dogme[] dogme, String  cheminCarte) {
+        super(Origine.JOUR, dogme,cheminCarte);
         this.setDescription("Sacrifice :\nImpose le sacrifice d'un\n" +
                 "Croyant d'un autre joueur,\n" +
                 "qui choisit la carte. La\n" +

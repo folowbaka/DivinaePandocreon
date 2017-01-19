@@ -1,5 +1,8 @@
-package divinae;
+package Controller;
 
+import Controller.ControllerDivinae;
+import divinae.DivinaePandocreonGraphique;
+import divinae.Joueur;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.image.ImageView;

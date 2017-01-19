@@ -1,17 +1,16 @@
 package divinae.carte.deusEx;
 
-import divinae.InterfaceCommand;
+import Vue.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.DeusEx;
 import divinae.enumeration.Origine;
-import javafx.scene.image.Image;
 
 public class Concentration extends DeusEx {
 
-    public Concentration(Origine origine,Image imgCarte)
+    public Concentration(Origine origine,String cheminCarte)
     {
-        super(origine,imgCarte);
+        super(origine,cheminCarte);
         this.setDescription("Vous récupérez un des\n" +
                 "Guides Spirituels posés\n" +
                 "devant une autre Divinité et\n" +

@@ -1,5 +1,6 @@
-package divinae;
+package Controller;
 
+import divinae.*;
 import divinae.carte.Apocalypse;
 import divinae.carte.abstractcarte.Carte;
 import divinae.carte.abstractcarte.Croyant;
@@ -24,7 +25,7 @@ import java.util.Optional;
 /*
  * Created by Folow on 02/01/2017.
  */
-public class BottomGameController extends ControllerDivinae{
+public class BottomGameController extends ControllerDivinae {
 
     private int tour;
 
@@ -85,7 +86,6 @@ public class BottomGameController extends ControllerDivinae{
                 private int idCarte=mainJoueur.size()-1;
 
                 public void handle(MouseEvent event) {
-                    System.out.println(bdefausser.isFocused());
                     handleCarte(idCarte);
                 }
             });
@@ -109,7 +109,6 @@ public class BottomGameController extends ControllerDivinae{
     @FXML
     private void handleTerminerTour()
     {
-        System.out.println(DivinaePandocreonGraphique.JOUEURCOURANT);
         Joueur j=this.getDpg().getP().getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT);
         j.setPeutRecevoirPoint(true);
         j.allowSacrificeCroyant();
@@ -187,7 +186,6 @@ public class BottomGameController extends ControllerDivinae{
     }
     public void handleCarte(int num)
     {
-        System.out.println(num);
         bpiocher.setDisable(true);
         Partie p = this.getDpg().getP();
         Joueur j = p.getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT);
@@ -205,9 +203,7 @@ public class BottomGameController extends ControllerDivinae{
     }
     public void pointJouer(Joueur j,int c,Partie p,int joueurJoue)
     {
-        System.out.println("Joueur "+DivinaePandocreonGraphique.JOUEURCOURANT);
         Carte carte=j.getMain().get(c);
-        System.out.println(carte);
         if(carte.getOrigine()!=null)
         {
             int point = j.getPointsAction().get(carte.getOrigine().toString());
@@ -279,17 +275,6 @@ public class BottomGameController extends ControllerDivinae{
                 }
             }
         }
-        /*if(p.checkInterrompre(joueurJoue))
-        {
-            int inte;
-            System.out.println("9---------Interrompre");
-            inte=sc.nextInt();
-            switch (inte)
-            {
-                case 9:
-                    InterfaceCommand.interrompre(j,p,joueurJoue);
-            }
-        }*/
         if(carte instanceof Croyant)
         {
             this.getDpg().getCentercontroller().addCroyant((Croyant)carte);
@@ -313,9 +298,7 @@ public class BottomGameController extends ControllerDivinae{
     }
     public void initBoard()
     {
-        int i;
         Joueur joueurcourant=this.getDpg().getP().getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT);
-        System.out.println(joueurcourant);
         refreshBoard(joueurcourant);
         nomjoueur.setText(joueurcourant.getNom());
         this.getDpg().initTopLayout();
@@ -334,7 +317,6 @@ public class BottomGameController extends ControllerDivinae{
         {
             ((ImageView)board.getChildren().get(i)).setImage(joueurcourant.getMain().get(i).getImgCarte());
         }
-        System.out.println("carte "+i);
         for(i=i;i<board.getChildren().size();i++)
         {
             ((ImageView)board.getChildren().get(i)).setImage(null);

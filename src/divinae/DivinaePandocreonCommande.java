@@ -1,11 +1,9 @@
 package divinae;
 
-import divinae.carte.divinite.Brewalen;
-import divinae.enumeration.Dogme;
+import Vue.InterfaceCommand;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.*;
 
 /**
  * Created by david on 21/11/2016.

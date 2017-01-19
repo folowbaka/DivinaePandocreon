@@ -8,9 +8,9 @@ import javafx.scene.image.Image;
 
 public class Miroir extends DeusEx {
 
-    public Miroir(Origine origine,Image imgCarte)
+    public Miroir(Origine origine,String cheminCarte)
     {
-        super(origine,imgCarte);
+        super(origine,cheminCarte);
         this.setDescription("Retourne les effets d'une carte\n" +
                 "d'Action sur la Divinité qui\n" +
                 "l'a posée");

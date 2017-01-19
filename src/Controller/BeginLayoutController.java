@@ -1,4 +1,4 @@
-package divinae;
+package Controller;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -11,7 +11,7 @@ import java.io.IOException;
 /*
  * Created by Folow on 27/12/2016.
  */
-public class BeginLayoutController extends ControllerDivinae{
+public class BeginLayoutController extends ControllerDivinae {
     @FXML
     private Button bJouer;
     @FXML
@@ -25,7 +25,7 @@ public class BeginLayoutController extends ControllerDivinae{
     @FXML
     private void handlePlay()
     {
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("playercreationlayout.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("../Vue/playercreationlayout.fxml"));
         VBox pCL=null;
         try {
             pCL=loader.load();

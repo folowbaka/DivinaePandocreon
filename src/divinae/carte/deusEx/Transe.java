@@ -8,8 +8,8 @@ import javafx.scene.image.Image;
 
 public class Transe extends DeusEx {
 
-    public Transe(Origine origine,Image imgCarte) {
-        super(origine,imgCarte);
+    public Transe(Origine origine,String cheminCarte) {
+        super(origine,cheminCarte);
         this.setDescription("Permet de récupérer les effets\n" +
                 "bénéfiques d'une carte\n" +
                 "d'Action posée par une autre\n" +

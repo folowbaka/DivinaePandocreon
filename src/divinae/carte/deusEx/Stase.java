@@ -8,9 +8,9 @@ import javafx.scene.image.Image;
 
 public class Stase extends DeusEx {
 
-    public Stase(Origine origine,Image imgCarte)
+    public Stase(Origine origine,String cheminCarte)
     {
-        super(origine,imgCarte);
+        super(origine,cheminCarte);
         this.setDescription("Protège un Guide Spirituel et\n" +
                 "ses Croyants jusqu'à ce que\n" +
                 "cette carte soit annulée ou\n" +

@@ -1,17 +1,16 @@
 package divinae.carte.deusEx;
 
-import divinae.InterfaceCommand;
+import Vue.InterfaceCommand;
 import divinae.Joueur;
 import divinae.Partie;
 import divinae.carte.abstractcarte.DeusEx;
 import divinae.enumeration.Origine;
-import javafx.scene.image.Image;
 
 public class ColereDivine extends DeusEx {
 
-    public ColereDivine(Origine origine,Image imgCarte)
+    public ColereDivine(Origine origine,String cheminCarte)
     {
-        super(origine,imgCarte);
+        super(origine,cheminCarte);
         this.setDescription("Détruit une carte Guide\n" +
                 "Spirituel d'Origine Nuit ou\n" +
                 "Néant, dont la capacité\n" +

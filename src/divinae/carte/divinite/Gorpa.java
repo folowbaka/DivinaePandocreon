@@ -10,8 +10,8 @@ import javafx.scene.image.Image;
 import java.util.Scanner;
 
 public class Gorpa extends Divinite {
-    public Gorpa(Image imgCarte) {
-        super(Origine.CREPUSCULE,new Dogme[]{Dogme.HUMAIN,Dogme.SYMBOLE,Dogme.CHAOS},imgCarte);
+    public Gorpa(String cheminCarte) {
+        super(Origine.CREPUSCULE,new Dogme[]{Dogme.HUMAIN,Dogme.SYMBOLE,Dogme.CHAOS},cheminCarte);
         this.setDescriptionDivinite("Divinité joueuse et espiègle, Gorpa aime gêner ses consœurs dans leur recherche de puissance.");
         this.setDescription("Peut récupérer les points d'Action d'une autre Divinité en plus des siens. L'autre Divinité ne reçoit aucun point d'Action ce tour-ci.");
         this.setNom("Gorpa");

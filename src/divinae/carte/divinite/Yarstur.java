@@ -10,8 +10,8 @@ import javafx.scene.image.Image;
 
 public class Yarstur extends Divinite {
 
-    public Yarstur(Image imgCarte) {
-        super(Origine.JOUR,new Dogme[]{Dogme.CHAOS,Dogme.SYMBOLE,Dogme.MYSTIQUE},imgCarte);
+    public Yarstur(String cheminCarte) {
+        super(Origine.JOUR,new Dogme[]{Dogme.CHAOS,Dogme.SYMBOLE,Dogme.MYSTIQUE},cheminCarte);
         this.setDescriptionDivinite("Dernier pur du jour, Yarstur combat le Néant sous toutes ses formes");
         this.setDescription("Peut détruire toutes les cartes de Croyants au centre de la table d'Origine Néant.");
         this.setNom("Yartsur");

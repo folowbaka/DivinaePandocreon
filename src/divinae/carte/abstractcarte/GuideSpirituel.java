@@ -11,9 +11,9 @@ import java.util.ArrayList;
 
 public abstract class GuideSpirituel extends CarteDogme {
     private Croyant[] croyantRattache;
-    public GuideSpirituel(Origine origine,Dogme[] dogme,int nbMaxCroyant,Image imgCarte)
+    public GuideSpirituel(Origine origine,Dogme[] dogme,int nbMaxCroyant,String cheminCarte)
     {
-        super(origine,dogme,imgCarte);
+        super(origine,dogme,cheminCarte);
         this.croyantRattache=new Croyant[nbMaxCroyant];
 
     }
@@ -84,6 +84,7 @@ public abstract class GuideSpirituel extends CarteDogme {
         int priere=0;
         for(int i=0;i<this.croyantRattache.length;i++)
         {
+            if(this.croyantRattache[i]!=null)
             priere=priere+this.croyantRattache[i].getNbCroyant();
         }
         return priere;

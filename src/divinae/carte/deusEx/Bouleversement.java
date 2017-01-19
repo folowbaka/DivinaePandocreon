@@ -8,9 +8,9 @@ import javafx.scene.image.Image;
 
 public class Bouleversement extends DeusEx {
 
-    public Bouleversement(Origine origine,Image imgCarte)
+    public Bouleversement(Origine origine,String cheminCarte)
     {
-        super(origine,imgCarte);
+        super(origine,cheminCarte);
         this.setDescription("Relancez le dé de Cosmogonie.\n" +
                 "Le tour de jeu se terminera\n" +
                 "normalement, mais sous la\n" +

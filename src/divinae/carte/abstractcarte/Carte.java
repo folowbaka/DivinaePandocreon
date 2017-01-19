@@ -11,12 +11,12 @@ public abstract class Carte {
     private Origine origine;
     private String description;
     private String nom;
-    private Image imgCarte;
+    private String cheminCarte;
 
-    public Carte(Origine origine,Image imgCarte)
+    public Carte(Origine origine,String cheminCarte)
     {
         this.origine=origine;
-        this.imgCarte=imgCarte;
+        this.cheminCarte=cheminCarte;
     }
     public abstract void capacite(Joueur j,Partie p);
 
@@ -45,12 +45,12 @@ public abstract class Carte {
     }
 
     public Image getImgCarte() {
-        return imgCarte;
+        return new Image(this.cheminCarte);
     }
 
-    public void setImgCarte(Image imgCarte) {
+    public void setImgCarte(String cheminCarte) {
 
-        this.imgCarte = imgCarte;
+        this.cheminCarte = cheminCarte;
     }
 
     @Override

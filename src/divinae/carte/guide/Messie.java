@@ -10,8 +10,8 @@ import javafx.scene.image.Image;
 import java.util.Scanner;
 
 public class Messie  extends GuideSpirituel{
-    public Messie(Origine origine, Dogme[] dogme,int nbMaxCroyant,Image imgCarte) {
-        super(origine, dogme,nbMaxCroyant,imgCarte);
+    public Messie(Origine origine, Dogme[] dogme,int nbMaxCroyant,String cheminCarte) {
+        super(origine, dogme,nbMaxCroyant,cheminCarte);
         this.setDescription("Sacrifice :\nLe joueur pose le dé de\n" +
                 "Cosmogonie sur la face qu'il\n" +
                 "désire et commence un\n" +

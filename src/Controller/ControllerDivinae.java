@@ -1,4 +1,6 @@
-package divinae;
+package Controller;
+
+import divinae.DivinaePandocreonGraphique;
 
 /**
  * Created by Folow on 02/01/2017.

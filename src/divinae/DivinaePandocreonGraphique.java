@@ -2,10 +2,12 @@ package divinae;/**
  * Created by Folow on 27/12/2016.
  */
 
+import Controller.BeginLayoutController;
+import Controller.CenterGameController;
+import Controller.TopController;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -30,7 +32,7 @@ public class DivinaePandocreonGraphique extends Application {
     public void start(Stage primaryStage) {
             this.primaryStage = primaryStage;
         try {
-            rootLayout=FXMLLoader.load(getClass().getResource("rootlayout.fxml"));
+            rootLayout=FXMLLoader.load(getClass().getResource("../Vue/rootlayout.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -43,7 +45,7 @@ public class DivinaePandocreonGraphique extends Application {
     }
     public void initBeginLayout(){
         try {
-            FXMLLoader loader=new FXMLLoader(getClass().getResource("beginlayout.fxml"));
+            FXMLLoader loader=new FXMLLoader(getClass().getResource("../Vue/beginlayout.fxml"));
             beginLayout=loader.load();
             rootLayout.setCenter(beginLayout);
             BeginLayoutController blc=loader.getController();
@@ -54,7 +56,7 @@ public class DivinaePandocreonGraphique extends Application {
     }
     public void initTopLayout()
     {
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("toplayout.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("../Vue/toplayout.fxml"));
         try {
             topLayout=loader.load();
         } catch (IOException e) {
@@ -66,7 +68,7 @@ public class DivinaePandocreonGraphique extends Application {
     }
     public void initCenterLayout()
     {
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("centergamelayout.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("../Vue/centergamelayout.fxml"));
         VBox centerTable= null;
         try {
             centerTable = loader.load();

@@ -8,8 +8,8 @@ import divinae.enumeration.Origine;
 import javafx.scene.image.Image;
 
 public class Moine extends Croyant {
-    public Moine(Dogme[] dogme, Image imgCarte) {
-        super(Origine.JOUR,dogme,imgCarte);
+    public Moine(Dogme[] dogme, String cheminCarte) {
+        super(Origine.JOUR,dogme,cheminCarte);
         this.setDescription("Sacrifice :\nDonne un point d'Action d'Origine Jour");
         this.setNom("Moine");
         this.setNbCroyant(2);

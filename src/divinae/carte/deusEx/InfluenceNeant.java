@@ -8,9 +8,9 @@ import javafx.scene.image.Image;
 
 public class InfluenceNeant extends DeusEx {
 
-    public InfluenceNeant(Origine origine,Image imgCarte)
+    public InfluenceNeant(Origine origine,String cheminCarte)
     {
-        super(origine,imgCarte);
+        super(origine,cheminCarte);
         this.setDescription("Annule la capacité spéciale\n" +
                 "d'une carte d'Action d'Origine\n" +
                 "Jour ou Nuit.");

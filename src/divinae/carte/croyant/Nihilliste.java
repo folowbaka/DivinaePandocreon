@@ -9,8 +9,8 @@ import javafx.scene.image.Image;
 
 public class Nihilliste extends Croyant {
 
-    public Nihilliste(Dogme[] dogme, Image imgCarte) {
-        super(Origine.NEANT,dogme,imgCarte);
+    public Nihilliste(Dogme[] dogme,String cheminCarte) {
+        super(Origine.NEANT,dogme,cheminCarte);
         this.setDescription("Sacrifice :\nJusqu'à la fin du tour, plus\n" +
                 "aucune Divinité ne reçoit de\n" +
                 "points d'Action.\n");
