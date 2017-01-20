@@ -7,7 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.image.ImageView;
 
-/*
+/**
  * Controller pour le haut de l'ecran avec les divinites.
  */
 public class TopController extends ControllerDivinae {

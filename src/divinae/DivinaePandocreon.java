@@ -6,7 +6,7 @@ import javafx.stage.Stage;
 
 import java.util.Scanner;
 
-/*
+/**
  * Contient le main de l'application.
  */
 public class DivinaePandocreon{

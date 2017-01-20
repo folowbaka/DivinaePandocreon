@@ -8,7 +8,7 @@ import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 
-/*
+/**
  * Controller pour le debut de la partie.
  */
 public class BeginLayoutController extends ControllerDivinae {

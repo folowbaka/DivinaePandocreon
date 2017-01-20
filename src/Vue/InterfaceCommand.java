@@ -9,7 +9,7 @@ import divinae.enumeration.Origine;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-/*
+/**
  * Contient l'ensemble des methodes (static) utilises pour faire tourner le jeu.
  */
 public class InterfaceCommand {

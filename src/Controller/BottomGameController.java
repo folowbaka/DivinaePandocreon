@@ -22,7 +22,7 @@ import javafx.util.Callback;
 import java.util.HashMap;
 import java.util.Optional;
 
-/*
+/**
  * Controller de l'ensemble du bas de la fenetre, c'est a dire la main, les points, et les commandes pour gerer son tour.
  */
 public class BottomGameController extends ControllerDivinae {

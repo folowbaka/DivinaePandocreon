@@ -1,6 +1,6 @@
 package divinae;
 
-/*
+/**
  * Interface strategie avec la methode jouer.
  */
 public interface Strategie

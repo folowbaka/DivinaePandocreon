@@ -16,7 +16,7 @@ import javafx.stage.Popup;
 
 import java.io.IOException;
 
-/*
+/**
  * Controller du centre du jeu avec les guides et croyants mis au centre.
  */
 public class CenterGameController extends ControllerDivinae {

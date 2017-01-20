@@ -12,7 +12,7 @@ import javafx.scene.layout.HBox;
 
 import java.io.IOException;
 
-/*
+/**
  * Controller pour le choix des noms des joueurs au debut de la partie.
  */
 public class PlayerAskNameController extends ControllerDivinae

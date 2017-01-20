@@ -1,6 +1,6 @@
 package divinae;
 
-/*
+/**
  * Represente un joueur virtuel.
  */
 public class JoueurVirtuel extends Joueur{

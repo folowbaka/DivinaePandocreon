@@ -18,7 +18,7 @@ import java.util.Random;
 
 import static java.util.Collections.shuffle;
 
-/*
+/**
  * Represente la partie qui contient les joueurs, la pioche, la defausse et le centre de la table.
  * La partie est unique.
  */
