@@ -30,7 +30,7 @@ public class DivinaePandocreonGraphique extends Application {
     public static int JOUEURCOURANT=0;
 
     /**
-     * Lance la fenetre.
+     * Lance la fenetre de depart.
      * @param primaryStage
      */
         @Override
@@ -50,7 +50,7 @@ public class DivinaePandocreonGraphique extends Application {
     }
 
     /**
-     * Initialise 
+     * Initialise la creation de la partie, choix des joueurs...
      */
     public void initBeginLayout(){
         try {
@@ -63,6 +63,10 @@ public class DivinaePandocreonGraphique extends Application {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Initialise le haut de la fenetre avec les divinites.
+     */
     public void initTopLayout()
     {
         FXMLLoader loader=new FXMLLoader(getClass().getResource("../Vue/toplayout.fxml"));
@@ -75,6 +79,10 @@ public class DivinaePandocreonGraphique extends Application {
         topController=loader.getController();
         topController.setDpg(this);
     }
+
+    /**
+     * Initialise le centre de la fenetre avec le centre de la table et les guides associes.
+     */
     public void initCenterLayout()
     {
         FXMLLoader loader=new FXMLLoader(getClass().getResource("../Vue/centergamelayout.fxml"));
@@ -90,42 +98,83 @@ public class DivinaePandocreonGraphique extends Application {
         this.centercontroller.initPopup();
     }
 
+    /**
+     * Getter rootLayout
+     * @return rootLayout
+     */
     public BorderPane getRootLayout() {
         return rootLayout;
     }
 
+    /**
+     * Getter primaryStage
+     * @return primaryStage
+     */
     public Stage getPrimaryStage() {
         return primaryStage;
     }
+
+    /**
+     * Setter partie
+     * @param p partie
+     */
     public void setPartie(Partie p)
     {
         this.p=p;
     }
 
+    /**
+     * Getter Partie
+     * @return partie
+     */
     public Partie getP() {
         return p;
     }
 
+    /**
+     * Getter topController
+     * @return topController
+     */
     public TopController getTopController() {
         return topController;
     }
 
+    /**
+     * Setter topController
+     * @param topController
+     */
     public void setTopController(TopController topController) {
         this.topController = topController;
     }
 
+    /**
+     * Getter pointsData
+     * @return pointsData
+     */
     public ObservableList<HashMap<String, Integer>> getPointsData() {
         return pointsData;
     }
 
+    /**
+     * Getter centercontroller
+     * @return centercontroller
+     */
     public CenterGameController getCentercontroller() {
         return centercontroller;
     }
 
+    /**
+     * Setter centercontroller
+     * @param centercontroller
+     */
     public void setCentercontroller(CenterGameController centercontroller) {
         this.centercontroller = centercontroller;
     }
 
+    /**
+     * Setter pointsData
+     * @param pointsData
+     */
     public void setPointsData(ObservableList<HashMap<String, Integer>> pointsData) {
         this.pointsData = pointsData;
     }

@@ -9,7 +9,7 @@ import javafx.scene.layout.VBox;
 import java.io.IOException;
 
 /*
- * Created by Folow on 27/12/2016.
+ * Controller pour le debut de la partie.
  */
 public class BeginLayoutController extends ControllerDivinae {
     @FXML
@@ -17,11 +17,18 @@ public class BeginLayoutController extends ControllerDivinae {
     @FXML
     private Button bQuitter;
 
+    /**
+     * Exit
+     */
     @FXML
     private void handleExit()
     {
         Platform.exit();
     }
+
+    /**
+     * Debut de partie.
+     */
     @FXML
     private void handlePlay()
     {

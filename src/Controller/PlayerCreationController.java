@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * Created by Folow on 28/12/2016.
+ * Controller pour la creation des joueurs
  */
 public class PlayerCreationController extends ControllerDivinae {
 
@@ -31,6 +31,10 @@ public class PlayerCreationController extends ControllerDivinae {
     private ChoiceBox chbNbPlayerV;
     @FXML
     private Button bvaliderCreation;
+
+    /**
+     * Initialise les variables.
+     */
     @FXML
     private void initialize()
     {
@@ -43,6 +47,8 @@ public class PlayerCreationController extends ControllerDivinae {
        });
         chbNbPlayer.getSelectionModel().selectFirst();
     }
+
+
     @FXML
     private void handleCheck()
     {
@@ -56,6 +62,10 @@ public class PlayerCreationController extends ControllerDivinae {
 
         bvaliderCreation.setDisable(false);
     }
+
+    /**
+     * Permet la creation des joueurs avec l'affichage graphique.
+     */
     @FXML
     private void handleValiderJoueur()
     {

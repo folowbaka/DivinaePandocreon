@@ -13,7 +13,7 @@ import javafx.scene.layout.HBox;
 import java.io.IOException;
 
 /*
- * Created by Folow on 31/12/2016.
+ * Controller pour le choix des noms des joueurs au debut de la partie.
  */
 public class PlayerAskNameController extends ControllerDivinae
 {
@@ -29,6 +29,10 @@ public class PlayerAskNameController extends ControllerDivinae
     private TextField tFieldInputNomJoueur;
     @FXML
     private Label lquestionNomJoueur;
+
+    /**
+     * Initialise le nombre de joueurs.
+     */
     @FXML
     private void initialize()
     {
@@ -36,6 +40,10 @@ public class PlayerAskNameController extends ControllerDivinae
         this.nbJoueur=0;
         this.nbJoueurVirtuel=0;
     }
+
+    /**
+     * Permet d'entrer les noms des joueurs.
+     */
     @FXML
     private void handleValiderNomJoueur()
     {
@@ -80,10 +88,19 @@ public class PlayerAskNameController extends ControllerDivinae
 
         }
     }
+
+    /**
+     * Setter nombre joueurs reels
+     * @param nbJoueur
+     */
     public void setNbJoueur(int nbJoueur) {
         this.nbJoueur = nbJoueur;
     }
 
+    /**
+     * Setter nombre joueurs virtuels
+     * @param nbJoueurVirtuel
+     */
     public void setNbJoueurVirtuel(int nbJoueurVirtuel) {
         this.nbJoueurVirtuel = nbJoueurVirtuel;
     }

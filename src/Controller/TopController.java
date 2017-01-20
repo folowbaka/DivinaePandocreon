@@ -8,7 +8,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.image.ImageView;
 
 /*
- * Created by Folow on 05/01/2017.
+ * Controller pour le haut de l'ecran avec les divinites.
  */
 public class TopController extends ControllerDivinae {
 
@@ -17,6 +17,10 @@ public class TopController extends ControllerDivinae {
     }
     @FXML
     private ImageView imgDivinite;
+
+    /**
+     * Permet la gestion de la capacite de la divinite.
+     */
     @FXML
     private void  handleDivinite()
     {
@@ -34,6 +38,11 @@ public class TopController extends ControllerDivinae {
             return;
         }
     }
+
+    /**
+     * Definie l'image de la divinite.
+     * @param imgDivinite
+     */
     public void setImgDivinite(ImageView imgDivinite) {
         this.imgDivinite = imgDivinite;
     }

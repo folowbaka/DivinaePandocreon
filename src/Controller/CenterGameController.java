@@ -17,7 +17,7 @@ import javafx.stage.Popup;
 import java.io.IOException;
 
 /*
- * Created by Folow on 08/01/2017.
+ * Controller du centre du jeu avec les guides et croyants mis au centre.
  */
 public class CenterGameController extends ControllerDivinae {
 
@@ -32,11 +32,19 @@ public class CenterGameController extends ControllerDivinae {
 
     public  static Popup popup=new Popup();
 
+    /**
+     * Ajoute un croyant a l'affichage.
+     * @param croyant
+     */
     public void addCroyant(Croyant croyant)
     {
 
         centertable.getChildren().add(createImgCarte(croyant.getImgCarte()));
     }
+
+    /**
+     * Initialise le popup qui affiche les croyants d'un guide.
+     */
     public void  initPopup()
     {
         ScrollPane popCroyant=null;
@@ -50,6 +58,11 @@ public class CenterGameController extends ControllerDivinae {
         popup.setY(300);
         popup.getContent().add(popCroyant);
     }
+
+    /**
+     * Ajoute un guide a l'affichage.
+     * @param guideSpirituel
+     */
     public void addGuide(GuideSpirituel guideSpirituel)
     {
         guideBoard.getChildren().add(createImgCarte(guideSpirituel.getImgCarte()));
@@ -109,6 +122,13 @@ public class CenterGameController extends ControllerDivinae {
             }
         });
     }
+
+    /**
+     * Retourne une imageView a partir d'une image.
+     * @param image
+     * @return imageView
+     * @see Image
+     */
     public ImageView createImgCarte(Image image)
     {
         ImageView iVCarte=new ImageView(image);
@@ -117,6 +137,10 @@ public class CenterGameController extends ControllerDivinae {
         return iVCarte;
     }
 
+    /**
+     * Met a jour le plateau.
+     * @param joueurcourant
+     */
     public void refreshGuideBoard(Joueur joueurcourant)
     {
         int i;
@@ -127,6 +151,10 @@ public class CenterGameController extends ControllerDivinae {
         }
 
     }
+
+    /**
+     * Met a jour le centre.
+     */
     public void refreshCenterTable()
     {
         centertable.getChildren().clear();

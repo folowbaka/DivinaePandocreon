@@ -23,7 +23,7 @@ import java.util.HashMap;
 import java.util.Optional;
 
 /*
- * Created by Folow on 02/01/2017.
+ * Controller de l'ensemble du bas de la fenetre, c'est a dire la main, les points, et les commandes pour gerer son tour.
  */
 public class BottomGameController extends ControllerDivinae {
 
@@ -54,6 +54,10 @@ public class BottomGameController extends ControllerDivinae {
     private Label nomjoueur;
     @FXML
     private ImageView imgOrigine;
+
+    /**
+     * Initialisation.
+     */
     @FXML
     private void initialize()
     {
@@ -106,6 +110,10 @@ public class BottomGameController extends ControllerDivinae {
         }
 
     }
+
+    /**
+     * Terminer tour.
+     */
     @FXML
     private void handleTerminerTour()
     {
@@ -153,6 +161,10 @@ public class BottomGameController extends ControllerDivinae {
 
 
     }
+
+    /**
+     * Defausser.
+     */
     @FXML
     private void handleDefausser()
     {
@@ -166,6 +178,10 @@ public class BottomGameController extends ControllerDivinae {
             }
 
     }
+
+    /**
+     * Completer sa main.
+     */
     @FXML
     private void handleCompleter()
     {
@@ -185,6 +201,11 @@ public class BottomGameController extends ControllerDivinae {
         }
 
     }
+
+    /**
+     * Gestion defausser.
+     * @param num
+     */
     public void handleCarte(int num)
     {
         bpiocher.setDisable(true);
@@ -202,6 +223,14 @@ public class BottomGameController extends ControllerDivinae {
         }
         refreshBoard(j);
     }
+
+    /**
+     * Gestion des points lorsqu'on veut jouer une carte.
+     * @param joueur
+     * @param numCarte
+     * @param partie
+     * @param joueurJoue
+     */
     public void pointJouer(Joueur joueur,int numCarte,Partie partie,int joueurJoue)
     {
         Carte carte=joueur.getMain().get(numCarte);
@@ -297,6 +326,10 @@ public class BottomGameController extends ControllerDivinae {
             this.getDpg().initBeginLayout();
         }
     }
+
+    /**
+     * Initialise le plateau.
+     */
     public void initBoard()
     {
         Joueur joueurcourant=this.getDpg().getP().getJoueur().get(DivinaePandocreonGraphique.JOUEURCOURANT);
@@ -311,6 +344,11 @@ public class BottomGameController extends ControllerDivinae {
         pointTable.refresh();
 
     }
+
+    /**
+     * Met a jour le plateau.
+     * @param joueurcourant
+     */
     public void refreshBoard(Joueur joueurcourant)
     {
         int i;
@@ -325,6 +363,10 @@ public class BottomGameController extends ControllerDivinae {
         pointTable.refresh();
 
     }
+
+    /**
+     * Met a jour l'origine du tour.
+     */
     public void refreshOrigine()
     {
         switch(this.getDpg().getP().getInfluenceTour())
@@ -341,11 +383,21 @@ public class BottomGameController extends ControllerDivinae {
 
         }
     }
+
+    /**
+     * Aggrandis la carte affichee.
+     * @param num
+     */
     public void resizeCarteUp(int num)
     {
         ((ImageView)board.getChildren().get(num)).setFitWidth(200);
         ((ImageView)board.getChildren().get(num)).setFitHeight(300);
     }
+
+    /**
+     * Reduis la taille de la carte affichee.
+     * @param num
+     */
     public void resizeCarteDown(int num)
     {
         ((ImageView)board.getChildren().get(num)).setFitWidth(130);

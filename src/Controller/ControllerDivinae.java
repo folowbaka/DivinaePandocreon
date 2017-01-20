@@ -3,7 +3,7 @@ package Controller;
 import divinae.DivinaePandocreonGraphique;
 
 /**
- * Created by Folow on 02/01/2017.
+ * Controller Divinae
  */
 public class ControllerDivinae {
     private DivinaePandocreonGraphique dpg;
