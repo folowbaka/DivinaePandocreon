@@ -5,7 +5,7 @@ import divinae.*;
 import javafx.scene.image.Image;
 
 /**
- * Représente une carte qui possede un nom, description et origine.
+ * Represente une carte qui possede un nom, description et origine.
  */
 public abstract class Carte {
     private Origine origine;

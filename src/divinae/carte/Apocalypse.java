@@ -9,7 +9,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 
 /**
- * Represente une carte Apocalypse, sa effet est definie dans la methode capacite.
+ * Represente une carte Apocalypse, son effet est definie dans la methode capacite.
  */
 public class Apocalypse extends Carte {
 

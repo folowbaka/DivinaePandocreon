@@ -9,7 +9,7 @@ import javafx.scene.image.Image;
 
 import java.util.Scanner;
 /**
- * Represente une carte Guide Spirituel Anarchiste.
+ * Represente une carte Guide Spirituel Messie.
  * Sa capacite est defini dans la methode capacite.
  */
 public class Messie  extends GuideSpirituel{

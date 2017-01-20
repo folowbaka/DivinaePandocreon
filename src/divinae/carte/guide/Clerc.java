@@ -7,7 +7,7 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 import Vue.InterfaceCommand;
 /**
- * Represente une carte Guide Spirituel Anarchiste.
+ * Represente une carte Guide Spirituel Clerc.
  * Sa capacite est defini dans la methode capacite.
  */
 public class Clerc extends GuideSpirituel {

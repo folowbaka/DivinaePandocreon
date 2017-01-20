@@ -8,7 +8,7 @@ import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 import javafx.scene.image.Image;
 /**
- * Represente une carte Guide Spirituel Anarchiste.
+ * Represente une carte Guide Spirituel Paladin.
  * Sa capacite est defini dans la methode capacite.
  */
 public class Paladin extends GuideSpirituel{

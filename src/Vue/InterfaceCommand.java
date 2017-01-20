@@ -290,6 +290,12 @@ public class InterfaceCommand {
                 System.out.println("Choix invalide");
         }while (!j.getMain().isEmpty() && choixCarte>0);
     }
+
+    /**
+     * Choix et sacrifice d'un croyant ou guide.
+     * @param j joueur
+     * @param p partie
+     */
     public static void sacrifierCarte(Joueur j,Partie p)
     {
         Scanner sc=new Scanner(System.in);

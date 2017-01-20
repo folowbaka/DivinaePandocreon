@@ -6,7 +6,7 @@ import javafx.scene.image.Image;
 import java.util.Arrays;
 
 /**
- * Représente une carte munie de dogmes, un tableau de dogmes.
+ * Represente une carte munie de dogmes, un tableau de dogmes.
  */
 public abstract class CarteDogme  extends Carte{
     private Dogme[] dogme;

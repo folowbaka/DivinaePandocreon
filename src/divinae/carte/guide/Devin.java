@@ -7,7 +7,7 @@ import divinae.carte.abstractcarte.GuideSpirituel;
 import divinae.enumeration.Dogme;
 import divinae.enumeration.Origine;
 /**
- * Represente une carte Guide Spirituel Anarchiste.
+ * Represente une carte Guide Spirituel Devin.
  * Sa capacite est defini dans la methode capacite.
  */
 public class Devin extends GuideSpirituel{

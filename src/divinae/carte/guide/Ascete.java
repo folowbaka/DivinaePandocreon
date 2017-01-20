@@ -9,7 +9,7 @@ import divinae.enumeration.Origine;
 
 import java.util.Scanner;
 /**
- * Represente une carte Guide Spirituel Anarchiste.
+ * Represente une carte Guide Spirituel Ascete.
  * Sa capacite est defini dans la methode capacite.
  */
 public class Ascete extends GuideSpirituel{
