@@ -23,7 +23,7 @@ public class Ascete extends GuideSpirituel{
         this.setNom("Ascete");
     }
     /**
-     *Capacite de la carte GuideSpirituel concernee.
+     *Capacite de la carte GuideSpirituel concernee, force le sacrifice de 2 croyants.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

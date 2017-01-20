@@ -23,7 +23,7 @@ public class Concentration extends DeusEx {
         this.setNom("Concentration");
     }
     /**
-     *Capacite de la carte deusEx concernee.
+     *Capacite de la carte deusEx concernee, vole un guide avec ses croyants.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

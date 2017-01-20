@@ -47,7 +47,8 @@ public class Alchimiste extends Croyant {
     }
 
     /**
-     *Capacite de la carte croyant concernee.
+     *Capacite de la carte croyant concernee, en fonction de la version de la carte (attribut numero), cette capacite
+     * permet d'empecher un sacrifice ou de voler 2 cartes.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

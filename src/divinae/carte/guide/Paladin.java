@@ -23,7 +23,7 @@ public class Paladin extends GuideSpirituel{
         this.setNom("Paladin");
     }
     /**
-     *Capacite de la carte GuideSpirituel concernee.
+     *Capacite de la carte GuideSpirituel concernee, des croyants au centre sont defausses.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

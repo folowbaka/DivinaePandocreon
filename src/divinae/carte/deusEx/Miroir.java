@@ -20,7 +20,7 @@ public class Miroir extends DeusEx {
         this.setNom("Miroir");
     }
     /**
-     *Capacite de la carte deusEx concernee.
+     *NON IMPLEMENTE
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

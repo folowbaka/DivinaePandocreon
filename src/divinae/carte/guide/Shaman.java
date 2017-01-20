@@ -22,7 +22,7 @@ public class Shaman extends GuideSpirituel {
         this.setNom("Shaman");
     }
     /**
-     *Capacite de la carte GuideSpirituel concernee.
+     *Capacite de la carte GuideSpirituel concernee, impose des sacrifices de croyants.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

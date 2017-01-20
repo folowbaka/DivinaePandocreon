@@ -21,7 +21,7 @@ public class Nihilliste extends Croyant {
         this.setNbCroyant(4);
     }
     /**
-     *Capacite de la carte croyant concernee.
+     *Capacite de la carte croyant concernee, empeche tous les joueurs de recevoir des points.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

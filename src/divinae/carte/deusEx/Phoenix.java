@@ -23,7 +23,7 @@ public class Phoenix extends DeusEx {
         this.setNom("Phoenix");
     }
     /**
-     *Capacite de la carte deusEx concernee.
+     *Capacite de la carte deusEx concernee, vole une capacite.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

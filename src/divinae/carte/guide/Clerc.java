@@ -23,7 +23,7 @@ public class Clerc extends GuideSpirituel {
         this.setNom("Clerc");
     }
     /**
-     *Capacite de la carte GuideSpirituel concernee.
+     *Capacite de la carte GuideSpirituel concernee, fait gagner autant de points que de croyants rattachés.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

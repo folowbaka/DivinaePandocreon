@@ -21,7 +21,7 @@ public class Bouleversement extends DeusEx {
         this.setNom("Bouleversement");
     }
     /**
-     *Capacite de la carte deusEx concernee.
+     *Capacite de la carte deusEx concernee, relance le dé et change l'origine du tour.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

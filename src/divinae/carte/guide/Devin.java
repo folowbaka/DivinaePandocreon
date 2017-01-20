@@ -21,7 +21,7 @@ public class Devin extends GuideSpirituel{
         this.setNom("Devin");
     }
     /**
-     *Capacite de la carte GuideSpirituel concernee.
+     *Capacite de la carte GuideSpirituel concernee, impose un sacrifice de guide.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

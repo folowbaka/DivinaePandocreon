@@ -24,7 +24,7 @@ public class Fourberie extends DeusEx {
         this.setNom("Fourberie");
     }
     /**
-     *Capacite de la carte deusEx concernee.
+     *Capacite de la carte deusEx concernee, sacrifie deux croyants d'une autre divinite.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

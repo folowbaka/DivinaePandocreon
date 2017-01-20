@@ -23,7 +23,7 @@ public class OrdreCeleste extends DeusEx {
         this.setNom("Ordre Céleste");
     }
     /**
-     *Capacite de la carte deusEx concernee.
+     *Capacite de la carte deusEx concernee, vole un guide.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

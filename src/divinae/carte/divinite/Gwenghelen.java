@@ -19,7 +19,7 @@ public class Gwenghelen extends Divinite {
         this.setNom("Gwenghelen");
     }
     /**
-     *Capacite de la carte Divinite concernee.
+     *Capacite de la carte Divinite concernee, recupere des points neants supplementaires en fonctions des guides.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

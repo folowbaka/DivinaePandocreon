@@ -20,7 +20,7 @@ public class Diversion extends DeusEx {
         this.setNom("Diversion");
     }
     /**
-     *Capacite de la carte deusEx concernee.
+     *Capacite de la carte deusEx concernee, vole 3 cartes.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

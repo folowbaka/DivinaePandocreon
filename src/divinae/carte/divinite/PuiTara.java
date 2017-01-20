@@ -20,7 +20,7 @@ public class PuiTara extends Divinite {
         this.setNom("Pui-Tara");
     }
     /**
-     *Capacite de la carte Divinite concernee.
+     *Capacite de la carte Divinite concernee, detruit les croyants au centre.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

@@ -21,7 +21,7 @@ public class Gorpa extends Divinite {
     }
 
     /**
-     *Capacite de la carte Divinite concernee.
+     *Capacite de la carte Divinite concernee, vole les points d'un autre joueur.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

@@ -19,7 +19,7 @@ public class Martyr extends GuideSpirituel {
         this.setNom("Martyr");
     }
     /**
-     *Capacite de la carte GuideSpirituel concernee.
+     *Capacite de la carte GuideSpirituel concernee, equivalent a une apocalypse.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

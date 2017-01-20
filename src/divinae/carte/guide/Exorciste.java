@@ -23,7 +23,7 @@ public class Exorciste extends GuideSpirituel{
         this.setNom("Exorciste");
     }
     /**
-     *Capacite de la carte GuideSpirituel concernee.
+     *Capacite de la carte GuideSpirituel concernee, un guide revient dans la main de son proprietaire, les croyants reviennent sont defausses.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

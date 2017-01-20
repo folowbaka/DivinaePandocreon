@@ -21,7 +21,7 @@ public class Shingva extends Divinite {
         this.setNom("Shingva");
     }
     /**
-     *Capacite de la carte Divinite concernee.
+     *Capacite de la carte Divinite concernee, impose le sacrifice d'un guide.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

@@ -23,7 +23,7 @@ public class Anarchiste extends GuideSpirituel {
         this.setNom("Anarchiste");
     }
     /**
-     *Capacite de la carte GuideSpirituel concernee.
+     *Capacite de la carte GuideSpirituel concernee, force le sacrifice d'un guide.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

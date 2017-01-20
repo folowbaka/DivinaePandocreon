@@ -25,7 +25,7 @@ public class Inquisition extends DeusEx {
         this.setNom("Inquisition");
     }
     /**
-     *Capacite de la carte deusEx concernee.
+     *Capacite de la carte deusEx concernee, en fonction du resultat du de, un guide ennemi ou notre guide est sacrifie ou encore les capacites de ces guides sont jouees.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

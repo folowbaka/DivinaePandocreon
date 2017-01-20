@@ -19,7 +19,7 @@ public class Brewalen extends Divinite {
         this.setNom("Brewalen");
     }
     /**
-     *Capacite de la carte Divinite concernee.
+     *NON IMPLEMENTE
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

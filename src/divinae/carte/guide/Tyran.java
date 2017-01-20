@@ -21,7 +21,7 @@ public class Tyran extends GuideSpirituel {
         this.setNom("Tyran");
     }
     /**
-     *Capacite de la carte GuideSpirituel concernee.
+     *Capacite de la carte GuideSpirituel concernee, imposse la defausse de croyants au centre.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

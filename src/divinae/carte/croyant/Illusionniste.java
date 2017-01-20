@@ -25,7 +25,7 @@ public class Illusionniste extends Croyant {
         this.setNbCroyant(4);
     }
     /**
-     *Capacite de la carte croyant concernee.
+     *Capacite de la carte croyant concernee, vole la capacite d'un autre croyant.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

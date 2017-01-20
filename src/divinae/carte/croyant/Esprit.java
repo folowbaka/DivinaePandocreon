@@ -19,7 +19,7 @@ public class Esprit extends Croyant {
         this.setNbCroyant(2);
     }
     /**
-     *Capacite de la carte croyant concernee.
+     *Capacite de la carte croyant concernee, donne un point néant.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

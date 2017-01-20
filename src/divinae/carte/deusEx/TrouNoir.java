@@ -19,7 +19,7 @@ public class TrouNoir extends DeusEx {
         this.setNom("Trou Noir");
     }
     /**
-     *Capacite de la carte deusEx concernee.
+     *Capacite de la carte deusEx concernee, empeche les joueurs de recevoir des points.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

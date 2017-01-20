@@ -23,7 +23,7 @@ public class Sorcier extends GuideSpirituel{
         this.setNom("Sorcier");
     }
     /**
-     *Capacite de la carte GuideSpirituel concernee.
+     *Capacite de la carte GuideSpirituel concernee, echange un guide avec un autre joueur.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

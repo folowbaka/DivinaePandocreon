@@ -22,7 +22,7 @@ public class Llewella extends Divinite {
         this.setNom("Llewella");
     }
     /**
-     *Capacite de la carte Divinite concernee.
+     *Capacite de la carte Divinite concernee, oblige un joueur a jouer une carte apocalypse.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

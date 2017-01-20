@@ -22,7 +22,7 @@ public class Messie  extends GuideSpirituel{
         this.setNom("Messie");
     }
     /**
-     *Capacite de la carte GuideSpirituel concernee.
+     *Capacite de la carte GuideSpirituel concernee, lance un de et demarre un nouveau tour (NON FONCTIONNEL).
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

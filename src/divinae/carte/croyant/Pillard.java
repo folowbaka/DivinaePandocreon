@@ -24,7 +24,7 @@ public class Pillard extends Croyant {
         this.setNbCroyant(4);
     }
     /**
-     *Capacite de la carte croyant concernee.
+     *Capacite de la carte croyant concernee, vole les points d'un autre joueur.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

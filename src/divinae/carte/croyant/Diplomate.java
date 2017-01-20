@@ -20,7 +20,7 @@ public class Diplomate extends Croyant {
         this.setNbCroyant(4);
     }
     /**
-     *Capacite de la carte croyant concernee.
+     *Capacite de la carte croyant concernee, relance le dé et change l'origine du tour.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

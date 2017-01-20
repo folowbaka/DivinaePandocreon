@@ -25,7 +25,7 @@ public class Lycanthrope extends Croyant {
         this.setNbCroyant(4);
     }
     /**
-     *Capacite de la carte croyant concernee.
+     *Capacite de la carte croyant concernee, enleve les croyants d'un guide. Ceux-ci reviennent au centre.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

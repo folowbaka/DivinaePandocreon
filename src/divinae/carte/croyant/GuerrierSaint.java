@@ -22,7 +22,7 @@ public class GuerrierSaint extends Croyant {
         this.setNbCroyant(4);
     }
     /**
-     *Capacite de la carte croyant concernee.
+     *Capacite de la carte croyant concernee, un guide revient dans la main de sa divinité et les croyants associes reviennent au centre.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

@@ -24,7 +24,7 @@ public class Ermite extends Croyant {
         this.setNbCroyant(1);
     }
     /**
-     *Capacite de la carte croyant concernee.
+     *Capacite de la carte croyant concernee, impose le sacrifice d'un autre joueur.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours

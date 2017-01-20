@@ -23,7 +23,7 @@ public class ColereDivine extends DeusEx {
         this.setNom("Colère Divine");
     }
     /**
-     *Capacite de la carte deusEx concernee.
+     *Capacite de la carte deusEx concernee, detruit un guide et renvois ses croyants au centre.
      * <p>
      * @param  Joueur  le joueur sur lequel l'effet aura lieu
      * @param  Partie la partie en cours
